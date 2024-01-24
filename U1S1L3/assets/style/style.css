@@ -27,6 +27,7 @@ main, footer{
 #focaccia{
     width: 100%;
     border-radius: 10px;
+    box-shadow: 0px 3px 5px #828282;
 }
 figcaption{
     text-align: center;
