@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    text-align: center;
+    color: #0b6161;
+}
+#slogo {
+width: 20vw;
+}
+#sottotitolo {
+    background: #fef8e9;
+    border-top: solid #FFECBC;
+    padding: 10px;
+    border-width: 1px;
+}
+
+main, footer{
+    margin: 0 25%;
+}
+#titolo{
+    text-align: center;
+    margin: 5% 20%;
+}
+#focaccia{
+    width: 100%;
+    border-radius: 10px;
+}
+figcaption{
+    text-align: center;
+    font-size: 0,5em;
+    color: rgb(133, 133, 133);
+}
+
+#cta{
+    border-left: solid #FFECBC;
+    padding:0 5px;
+    
+}
+#featured{
+    color: rgb(201, 44, 0);
+}
+.sottotitoli{
+    border-bottom: solid #7CD5D5;
+    padding-bottom: 16px;
+    border-width: 1px;
+}
