@@ -1,0 +1,140 @@
+/* IMPOSTAZIONI GENERALI */
+body {
+    background-image: url(sfondo.png);
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+
+}
+
+/* HEADER */
+header {
+    background-image: linear-gradient(#009FC5, #036D86);
+    text-align: center;
+    color: white;
+    box-shadow: 2px 2px 2px rgb(110, 110, 110);
+    padding: 15px 0;
+    text-transform: uppercase;
+
+}
+
+.linkheader:link,
+.linkheader:visited {
+    text-decoration: none;
+    color: white;
+
+}
+nav{
+    display: flex; 
+    justify-content: center;
+}
+ul{
+    list-style:circle ;
+}
+.autore {
+    font-size: 0.8em;
+    color: gray;
+}
+
+/* MAIN */
+main {
+    background-color: white;
+    padding-bottom: 30px;
+}
+
+.novità {
+    background-color: #E3E3E3;
+    text-align: center;
+    margin: 0;
+}
+#box{
+    background-color: white;
+    padding: 10px;
+}
+h2 {
+    padding-top: 10px;
+}
+
+.grass {
+    color: #A6347A;
+}
+
+code {
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+table{
+    border: 0;
+    border-collapse: collapse;
+    font-size: 0.8em;
+    text-align: center ;
+    border-bottom: 2px solid #3F6BCA;
+    
+}
+tr, td {
+    width: 120px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #F3F3F3;
+}
+
+thead tr:first-child {
+    background-color: #3F6BCA;
+    color: #F3F6FC;
+    border: none;
+}
+
+.coll:link, .coll:visited{
+    color: #00A0C6;
+}
+
+iframe{
+    width: 100%;
+    border-radius: 10px;
+   
+}
+/* FORM */
+form{
+    text-align: left;
+    margin-left: 15px;
+}
+
+fieldset{
+    border: 0;
+}
+/* ELEMENTI NELL' ASIDE */
+aside {
+    background-color: white;
+    padding-bottom: 10px;
+padding-top: 10px;
+}
+
+.titolini{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.articoli {
+    border: 1px solid rgb(135, 134, 134);
+    margin: 10px ;
+    background-color: #E3E3E3;
+}
+/* FOOTER */
+footer {
+    background-image: linear-gradient(#055567, #333637);
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+#email:link, #email:visited{
+    text-decoration: none;
+    color: fuchsia;
+
+}
