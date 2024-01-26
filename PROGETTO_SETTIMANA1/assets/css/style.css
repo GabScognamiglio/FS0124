@@ -51,6 +51,15 @@ header {
     cursor: pointer;
 }
 
+#partiamo a:link, #partiamo a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+#partiamo:active{
+   background-color : #25a2c3;
+}
+
 article{
     padding: 5% 15%;
 }
