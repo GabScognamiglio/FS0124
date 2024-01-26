@@ -18,7 +18,7 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     margin-top: 1.5em;
     font-weight: 700;
-    
+
 }
 
 header {
@@ -31,75 +31,79 @@ header {
     margin: 30px;
 }
 
-#titolo{
+#titolo {
     background-image: url(../images/banner.jpg);
-    background-size:cover;
+    background-size: cover;
     background-position: bottom;
     padding: 5% 15%;
-    
+
 }
 
-#partiamo{
+#partiamo {
     border: none;
     padding: 3% 9%;
     background-color: #e22d0e;
     color: white;
-    font-family:'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 0.8em;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#partiamo a:link, #partiamo a:visited{
+#partiamo a:link,
+#partiamo a:visited {
     text-decoration: none;
     color: white;
 }
 
-#partiamo:active{
-   background-color : #25a2c3;
+#partiamo:active {
+    background-color: #25a2c3;
 }
 
-article{
+article {
     padding: 5% 15%;
 }
 
-#notebook{
+#notebook {
     border-radius: 50%;
 }
 
-#testimonianze{
-background-color: #e22d0e ;
-color: white;
-padding: 3%;
+#testimonianze {
+    background-color: #e22d0e;
+    color: white;
+    padding: 3%;
 }
 
-#testimonianze h2{
+#testimonianze h2 {
     color: white;
     font-size: 1.8em;
 }
 
-span{
+span {
     font-size: 0.7em;
 }
 
-.schede{
+.schede {
     border: 2px solid #dee1e3;
     border-radius: 5px;
     margin: 15% 5%;
 
 }
 
-.schede h3, .schede p{
+.schede h3,
+.schede p {
     padding: 0 10%;
 }
 
-.schede p{
+.schede p {
     margin-bottom: 10%;
 }
-.schede img{
+
+.schede img {
     border-radius: 5px;
 }
+
 img {
     max-width: 100%;
     margin: 0 auto;
