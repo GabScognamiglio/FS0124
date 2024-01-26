@@ -1,0 +1,145 @@
+/* Your styles here */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    font-size: 1.2rem;
+    line-height: 1.65em;
+
+}
+
+h1,
+h2,
+h3 {
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.5em;
+    font-weight: 700;
+    
+}
+
+header {
+    background-color: black;
+    text-align: left;
+
+}
+
+#logo {
+    width: 15%;
+    margin: 30px;
+}
+
+#titolo{
+    background-image: url(../images/banner.jpg);
+    background-size:cover;
+    background-position: bottom;
+    padding: 5% 15%;
+    
+}
+
+#partiamo{
+    border: none;
+    padding: 3% 9%;
+    background-color: #e22d0e;
+    color: white;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#partiamo a:link, #partiamo a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+#partiamo:active, #partiamo:hover{
+   background-color : #25a2c3;
+}
+
+article{
+    padding: 5% 5%;
+    text-align: center;
+}
+
+article div{
+    display: inline-block;
+    width: 450px;
+    margin: 20px;
+    vertical-align:middle;
+    text-align: left;
+}
+
+#notebook{
+    border-radius: 50%;
+    width: 350px;
+    vertical-align: middle;
+    margin-right: 50px;
+}
+
+#testimonianze{
+background-color: #e22d0e ;
+color: white;
+padding: 3%;
+}
+
+#testimonianze h2{
+    color: white;
+    font-size: 1.8em;
+}
+
+span{
+    font-size: 0.7em;
+}
+
+.schede{
+    border: 2px solid #dee1e3;
+    border-radius: 5px;
+    margin: 15% 3%;
+    display: inline-block;
+    width: 250px;
+    height: 400px;
+    vertical-align: top;
+
+}
+
+.schede h3, .schede p{
+    padding: 0 10%;
+}
+
+.schede p{
+    margin-bottom: 10%;
+}
+.schede img{
+    border-radius: 5px;
+    width: 100%;
+}
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+footer {
+    color: #c8e7f0;
+    background-color: #25a2c3;
+    padding: 20px;
+}
+
+footer h2 {
+    color: white;
+}
+
+footer a:link,
+footer a:visited {
+    color: #c8e7f0;
+    cursor: pointer;
+}
+
+footer hr {
+    width: 50%;
+    margin-top: 30px;
+}
