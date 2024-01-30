@@ -185,7 +185,7 @@ console.log(me)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let miaLista=[]
+let miaLista = []
 for (let i = 1; i <= 10; i++) {
   miaLista.push(i);
 }
@@ -196,5 +196,5 @@ console.log(miaLista)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-miaLista[miaLista.length - 1]=100
+miaLista[miaLista.length - 1] = 100
 console.log(miaLista)
