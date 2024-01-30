@@ -196,5 +196,5 @@ console.log(miaLista)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-miaLista[9]=100
+miaLista[miaLista.length - 1]=100
 console.log(miaLista)
