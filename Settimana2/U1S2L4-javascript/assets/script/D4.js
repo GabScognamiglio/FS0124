@@ -71,7 +71,7 @@ function boundary(n) {
 
 }
 
-console.log(boundary('50'))
+console.log(boundary(50))
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
