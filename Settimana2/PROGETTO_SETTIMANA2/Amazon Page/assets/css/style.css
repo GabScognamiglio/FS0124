@@ -4,6 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #E9EDEE;
 }
 
 .bg-darkblue{
@@ -46,4 +47,73 @@ body {
 }
 h1{
     font-size: 1.7em;
+}
+span{
+    color: #22747D;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#perfectGift{
+    background-color: white;
+    margin: 30px;
+   text-align: center;
+}
+
+#perfectGift h3{
+text-align: left;
+font-weight: 400;
+margin: 10px;
+padding: 30px 10px;
+}
+.img1_4{
+    display: inline-block;
+    width: 300px;
+    height: 420px;
+    margin: 20px 30px;
+    /*border: 1px solid black;*/
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgb(230, 230, 230);
+
+}
+#img1{
+    background-image: url(../images/img_1.jpg);
+}
+#img2{
+    background-image: url(../images/img_2.jpg);
+}
+#img3{
+    background-image: url(../images/img_3.jpg);
+}
+#img4{
+    background-image: url(../images/img_4.jpg);
+}
+
+#img1, #img2, #img3, #img4{
+background-position: center;
+}
+
+.largo img{
+    width: 100%;
+
+}
+
+.largo{
+    margin: 0 30px;
+    text-align: center;
+}
+.titolini{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+footer{
+    text-align: center;
+}
+#logoBottom{
+    width: 250px;
+    margin: 30px;
 }
