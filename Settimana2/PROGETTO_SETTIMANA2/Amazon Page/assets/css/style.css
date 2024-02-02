@@ -1,0 +1,49 @@
+/* Your styles here */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-darkblue{
+    background-color: #222F3F;
+}
+.bg-blue{
+    background-color: #364759;
+    color: white;
+    padding: 10px 30px;
+    margin: 0;
+}
+
+#BTT:link, #BTT:visited{
+    color: white;
+    font-weight: bold;text-align: center;
+}
+
+#topLogo{
+    width: 170px;
+    padding: 10px 30px;
+}
+.navbar{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+#banner{
+    background-color: #F56600;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+#titolo{
+    background-image: url(../images/bg-image.png);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin:30px;
+}
+h1{
+    font-size: 1.7em;
+}
