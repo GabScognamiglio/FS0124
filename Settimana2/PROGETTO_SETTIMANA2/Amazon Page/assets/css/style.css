@@ -40,6 +40,9 @@ body {
 }
 #titolo{
     background-image: url(../images/bg-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
     color: white;
     text-align: center;
     padding: 30px;
@@ -74,7 +77,7 @@ padding: 10px;
     /*border: 1px solid black;*/
     max-width: 100%;
     border-radius: 20px;
-    box-shadow: 4px 4px 8px rgb(230, 230, 230);
+    box-shadow: 5px 5px 10px rgb(172, 172, 172);
 
 }
 #img1{
