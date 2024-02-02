@@ -11,8 +11,8 @@ REGOLE
     Dato il seguente array, scrivi del codice per stampare ogni elemento dell'array in console.
 */
 const pets = ['dog', 'cat', 'hamster', 'redfish']
-function stampaPets(){
-  for (let i=0; i<pets.length; i++){
+function stampaPets() {
+  for (let i = 0; i < pets.length; i++) {
     console.log(pets[i])
   }
 }
@@ -32,7 +32,7 @@ console.log(pets)
 */
 console.log('***ESERCIZIO 3***')
 
-function reversePets(){
+function reversePets() {
   pets.reverse()
   console.log(pets)
 }
@@ -44,8 +44,8 @@ reversePets()
 */
 console.log('***ESERCIZIO 4***')
 
-function firstLast(){
-  let primoPet = pets.splice(0,1)
+function firstLast() {
+  let primoPet = pets.splice(0, 1)
   pets.push(primoPet[0])
   console.log(pets)
 
@@ -76,10 +76,43 @@ const cars = [
   },
 ]
 
+console.log('***ESERCIZIO 5***')
+
+for (let i = 0; i < cars.length; i++) {
+  if (cars[i].brand === 'Ford') {
+    cars[i].licensePlate = 'aa000bb'
+  }
+  else if (cars[i].brand === 'Peugeot') {
+    cars[i].licensePlate = 'cc111dd'
+  }
+  else {
+    cars[i].licensePlate = 'ee222ff'
+  }
+}
+console.log(cars)
 /* ESERCIZIO 6
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
+console.log('***ESERCIZIO 6***')
+
+let newCar = { brand: 'Opel', model: 'Karl', color: 'Dark Gray', trims: ['base', 'nJoy', 'Cosmo'], licensePlate: 'ff555gg' }
+
+function aggiungiCar(c) {
+  cars.push(c)
+  console.log(cars)
+}
+
+aggiungiCar(newCar)
+
+function deleteTrim(){
+  for (i = 0; i < cars.length; i++) {
+    cars[i].trims.splice(-1, 1)
+    console.log(cars)
+  }
+}
+ deleteTrim()
+
 
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
