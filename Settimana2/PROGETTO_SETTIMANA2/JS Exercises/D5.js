@@ -11,19 +11,47 @@ REGOLE
     Dato il seguente array, scrivi del codice per stampare ogni elemento dell'array in console.
 */
 const pets = ['dog', 'cat', 'hamster', 'redfish']
+function stampaPets(){
+  for (let i=0; i<pets.length; i++){
+    console.log(pets[i])
+  }
+}
+console.log('***ESERCIZIO 1***')
+stampaPets()
 
 /* ESERCIZIO 2
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
 */
+console.log('***ESERCIZIO 2***')
+
+pets.sort()
+console.log(pets)
 
 /* ESERCIZIO 3
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
+console.log('***ESERCIZIO 3***')
+
+function reversePets(){
+  pets.reverse()
+  console.log(pets)
+}
+
+reversePets()
 
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
+console.log('***ESERCIZIO 4***')
 
+function firstLast(){
+  let primoPet = pets.splice(0,1)
+  pets.push(primoPet[0])
+  console.log(pets)
+
+}
+
+firstLast()
 /* ESERCIZIO 5
     Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.
 */
