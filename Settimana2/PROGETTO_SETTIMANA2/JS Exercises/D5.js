@@ -105,25 +105,46 @@ function aggiungiCar(c) {
 
 aggiungiCar(newCar)
 
-function deleteTrim(){
+function deleteTrim() {
   for (i = 0; i < cars.length; i++) {
     cars[i].trims.splice(-1, 1)
-    console.log(cars)
   }
+  console.log(cars)
 }
- deleteTrim()
+deleteTrim()
 
 
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
+console.log('***ESERCIZIO 7***')
+
 const justTrims = []
+
+for (i = 0; i < cars.length; i++) {
+  justTrims.push(cars[i].trims.slice(0, 1))
+}
+
+console.log(justTrims)
 
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
 */
+console.log('***ESERCIZIO 8***')
 
+function fizzBuzz() {
+  for (i = 0; i < cars.length; i++) {
+    if (cars[i].color.charAt(0) === 'b') {
+      console.log('Fizz')
+    }
+    else {
+      console.log('Buzz')
+    }
+  }
+}
+
+fizzBuzz()
 /* ESERCIZIO 9
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
 */
@@ -131,9 +152,98 @@ const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ]
 
+console.log('***ESERCIZIO 9***')
+
+let g = 0
+
+while (g < numericArray.length) {
+  console.log(numericArray[g])
+
+  if (numericArray[g] === 32) {
+    break;
+  }
+  g++
+}
+
+
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
 const charactersArray = ['g', 'n', 'u', 'z', 'd']
+
+console.log('***ESERCIZIO 10***')
+
+let ordAlf = []
+for (let i = 0; i < charactersArray.length; i++) {
+
+
+  switch (charactersArray[i]) {
+    case 'a':
+      ordAlf.push(1);
+      break;
+    case 'b':
+      ordAlf.push(2);
+      break;
+    case 'c':
+      ordAlf.push(3);
+      break;
+    case 'd':
+      ordAlf.push(4);
+      break;
+    case 'e':
+      ordAlf.push(5);
+      break;
+    case 'f':
+      ordAlf.push(6);
+      break;
+    case 'g':
+      ordAlf.push(7);
+      break;
+    case 'h':
+      ordAlf.push(8);
+      break;
+    case 'i':
+      ordAlf.push(9);
+      break;
+    case 'l':
+      ordAlf.push(10);
+      break;
+    case 'm':
+      ordAlf.push(11);
+      break;
+    case 'n':
+      ordAlf.push(12);
+      break;
+    case 'o':
+      ordAlf.push(13);
+      break;
+    case 'p':
+      ordAlf.push(14);
+      break;
+    case 'q':
+      ordAlf.push(15);
+      break;
+    case 'r':
+      ordAlf.push(16);
+      break;
+    case 's':
+      ordAlf.push(17);
+      break;
+    case 't':
+      ordAlf.push(18);
+      break;
+    case 'u':
+      ordAlf.push(19);
+      break;
+    case 'v':
+      ordAlf.push(20);
+      break;
+    case 'z':
+      ordAlf.push(21);
+      break;
+
+  }
+}
+console.log(ordAlf)
