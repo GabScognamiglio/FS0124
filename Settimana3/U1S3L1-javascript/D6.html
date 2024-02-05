@@ -156,6 +156,7 @@
       //document.getElementById('firstList').innerHTML='';
       //document.getElementById('firstList').remove();
       document.getElementById('firstList').setAttribute('style', 'display: none');
+      //document.getElementById('firstList').style.display('none');
     }
     hideFirstUl()
 
@@ -194,10 +195,13 @@
     */
 
     const revealFooterLink = function () {
-      let footer = document.getElementsByTagName('footer')[0]
+      let footer = document.querySelector('footer');
+      footer.style.cursor = 'pointer'
       footer.addEventListener('click', function () {
-        footer.innerHTML += '&nbsp ' + document.querySelectorAll('h3 a')[0].href
-      })   //ogni volta che clicco concatena
+        const footerLink = document.querySelector('footer a');
+        const linkFooter = footerLink.getAttribute('href');
+        alert(linkFooter);
+      })
     }
     revealFooterLink()
 
