@@ -117,8 +117,11 @@
     */
 
     const changeUrls = function () {
-      document.querySelectorAll('a :not(footer a)').href='https://www.google.com'
-    }
+      const links = document.querySelectorAll('a:not(footer a');
+      for (let i = 0; i < links.length; i++) {
+        links[i].setAttribute('href', 'https://www.google.com');
+      }
+    };
 
     changeUrls()
 
@@ -127,29 +130,29 @@
   */
 
     const addToTheSecond = function () {
-      let li= document.createElement('li')
-      li.innerText='elemento aggiunto'
+      let li = document.createElement('li')
+      li.innerText = 'elemento aggiunto'
       document.getElementById("secondList").append(li)
-      
-     }
 
-     addToTheSecond()
+    }
+
+    addToTheSecond()
 
     /* ESERCIZIO 6
      Scrivi una funzione che aggiunga un paragrafo al primo div
   */
 
     const addParagraph = function () {
-      let p=document.createElement('p')
-      p.innerText='Questo è un paragrafo aggiunto'
+      let p = document.createElement('p')
+      p.innerText = 'Questo è un paragrafo aggiunto'
       document.getElementsByTagName('div')[0].append(p)
-     }
-     addParagraph()
+    }
+    addParagraph()
     /* ESERCIZIO 7
      Scrivi una funzione che faccia scomparire la prima lista non ordinata
   */
 
-    const hideFirstUl = function () { 
+    const hideFirstUl = function () {
       //document.getElementById('firstList').innerHTML='';
       //document.getElementById('firstList').remove();
       document.getElementById('firstList').setAttribute('style', 'display: none');
@@ -160,10 +163,10 @@
      Scrivi una funzione che renda verde il background di ogni lista non ordinata
     */
 
-    const paintItGreen = function () { 
-      let uls= document.getElementsByTagName('ul')
-      for (let i=0; i<uls.length; i++)
-      document.getElementsByTagName('ul')[i].style.backgroundColor= 'green'
+    const paintItGreen = function () {
+      let uls = document.getElementsByTagName('ul')
+      for (let i = 0; i < uls.length; i++)
+        document.getElementsByTagName('ul')[i].style.backgroundColor = 'green'
     }
 
     paintItGreen()
@@ -173,31 +176,32 @@
     */
 
     const makeItClickable = function () {
-      let fade=document.getElementsByTagName('h1')[0];
-      fade.addEventListener('click', function(){
-        let testo= fade.innerText;
-        let nuovoTesto= testo.slice(0,-1);
-        fade.innerText=nuovoTesto
-      }) }
+      let fade = document.getElementsByTagName('h1')[0];
+      fade.addEventListener('click', function () {
+        let testo = fade.innerText;
+        let nuovoTesto = testo.slice(0, -1);
+        fade.innerText = nuovoTesto
+      })
+    }
 
-      makeItClickable()
+    makeItClickable()
 
 
-    
+
 
     /* ESERCIZIO 10
      Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
     */
 
-    const revealFooterLink = function () { 
+    const revealFooterLink = function () {
       let footer = document.getElementsByTagName('footer')[0]
-      footer.addEventListener('click', function(){
-        footer.innerHTML+='&nbsp ' + document.querySelectorAll('h3 a')[0].href
-      } )   //ogni volta che clicco concatena
+      footer.addEventListener('click', function () {
+        footer.innerHTML += '&nbsp ' + document.querySelectorAll('h3 a')[0].href
+      })   //ogni volta che clicco concatena
     }
     revealFooterLink()
 
-   
+
     /* ESERCIZIO 11
      Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
      La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
@@ -205,18 +209,18 @@
 
     const generateTable = function () {
       let table = document.createElement('table')
-      let headerRow= table.createTHead().insertRow(0)
-      let headerCell1= headerRow.insertCell(0);
-      headerCell1.innerText= 'Immagine'
-      let headerCell2= headerRow.insertCell(1);
-      headerCell1.innerText= 'Nome prodotto'
-      let headerCell3= headerRow.insertCell(2);
-      headerCell1.innerText= 'Quantità'
-      let headerCell4= headerRow.insertCell(3);
-      headerCell1.innerText= 'Prezzo'
+      let headerRow = table.createTHead().insertRow(0)
+      let headerCell1 = headerRow.insertCell(0);
+      headerCell1.innerText = 'Immagine'
+      let headerCell2 = headerRow.insertCell(1);
+      headerCell1.innerText = 'Nome prodotto'
+      let headerCell3 = headerRow.insertCell(2);
+      headerCell1.innerText = 'Quantità'
+      let headerCell4 = headerRow.insertCell(3);
+      headerCell1.innerText = 'Prezzo'
 
-     
-    
+
+
       document.getElementById('tableArea').appendChild(table)
     }
 
