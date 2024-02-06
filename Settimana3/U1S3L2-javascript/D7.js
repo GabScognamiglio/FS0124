@@ -286,7 +286,7 @@ const anni=[]
 
 
 for (let i=0;i<movies.length;i++){
-  anni.push(movies[i].Year)
+  anni.push(parseInt(movies[i].Year))   //metto parseInt() perchè altrimenti li tratta come stringhe e concatena!
 }
 
 console.log(anni)
@@ -295,7 +295,7 @@ const sommaAnni=anni.reduce((totale, valoreCorrente)=>
 totale+valoreCorrente,0
 )
 
-console.log(sommaAnni)   //concatena le stringhe e non mi fa la somma
+console.log(sommaAnni)   
 
 
 /* ESERCIZIO 14 (find)
