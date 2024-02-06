@@ -281,6 +281,22 @@ console.log(titoloni2000)
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+console.log('***ESERCIZIO 13***')
+const anni=[]
+
+
+for (let i=0;i<movies.length;i++){
+  anni.push(movies[i].Year)
+}
+
+console.log(anni)
+
+const sommaAnni=anni.reduce((totale, valoreCorrente)=>
+totale+valoreCorrente,0
+)
+
+console.log(sommaAnni)   //concatena le stringhe e non mi fa la somma
+
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
