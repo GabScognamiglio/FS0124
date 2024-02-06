@@ -56,12 +56,12 @@ const sommaArray = (array) => {
   let somma = 0;
 
   array.forEach(element => {
-      somma += element;
+    somma += element;
   });
 
 };
 
-let risultato=sommaArray(array0)
+let risultato = sommaArray(array0)
 console.log(risultato)
 
 
@@ -73,21 +73,50 @@ console.log(risultato)
 */
 console.log('***ESERCIZIO 5***')
 
-const array2=[10,20,25,35]
-const totale=array2.reduce((totale, valoreCorrente)=>totale + valoreCorrente,0)
+const array2 = [10, 20, 25, 35]
+const totale = array2.reduce((totale, valoreCorrente) => totale + valoreCorrente, 0)
 console.log(totale)
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+console.log('***ESERCIZIO 6***')
 
+const array3 = [2, 16, 95, 100]
+
+function incremento(n) {
+  arrayInc = array3.map((element) => {
+    return element + n;
+  })
+  console.log(arrayInc)
+}
+
+incremento(5)
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+console.log('***ESERCIZIO 7***')
 
+
+const StringArr = ['gab', 'scogna', 'ciao']
+const lungArr = StringArr.map((element) => {   //definisco nuovo array, mappando ogni elemento, mi ci deve infilare (return) la lunghezza di ogni element (element.length)
+  return element.length
+})
+
+console.log(lungArr)
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+console.log('***ESERCIZIO 8***')
+
+const disparoni = []
+for (let i = 0; i < 100; i++) {
+  if (i % 2 !== 0){
+    disparoni.push(i)
+  }
+}
+
+console.log(disparoni)
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
