@@ -111,7 +111,7 @@ console.log('***ESERCIZIO 8***')
 
 const disparoni = []
 for (let i = 0; i < 100; i++) {
-  if (i % 2 !== 0){
+  if (i % 2 !== 0) {
     disparoni.push(i)
   }
 }
@@ -237,19 +237,47 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+console.log('***ESERCIZIO 9***')
+
+   movies.forEach((element) => {
+  let piuVecchio = movies[0];
+  if (element.Year < piuVecchio.Year) {
+    piuVecchio=element
+    return element.Title
+  }
+}
+)     //da rivedere!!!!
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+console.log('***ESERCIZIO 10***')
+
+const totaleFilm=movies.length
+console.log(totaleFilm)
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+console.log('***ESERCIZIO 11***')
 
+const titoloni=movies.map((element)=>{
+  return element.Title
+})
+
+console.log(titoloni)
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+console.log('***ESERCIZIO 12***')
 
+const titoloni2000=movies.filter((element)=>{
+  if (element.Year>2000){
+    return element.Title
+  }
+})
+
+console.log(titoloni2000)
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
