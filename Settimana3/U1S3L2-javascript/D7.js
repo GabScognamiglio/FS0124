@@ -2,23 +2,80 @@
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
+console.log('***ESERCIZIO 1***')
+
+function concatenaStringhe(s1 = '', s2 = '') {
+  nuovaStringa1 = s1.substring(0, 2)
+  nuovaStringa2 = s2.substring(s2.length, -2)
+  stringaFinale = nuovaStringa1 + nuovaStringa2
+  const stringaMaius = stringaFinale.toUpperCase()
+  console.log(stringaMaius)
+}
+
+concatenaStringhe('ciao', 'mario')
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
 
+console.log('***ESERCIZIO 2***')
+
+const numeroni = []
+
+function zeroCento() {
+  for (let i = 0; i < 10; i++) {
+    const casuale = Math.floor(Math.random() * 101)
+    numeroni.push(casuale)
+
+  }
+  console.log(numeroni)
+}
+
+zeroCento()
+
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
+console.log('***ESERCIZIO 3***')
+
+const pariDisp = [5, 12, 66, 57, 41, 22, 89, 100]
+
+const soloPari = pariDisp.filter((element) => {
+  return element % 2 === 0
+})
+console.log(soloPari)
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+console.log('***ESERCIZIO 4***')
+
+const array0 = [1, 2, 3, 4, 5]
+
+const sommaArray = (array) => {
+  let somma = 0;
+
+  array.forEach(element => {
+      somma += element;
+  });
+
+};
+
+let risultato=sommaArray(array0)
+console.log(risultato)
+
+
+
+
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+console.log('***ESERCIZIO 5***')
 
+const array2=[10,20,25,35]
+const totale=array2.reduce((totale, valoreCorrente)=>totale + valoreCorrente,0)
+console.log(totale)
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
