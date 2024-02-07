@@ -52,17 +52,18 @@ console.log('***ESERCIZIO 4***')
 
 const array0 = [1, 2, 3, 4, 5]
 
-const sommaArray = (array) => {
+const sommaArray = () => {
   let somma = 0;
 
-  array.forEach(element => {
+  array0.forEach(element => {
     somma += element;
   });
-
+  return somma;
 };
 
-let risultato = sommaArray(array0)
-console.log(risultato)
+console.log(sommaArray())
+
+
 
 
 
@@ -239,21 +240,28 @@ const movies = [
 */
 console.log('***ESERCIZIO 9***')
 
-   movies.forEach((element) => {
-  let piuVecchio = movies[0];
-  if (element.Year < piuVecchio.Year) {
-    piuVecchio=element
-    return element.Title
-  }
-}
-)     //da rivedere!!!!
+function piuVecchio() {
+  let anno = 3000;
+  movies.forEach((element) => {
+    if (Number(element.Year) < anno) {
+      anno = Number(element.Year);
+    }
+  });
+  console.log(anno);
+};
+
+piuVecchio()
+
+
+
+//da rivedere!!!!
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 console.log('***ESERCIZIO 10***')
 
-const totaleFilm=movies.length
+const totaleFilm = movies.length
 console.log(totaleFilm)
 
 /* ESERCIZIO 11 (map)
@@ -261,7 +269,7 @@ console.log(totaleFilm)
 */
 console.log('***ESERCIZIO 11***')
 
-const titoloni=movies.map((element)=>{
+const titoloni = movies.map((element) => {
   return element.Title
 })
 
@@ -271,8 +279,8 @@ console.log(titoloni)
 */
 console.log('***ESERCIZIO 12***')
 
-const titoloni2000=movies.filter((element)=>{
-  if (element.Year>2000){
+const titoloni2000 = movies.filter((element) => {
+  if (element.Year > 2000) {
     return element.Title
   }
 })
@@ -282,20 +290,20 @@ console.log(titoloni2000)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 console.log('***ESERCIZIO 13***')
-const anni=[]
+const anni = []
 
 
-for (let i=0;i<movies.length;i++){
+for (let i = 0; i < movies.length; i++) {
   anni.push(parseInt(movies[i].Year))   //metto parseInt() perchè altrimenti li tratta come stringhe e concatena!
 }
 
 console.log(anni)
 
-const sommaAnni=anni.reduce((totale, valoreCorrente)=>
-totale+valoreCorrente,0
+const sommaAnni = anni.reduce((totale, valoreCorrente) =>
+  totale + valoreCorrente, 0
 )
 
-console.log(sommaAnni)   
+console.log(sommaAnni)
 
 
 /* ESERCIZIO 14 (find)
