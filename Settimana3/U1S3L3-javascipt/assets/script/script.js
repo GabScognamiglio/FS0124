@@ -5,30 +5,6 @@ const lista = document.getElementById('lista')
 const valid = false
 
 
-//controllo input valido
-
-function disabilita() {
-    button.setAttribute('disabled', 'true')
-}
-
-disabilita()
-
-input.addEventListener('blur', function (e) {
-    e.preventDefault();
-    if (input.value !== '') {
-        button.removeAttribute('disabled')
-    }
-    else {
-        disabilita();
-    }
-})
-
-
-
-
-
-
-
 //cosa succede al click del bottone
 button.addEventListener('click', function (e) {
     e.preventDefault();
@@ -38,7 +14,7 @@ button.addEventListener('click', function (e) {
     delete
     </span></button>`;
     lista.appendChild(taskLista);
-    input.value = '';
+    //input.value = '';
     taskLista.onclick = function () {
         this.classList.toggle('clicked')
     };
@@ -47,10 +23,5 @@ button.addEventListener('click', function (e) {
 )
 
 //eliminare un task creato
-const elimina = document.getElementsByClassName('elimina')
-for (i = 0; i < elimina.length; i++) {
-    elimina[i].onclick= function(){
-        taskLista.removeChild(li)
-    }}
-        
+
  
