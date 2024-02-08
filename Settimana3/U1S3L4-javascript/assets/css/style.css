@@ -32,6 +32,7 @@ header{
     border-radius: 5px;
     box-shadow: 2px 2px 5px gray;
     margin: 1px;
+
     
 }
 
@@ -63,6 +64,7 @@ header{
     padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px gray;
+
 }
 #ultimoEstratto span{
     font-size: 1.3em;
