@@ -46,7 +46,7 @@ h2 {
     top: 50%;
     left: 0;
     right: 0;
-    transform: translateY(50%);
+    transform: translateY(-50%);
 }
 
 .day.selected{
@@ -112,4 +112,23 @@ form button {
 
 #appointments{
     display: none;
+}
+
+.dot{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #7a408a;
+
+}
+
+#newMeetingDay.hasDay{
+    font-size: 28px;
+    background-color: #0c0b1d;
+    border-radius: 5px;
+    padding: 5px;
 }
