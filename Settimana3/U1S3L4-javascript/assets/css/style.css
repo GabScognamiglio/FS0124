@@ -6,11 +6,12 @@ body{
     text-align: center;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    background-color: #e6e6e6;
 }
 
 header{
     background-color: rgb(35, 72, 114);
-    color: white;
+    color: #e6e6e6;
     padding: 5px;
     margin-bottom: 30px;
     box-shadow: 5px 5px 10px gray;
@@ -38,13 +39,13 @@ header{
 
 .estratte{
     background-color:rgb(35, 72, 114);
-    color: white;
+    color: #e6e6e6;
 }
 
 #estrai{
     background-color: brown;
     border-style: none;
-    color: white;
+    color: #e6e6e6;
     font-size: 1em;
     padding: 10px 20px;
     border-radius: 10px;
