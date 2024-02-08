@@ -50,7 +50,6 @@ function evidenziaEstratti() {
             celleEstratte[i].classList.add('estratte');
         }
     }
-
 }
   
 
