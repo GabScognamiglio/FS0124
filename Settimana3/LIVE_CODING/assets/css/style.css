@@ -31,6 +31,7 @@ input {
     padding: 10px;
     border-radius: 5px;
     font-weight: 700;
+    color: #ebebeb;
 }
 
 input:focus {
@@ -39,4 +40,29 @@ input:focus {
 
 input:focus::placeholder {
     color: #615d9c;
+}
+
+#newMeetingDay {
+    display: inline-block;
+    min-height: 40px;
+}
+
+#newMeetingName {
+    width: 200px;
+}
+
+form button {
+    cursor: pointer;
+    background-color: #7a408a;
+    color: #efd7f5;
+    border: none;
+    width: 130px;
+    min-height: 36px;
+    font-weight: 700;
+    padding: 10px;
+
+}
+
+#appointments{
+    display: none;
 }
