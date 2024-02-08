@@ -40,5 +40,35 @@ const daysInThisMonth= ()=>{
     const getYear= now.getFullYear();
     const lastDayInTheMonth=new Date(getYear, getMonth +1, 0); //prendo l'ultimo giorno del mese (anno, mese prossimo, giorno 0 che non esiste, quindi mi da l'ultimo del mese corrente)
     console.log(lastDayInTheMonth);
+    const numberOfTheDay = lastDayInTheMonth.getDate();
+    return numberOfTheDay;
 }
 daysInThisMonth();
+
+
+//devo eliminare la classe .selected se presente, altrimenti rimangono selezionati più giorni
+const unselectAllDays = () => {
+    const previousSelected= document.querySelector('.selected');
+    if (previousSelected) {
+        previousSelected.classList.remove('selected')
+    }
+}
+//funzione per gestire new meetingday
+const changeMeetingDaySection = (indexOfTheDay) => {
+    const rightSpan = document.getElementById('newMeetingDay');
+    rightSpan.classList.add('hasDay');
+    rightSpan.innerText = indexOfTheDay + 1;
+}
+
+const createDays = (numberOfDays) => {
+    const calendarDiv = document.getElementById('calendar');
+    //ciclo numero giorni, creo e appendo div nel contenitore padre 'calendar'
+    for (let i=0; i<numberOfDays; i++) {
+        const dayCellDiv = document.createElement('div');
+        dayCellDiv.classList.add('day');
+        dayCellDiv.addEventListener('click', function(){
+
+        })
+    }
+
+}

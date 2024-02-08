@@ -24,6 +24,35 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.day{
+    display: inline-block;
+    width: 14%;
+    height: 100px;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.day:hover{
+    background-color: #15132e;
+}
+
+.day h3 {
+    text-align: center;
+    font-size: 26px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(50%);
+}
+
+.day.selected{
+    border-color: #7a408a;
+}
+
 form {
     display: inline;
 }
