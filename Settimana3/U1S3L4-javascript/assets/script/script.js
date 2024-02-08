@@ -4,6 +4,9 @@ const tabellone = document.getElementById('tabellone')
 const bottone = document.getElementById('estrai')
 const ultimoEstratto = document.getElementById('ultimoEstratto')
 let numeroEstratto;
+
+
+
 //creazione griglione iniziale
 
 const griglia = () => {
@@ -29,7 +32,7 @@ function estraiNumero() {
         numeriEstratti.splice(numeriEstratti.length, 1)
         estraiNumero();
     }
-    console.log(numeroEstratto);  //e intanto il cazzo di numero lo genera! DAJE!
+    console.log(numeroEstratto);  //e intanto il c***o di numero lo genera! DAJE!
     numeriEstratti.push(numeroEstratto)
     ultimoEstratto.innerHTML = `L'ultimo numero estratto è: &nbsp; <span> ${numeroEstratto} </span>`
     console.log(numeriEstratti);
