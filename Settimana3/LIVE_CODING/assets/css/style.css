@@ -7,6 +7,17 @@ html, body {
     color: #ebebeb;
 }
 
+.container{
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 64px;
+    font-weight: 900;
+    margin: 1rem 0;
+    
+}
 h2 {
     font-size: 36px;
     font-weight: 700;
@@ -49,6 +60,13 @@ input:focus::placeholder {
 
 #newMeetingName {
     width: 200px;
+}
+
+#newMeetingTime::-webkit-calendar-picker-indicator{
+    background-color: #7a408a;
+    border-radius: 50%;
+    cursor: pointer;
+    
 }
 
 form button {
