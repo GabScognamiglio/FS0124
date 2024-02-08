@@ -26,11 +26,12 @@ header{
 }
 .celle{
     display: inline-block;
-    width: 85px;
+    width: 83px;
     height: 35px;
     /*border: 1px solid gray;*/
     border-radius: 5px;
     box-shadow: 2px 2px 5px gray;
+    margin: 1px;
     
 }
 
