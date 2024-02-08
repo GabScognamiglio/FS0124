@@ -1,0 +1,58 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(35, 72, 114);
+    color: white;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+#tabellone{
+    max-width: 850px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid rgb(35, 72, 114) ;
+    margin-bottom: 30px;
+}
+.celle{
+    display: inline-block;
+    width: 85px;
+    height: 35px;
+    /*border: 1px solid gray;*/
+    border-radius: 5px;
+    
+}
+
+.estratte{
+    background-color:rgb(35, 72, 114);
+    color: white;
+}
+
+#estrai{
+    background-color: brown;
+    border-style: none;
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#estrai:hover{
+    background-color: rgb(199, 65, 65);
+}
+
+#ultimoEstratto{
+    display: inline-block;
+    background-color: rgb(0, 87, 0);
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
