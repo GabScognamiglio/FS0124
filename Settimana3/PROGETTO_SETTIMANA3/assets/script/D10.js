@@ -490,27 +490,30 @@ function tableDivision() {
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
-const tds = document.getElementsByTagName('td');
+
 function stampaTD() {
+  const tds = document.getElementsByTagName('td');
   for (let i = 0; i < tds.length; i++) {
     console.log(tds[i].innerText);
   }
 }
-//stampaTD();   //mi dice document is not defined, ma il codice è scritto bene
+//stampaTD();   //mi dice document is not defined in console, ma il codice è scritto bene
 
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
-const links = document.querySelectorAll('a')
+
 function linkRossi() {
+  const links = document.querySelectorAll('a')
   links.forEach(link => {
     link.style.backgroundColor = 'red';
   })
 }
 
-linkRossi();
+//linkRossi(); //mi dice document is not defined in console, ma il codice è scritto bene
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
@@ -521,7 +524,7 @@ function appendiLi() {
   lista.appendChild(nuovoLi)
 }
 
-appendiLi();
+//appendiLi(); //mi dice document is not defined in console, ma il codice è scritto bene
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
@@ -531,7 +534,7 @@ function svuotaLista() {
   lista.innerHTML=''
 }
 
-svuotaLista();
+//svuotaLista(); //mi dice document is not defined in console, ma il codice è scritto bene
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
@@ -543,7 +546,7 @@ function trTest() {
   })
 }
 
-trTest();
+//trTest(); //mi dice document is not defined in console, ma il codice è scritto bene
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
@@ -557,6 +560,18 @@ trTest();
   ***
 
 */
+console.log('***ESERCIZIO 27***');
+
+function halfTree(numero) {
+  let riga = '';
+  for (let i=0; i<numero; i++) {
+    riga += '*'
+    console.log(riga)
+}}
+
+halfTree(3);
+
+
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -569,10 +584,44 @@ trTest();
   *****
 
 */
+console.log('***ESERCIZIO 28***');
+
+function tree(numero) {
+  let riga = '';
+  for (let i=0; i<numero; i++) {
+    riga += ' ** '
+    console.log(riga)
+}}
+
+//tree(3);   //niente, non ci sono riuscito
+
+
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+console.log('***ESERCIZIO 29***');
+
+//devo testare che numero non sia divisibile tra 2 e la radice quadrata del numero
+// per trovare la radice quadrata c'è il metodo Math.sqrt
+
+function isItPrime(numero) {
+  for (let i = 2; i<Math.sqrt(numero); i++){
+    if (numero%i===0){
+      return false;
+    }
+    else {return true}
+  }  
+}
+
+console.log(isItPrime(5));
+console.log(isItPrime(16))
+console.log(isItPrime(51));
+console.log(isItPrime(100));
+
+
+
+
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
