@@ -479,23 +479,31 @@ removeIndex(0);
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 function container(){
-  const container=document.getElementById('container');
-  console.log(container)
+  document.getElementById('container');
 };
-
-container()
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
-
+function tableDivision() {
+  const td = document.getElementsByTagName('td')
+};
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+const tds = document.getElementsByTagName('td');
+function stampaTD(){
+  for (let i=0; i<tds.length; i++) {
+    console.log(tds[i].innerText);
+  }
+}
 
+stampaTD();
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+function linkRossi() {
 
+}
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
