@@ -12,66 +12,147 @@ REGOLE
 /* ESERCIZIO A
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
+console.log('***ESERCIZI A-G***')
+let a = 10;
+let b = 20;
+let sum = a + b
 
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
+let random = Math.floor(Math.random() * 21)
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
-
+const me = {
+  name: 'Gabriele',
+  surname: 'Scognamiglio',
+  age: 28
+}
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
+delete (me.age)
+console.log(me)
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
-
+me.skills = ['HTML', 'CSS', 'JS']
+console.log(me)
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
-
+me.skills.push('idraulica')
+console.log(me)
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
-
+me.skills.pop('idraulica')
+console.log(me)
 // Funzioni
 
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
+console.log('***ESERCIZIO 1***')
 
+function dice() {
+  let dado = Math.floor(Math.random() * 6) + 1
+  console.log(dado)
+}
+
+dice();
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+console.log('***ESERCIZIO 2***')
+
+function whoIsBigger(num1,num2){
+  if (num1>num2) {
+    console.log(num1)
+  }
+  else if (num1===num2) {
+    console.log('There\'s no bigger')
+  }
+  else {
+    console.log(num2)
+  }
+}
+
+whoIsBigger(10,20);
+whoIsBigger(16,16);
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
 
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
+console.log('***ESERCIZIO 3***')
+
+function splitMe(string){
+  let arrayStr=string.split(' ');
+  console.log(arrayStr)
+}
+splitMe('io sono gab')
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+console.log('***ESERCIZIO 4***')
+
+function deleteOne(string='', tf){
+  if(tf===true){
+    
+    console.log(string.slice(0,-1))
+  }
+  else {
+    console.log(string.slice(1))
+  }
+}
+deleteOne('Gabriele', false)
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
+console.log('***ESERCIZIO 5***')
+
+function onlyLetters(stringa) {
+  return stringa.replace(/[0-9]/g, '');
+}
+
+console.log(onlyLetters('ci son 2 coccodrilli'))
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
+console.log('***ESERCIZIO 6***')
+
+function isThisAnEmail(stringa) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(stringa);
+}
+console.log(isThisAnEmail('pippo@pluto'))
+console.log(isThisAnEmail('gab@gmail.com'))
+
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+console.log('***ESERCIZIO 7***')
 
+function whatDayIsIt() {
+  const giorniSettimana=['Domenica','Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
+  let data = new Date();
+  let giorno= data.getDay();
+  console.log(giorniSettimana[giorno]);
+}
+
+whatDayIsIt()
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
   Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
