@@ -466,13 +466,24 @@ searchAndDivide('Greystoke');
 */
 console.log('***ESERCIZIO 19***');
 
+function removeIndex(ind) {
+  movies.splice(ind,1);
+  console.log(movies);
+};
+
+removeIndex(0);
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+function container(){
+  const container=document.getElementById('container');
+  console.log(container)
+};
 
+container()
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
