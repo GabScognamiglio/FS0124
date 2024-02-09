@@ -467,7 +467,7 @@ searchAndDivide('Greystoke');
 console.log('***ESERCIZIO 19***');
 
 function removeIndex(ind) {
-  movies.splice(ind,1);
+  movies.splice(ind, 1);
   console.log(movies);
 };
 
@@ -478,7 +478,7 @@ removeIndex(0);
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
-function container(){
+function container() {
   document.getElementById('container');
 };
 /* ESERCIZIO 21
@@ -491,31 +491,59 @@ function tableDivision() {
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 const tds = document.getElementsByTagName('td');
-function stampaTD(){
-  for (let i=0; i<tds.length; i++) {
+function stampaTD() {
+  for (let i = 0; i < tds.length; i++) {
     console.log(tds[i].innerText);
   }
 }
+//stampaTD();   //mi dice document is not defined, ma il codice è scritto bene
 
-stampaTD();
+
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
-function linkRossi() {
 
+const links = document.querySelectorAll('a')
+function linkRossi() {
+  links.forEach(link => {
+    link.style.backgroundColor = 'red';
+  })
 }
+
+linkRossi();
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+function appendiLi() {
+  const lista = document.getElementById('mylist');
+  const nuovoLi = document.createElement('li');
+  nuovoLi.innerText = 'javascriptone';
+  lista.appendChild(nuovoLi)
+}
+
+appendiLi();
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+function svuotaLista() {
+  const lista = document.getElementById('mylist');
+  lista.innerHTML=''
+}
+
+svuotaLista();
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+function trTest() {
+  const trs= document.querySelectorAll('tr');
+  trs.forEach(element => {
+    element.classList.add('test');
+  })
+}
 
+trTest();
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
