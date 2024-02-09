@@ -59,21 +59,21 @@ console.log(me)
 console.log('***ESERCIZIO 1***')
 
 function dice() {
-  let dado = Math.floor(Math.random() * 6) + 1
-  console.log(dado)
+
+  return Math.floor(Math.random() * 6) + 1
 }
 
-dice();
+console.log(dice());
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 console.log('***ESERCIZIO 2***')
 
-function whoIsBigger(num1,num2){
-  if (num1>num2) {
+function whoIsBigger(num1, num2) {
+  if (num1 > num2) {
     console.log(num1)
   }
-  else if (num1===num2) {
+  else if (num1 === num2) {
     console.log('There\'s no bigger')
   }
   else {
@@ -81,8 +81,8 @@ function whoIsBigger(num1,num2){
   }
 }
 
-whoIsBigger(10,20);
-whoIsBigger(16,16);
+whoIsBigger(10, 20);
+whoIsBigger(16, 16);
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -91,8 +91,8 @@ whoIsBigger(16,16);
 */
 console.log('***ESERCIZIO 3***')
 
-function splitMe(string){
-  let arrayStr=string.split(' ');
+function splitMe(string) {
+  let arrayStr = string.split(' ');
   console.log(arrayStr)
 }
 splitMe('io sono gab')
@@ -103,10 +103,10 @@ splitMe('io sono gab')
 */
 console.log('***ESERCIZIO 4***')
 
-function deleteOne(string='', tf){
-  if(tf===true){
-    
-    console.log(string.slice(0,-1))
+function deleteOne(string = '', tf) {
+  if (tf === true) {
+
+    console.log(string.slice(0, -1))
   }
   else {
     console.log(string.slice(1))
@@ -146,9 +146,9 @@ console.log(isThisAnEmail('gab@gmail.com'))
 console.log('***ESERCIZIO 7***')
 
 function whatDayIsIt() {
-  const giorniSettimana=['Domenica','Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
+  const giorniSettimana = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
   let data = new Date();
-  let giorno= data.getDay();
+  let giorno = data.getDay();
   console.log(giorniSettimana[giorno]);
 }
 
@@ -165,6 +165,23 @@ whatDayIsIt()
       values: [3, 3, 4]
   }
 */
+console.log('***ESERCIZIO 8***');
+
+function rollTheDices(num) {
+  let dadoni = {}
+  let somma = 0;
+  let array = []
+  for (let i = 1; i <= num; i++) {
+    let dado = dice();
+    somma = somma + dado
+    array.push(dado)
+  }
+  dadoni.sum = somma
+  console.log(dadoni)
+  console.log(array)
+}
+
+rollTheDices(5)
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
