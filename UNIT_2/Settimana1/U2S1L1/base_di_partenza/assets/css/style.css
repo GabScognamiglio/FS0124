@@ -287,12 +287,15 @@ footer a {
     header {
         text-align: left;
         padding: 0.5em 1.5em;
+        position: relative;
     }
 
     header nav {
         position: absolute;
-        right: 5%;
-        top: 4.2%;
+        transform: translateY(-50%);
+        top: 50%;
+        vertical-align: middle;
+        right: 4.2% ;
 
     }
 
