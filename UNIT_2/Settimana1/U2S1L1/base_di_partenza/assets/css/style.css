@@ -322,4 +322,10 @@ footer a {
     aside {
         display: none;
     }
+
+    thead tr {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
 }
