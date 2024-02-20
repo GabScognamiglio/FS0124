@@ -14,7 +14,9 @@ body {
 
 hr {
   display: none;
-} /* rimuove l'elemento */
+}
+
+/* rimuove l'elemento */
 
 /* HEADER */
 header {
@@ -45,6 +47,7 @@ header {
   header {
     text-align: left;
   }
+
   header .brand,
   header nav,
   header .brand p {
@@ -54,9 +57,11 @@ header {
   header .brand {
     width: 75%;
   }
+
   header .brand img {
     vertical-align: middle;
   }
+
   header .brand p {
     margin-bottom: 0;
   }
@@ -65,21 +70,26 @@ header {
 header nav ul {
   margin: 0;
 }
+
 header nav li {
   list-style: none;
   display: inline-block;
   margin-right: 10px;
 }
+
 header nav li:last-child {
   margin-right: 0;
 }
+
 header nav li a {
   color: white;
   text-decoration: none;
 }
+
 header nav li a:hover {
   color: red;
 }
+
 header nav li a::before {
   content: "\22c6\0020";
 }
@@ -91,6 +101,7 @@ main {
   padding: 2em 1em;
   margin-bottom: 1.5em;
 }
+
 @media screen and (min-width: 700px) {
   main {
     padding: 2em;
@@ -133,11 +144,12 @@ blockquote {
   margin-bottom: 1.2em;
 }
 
-h1 + p {
+h1+p {
   color: #a0a0a0;
 }
 
 @media screen and (max-width: 499px) {
+
   p,
   ul,
   ol {
@@ -177,6 +189,7 @@ h1 + p {
   body {
     line-height: 2;
   }
+
   section {
     border-radius: 20px;
   }
@@ -188,23 +201,28 @@ h1 + p {
   outline: 4px solid #a02571;
   padding: 3px;
 }
+
 ul,
 ol {
   margin-left: 2em;
 }
+
 a {
   color: #00a0c6;
   font-weight: bold;
 }
+
 strong {
   color: #a02571;
   font-weight: bold;
 }
+
 code {
   background-color: #e3e3e3;
   border: 1px solid #969494;
   border-radius: 5px;
 }
+
 iframe {
   width: 100%;
   height: auto;
@@ -213,6 +231,7 @@ iframe {
 }
 
 @media screen and (min-width: 1200px) {
+
   iframe,
   section {
     display: inline-block;
@@ -230,11 +249,13 @@ iframe {
 table {
   margin-bottom: 2em;
 }
+
 @media screen and (min-width: 500px) {
   table {
     margin: 0 auto 2em;
   }
 }
+
 @media screen and (min-width: 700px) {
   table {
     width: 70%;
@@ -247,16 +268,19 @@ caption {
   font-weight: bold;
   font-style: italic;
 }
+
 thead tr {
   background-color: #3f6bca;
   color: #ffffff;
 }
+
 th,
 td {
   padding: 12px 15px;
   vertical-align: bottom;
   text-align: center;
 }
+
 tbody tr {
   border-bottom: 1px solid #dddddd;
 }
@@ -275,6 +299,7 @@ input {
   border: 0;
   border-bottom: 1px dashed #333;
 }
+
 button {
   padding: 4px 7px;
   background-color: #3f6bca;
@@ -282,16 +307,19 @@ button {
   color: white;
   font-weight: bold;
 }
+
 @media screen and (min-width: 500px) {
   input {
     display: inline-block;
     width: 70%;
   }
 }
+
 @media screen and (min-width: 700px) {
   input {
     padding: 15px;
   }
+
   button {
     padding: 15px 30px;
   }
@@ -306,6 +334,7 @@ aside h2 {
   text-transform: uppercase;
   margin-bottom: 1em;
 }
+
 aside div {
   background-color: #e3e3e3;
   border: 1px solid #c3c3c3;
@@ -320,6 +349,7 @@ aside div {
     margin-inline: -2px;
   }
 }
+
 aside div p:last-child {
   margin-bottom: 0;
   font-size: 0.8em;
@@ -348,6 +378,7 @@ footer a {
 }
 
 @media screen and (min-width: 1200px) {
+
   header,
   main,
   footer {
@@ -363,14 +394,17 @@ footer a {
     padding: 0;
     background-image: none;
   }
+
   main {
     box-shadow: none;
     margin: 0;
   }
+
   thead tr {
     background-color: #d3d3d3;
     color: black;
   }
+
   thead tr,
   tbody tr {
     border-bottom: 1px solid #666;
@@ -390,6 +424,158 @@ footer a {
 
 /*AGGIUNTA PER ESERCIZIO GIORNALIERO*/
 
-.imgLeft{
+.imgLeft {
   float: left;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+
+section h2 {
+  position: absolute;
+  top: -22px;
+}
+
+
+aside div {
+  position: relative;
+}
+
+.fa-tag{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 0.2;
+  font-size: 3.5rem;
+}
+h1{
+  position: relative;
+}
+
+.fissati{
+  background-color: rgba(219, 219, 219, 0.493);
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+  position: fixed;
+  right: -10px;
+  height: 59px;
+}
+
+#piu,
+#calendario,
+#backtop {
+font-size: 2rem;
+
+
+}
+
+#piu,
+#calendario {
+  color: blue;
+  
+}
+
+#backtop{
+  color: orange;
+}
+
+#piucont {
+  bottom: 140px;
+}
+
+#calcont {
+  bottom: 80px;
+}
+
+#backcont {
+  bottom: 20px;
+}
+
+
+/*MEDIA QUERIES*/
+
+
+@media screen and (min-width:576px) {
+  #underline {
+    width: 423px;
+    opacity: 0.7;
+    position: absolute;
+    top: 110px;
+    right: 0;
+    left: 0;
+  }
+}
+
+@media screen and (min-width:768px) {
+#underline {
+  width: 505.5px;
+  opacity: 0.7;
+  position: absolute;
+  top: 130px;
+  right: 166px;
+  /* left: 0; */
+}
+
+
+
+#piucont {
+  top: 270px;
+}
+
+#calcont {
+  top: 320px;
+}
+
+#backcont {
+  bottom: 20px;
+}
+
+}
+
+@media screen and (min-width:1200px) {
+  section {
+    height: 267px;
+  }
+
+  #validazione {
+    margin-bottom: 100px;
+  }
+
+  #underline {
+    width: 508.75px;
+    opacity: 0.7;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 467px;
+  }
+}
+
+.fissati{
+  height: 80px;
+}
+
+#piu,
+#calendario,
+#backtop {
+font-size: 3.5rem;
+}
+
+#piucont {
+  top: 120px;
+}
+
+#calcont {
+  top: 200px;
+}
+
+#backcont {
+  bottom: 20px;
 }
