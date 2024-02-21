@@ -269,6 +269,10 @@ h3 {
         text-align: left;
         width: 100%;
     }
+
+    #sottotitolo {
+        width: 90%;
+    }
 }
 
 @media screen and (min-width:1440px) {
