@@ -6,6 +6,7 @@ body {
     color: #752305;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.2rem;
+
 }
 
 /*HEADER*/
@@ -56,12 +57,21 @@ li img {
 
 /*MAIN*/
 
-h1, h2 {
+h1 {
     font-weight: 900;
     text-align: center;
     width: 60%;
     margin: 0 auto;
     margin-top: 20px;
+    line-height: 1em;
+}
+
+h2{
+    font-weight: 900;
+    text-align: center;
+    width: 60%;
+
+    margin: 20px 40px;
     line-height: 1em;
 }
 
@@ -95,19 +105,19 @@ h1, h2 {
     justify-content: space-around;
 }
 
-#nome{
-    line-height: 0.3em;
+#nome {
     text-align: center;
-    width: 50%;
+    width: 65%;
+    margin: 0;
 }
 
-.prezzo{
-    width: 50%;
+.prezzo {
+    width: 35%;
     font-weight: 700;
     text-align: center;
 }
 
-.addCart{
+.addCart {
     background-color: #FFDF7F;
     font-weight: 700;
     padding: 10px;
@@ -128,10 +138,10 @@ h3 {
     padding: 30px 0 20px 20px;
     margin: 0;
     font-weight: 900;
-    
+
 }
 
-.testo{
+.testo {
     background-color: #FEF7E2;
     width: 90%;
     margin: 0 auto;
@@ -154,4 +164,109 @@ h3 {
 
 .testo div img {
     width: 100%;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (min-width: 768px) {
+    ul {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    #shop {
+        width: 50%;
+        padding: 40px 20px;
+        border-radius: 80px;
+        font-size: 2em;
+        order: -0.5;
+    }
+
+    li img {
+        width: 20%;
+    }
+
+    #ourHoney {
+        order: -2;
+    }
+
+    #traceHoney {
+        order: -1;
+
+    }
+
+    .cards {
+        width: 42%;
+        flex-wrap: wrap;
+    }
+
+
+    #cardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #ultimo {
+        display: none;
+    }
+
+    h2 {
+        text-align: left;
+    }
+}
+@media screen and (min-width:1200px) {
+
+    body{
+        padding-left: 330px;
+    }
+    nav{
+        position: fixed;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    #shop{
+        order: -3;
+        width: 200px;
+        padding: 20px 0;
+    }
+
+    ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 90%;
+   
+    }
+
+    li {
+        width: 200px;
+        height: 50px;
+    }
+
+    .cards{
+        width: 22%;
+    }
+
+    #nome p{
+        margin-top: 0;
+    }
+
+    #nome h3 {
+        padding-bottom: 5px;
+    }
+
+    .addCart{
+        margin-top: 0;
+    }
+
+    h1,h2 {
+        text-align: left;
+        width: 100%;
+    }
 }
