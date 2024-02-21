@@ -270,3 +270,13 @@ h3 {
         width: 100%;
     }
 }
+
+@media screen and (min-width:1440px) {
+    #ultimo {
+        display: block;
+    }
+
+    .cards{
+        width: 18%;
+    }
+}
