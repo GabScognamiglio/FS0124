@@ -3,7 +3,9 @@ body{
 }
 
 #container {
-    background-color: rgb(61, 61, 61);
+    background: url(scratched-aluminum-texture-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 20px;
     width: 95%;
     margin: 20px auto;
@@ -12,7 +14,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-evenly;
-    border: 5px solid rgb(0, 0, 0);
+    /* border: 5px solid rgb(0, 0, 0); */
 }
 
 .postit {
