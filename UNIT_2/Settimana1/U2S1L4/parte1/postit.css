@@ -27,7 +27,7 @@ body{
     justify-content: center;
     align-items: center;
     transition-property: transform, scale;
-    animation: fadein 2s ease-out;
+    animation: fadein 5s ease-out;
 }
 
 h2 {
@@ -66,6 +66,7 @@ p{
 }
 
 @keyframes fadein {
-    from {opacity: 0; transform: scale(1.2);transform: rotate(-180deg);}
-    to {opacity: 100; transform: scale(1);transform: rotate(0deg);}
+    from {opacity: 0; transform:rotate(-180deg);}
+    50% {opacity: 50; transform: rotate(30deg);}
+    to {opacity: 100; transform: rotate(0);}
 }
