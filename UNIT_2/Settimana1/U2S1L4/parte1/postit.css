@@ -1,4 +1,4 @@
-body{
+body {
     font-family: "Indie Flower"
 }
 
@@ -14,7 +14,6 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-evenly;
-    /* border: 5px solid rgb(0, 0, 0); */
 }
 
 .postit {
@@ -36,12 +35,12 @@ h2 {
     margin-bottom: 10px;
 }
 
-p{
+p {
     font-size: 22px;
     font-weight: 400;
 }
 
-.yellow{
+.yellow {
     background: linear-gradient(#F9FAC8 70%, #B9B9A0);
     transform: rotate(-5deg);
 }
@@ -53,10 +52,12 @@ p{
 
 .purple {
     background: linear-gradient(#C6C6F1 70%, #8B8C9B);
-    transform: rotate(-7deg);   
+    transform: rotate(-7deg);
 }
 
-.postit:hover{
+
+/*TRANSIZIONI ALL'HOVER*/
+.postit:hover {
     transform: rotate(0deg);
     scale: 1.2;
     transition-duration: 0.6s;
@@ -65,8 +66,21 @@ p{
     cursor: pointer;
 }
 
+
+/*ANIMAZIONE DI INGRESSO*/
 @keyframes fadein {
-    from {opacity: 0.2; transform:rotate(-180deg);}
-    50% {opacity: 0.6; transform: rotate(30deg);}
-    to {opacity: 1; transform: rotate(0);}
+    from {
+        opacity: 0.2;
+        transform: rotate(-180deg);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: rotate(30deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
 }

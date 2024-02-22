@@ -8,12 +8,12 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
-body{
+body {
     font-family: "Bree Serif", serif;
     font-size: 1.5em;
 }
 
-main{
+main {
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ main{
     align-items: center;
 }
 
-#testoAlternato{
+#testoAlternato {
     width: 40%;
     border: 5px solid black;
     padding: 30px 50px;
@@ -36,7 +36,7 @@ main{
 .parole i {
     width: 300px;
     position: absolute;
-    left:7px;
+    left: 7px;
     color: transparent;
     animation: parole 9s linear infinite 0s;
 }
@@ -48,21 +48,25 @@ main{
 
 .parole i:nth-child(3) {
     animation-delay: 6s;
-    
+
 }
+
+
+/*ANIMAZIONE*/
 
 @keyframes parole {
-	from {
-		color: transparent;
-		top: -20px;
-	}
-	25% {
-		color: rgb(0, 110, 101);
-		top: -7px;
-	}
-	50% {
-		color: transparent;
-		top: 20px;
-	}
-}
+    from {
+        color: transparent;
+        top: -20px;
+    }
 
+    25% {
+        color: rgb(0, 110, 101);
+        top: -7px;
+    }
+
+    50% {
+        color: transparent;
+        top: 20px;
+    }
+}
