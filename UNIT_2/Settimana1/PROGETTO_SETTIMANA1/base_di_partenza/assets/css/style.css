@@ -83,6 +83,7 @@ h1 {
 #trending {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0 8%;
     font-size: 0.9em;
     border-bottom: 2px solid #191919;
@@ -136,6 +137,7 @@ h1 {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-content: space-between;
     height: 1600px;
     padding: 0 8%;
 }
@@ -144,7 +146,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 55%;
+    width: 58%;
     height: 1600px;
 }
 
@@ -171,7 +173,7 @@ h1 {
 .bookmark {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -10px;
 }
 
 .newsDesc {
@@ -181,11 +183,33 @@ h1 {
 /*CONTENUTI DX*/
 
 #containerDX {
-    width: 35%;
+    width: 38%;
 }
 
 .tagsContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.tags{
+    font-size: 0.9em;
+    color: gray;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 5px;
 }
 
+.othersContainer{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.others {
+    color: gray;
+    font-size: 0.9em;
+    padding: 3px 10px;
+    margin: 0;
+    cursor: pointer;
+}
