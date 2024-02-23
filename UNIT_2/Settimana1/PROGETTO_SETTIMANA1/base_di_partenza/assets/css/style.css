@@ -20,6 +20,9 @@ header{
     z-index: 1000;
 }
 
+
+
+
 nav{
     width: 40%;
 }
@@ -184,6 +187,8 @@ h1 {
 
 #containerDX {
     width: 38%;
+    position: sticky;
+    top: 100px;
 }
 
 .tagsContainer {
