@@ -55,7 +55,8 @@ nav ul{
     justify-content: space-between;
     align-items: center;
     font-size: 1.2em;
-    padding: 0 8%;
+    padding: 0 0 0 8%;
+    
     margin-bottom: 50px;
 }
 
