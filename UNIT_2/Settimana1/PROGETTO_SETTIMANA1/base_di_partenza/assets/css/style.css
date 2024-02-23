@@ -8,12 +8,12 @@ body {
 
 /*HEADER*/
 
-header{
+header {
     background-color: #ffc017;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:10px 8%; 
+    padding: 10px 8%;
     border-bottom: 2px solid black;
     position: sticky;
     top: 0;
@@ -22,13 +22,11 @@ header{
 }
 
 
-
-
-nav{
+nav {
     width: 45%;
 }
 
-nav ul{
+nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +39,7 @@ nav ul li {
     cursor: pointer;
 }
 
-#getStarted{
+#getStarted {
     background-color: #191919;
     color: white;
     padding: 10px 20px;
@@ -51,7 +49,7 @@ nav ul li {
 
 /*MAIN*/
 
-#heroSect{
+#heroSect {
     background-color: #ffc017;
     border-bottom: 2px solid #191919;
     display: flex;
@@ -59,7 +57,7 @@ nav ul li {
     align-items: center;
     font-size: 1.2em;
     padding: 0 0 0 8%;
-    
+
     margin-bottom: 50px;
 }
 
@@ -81,12 +79,12 @@ h1 {
     cursor: pointer;
 }
 
-#titoloTrends{
+#titoloTrends {
     display: flex;
     align-items: center;
     padding: 0 8%;
     font-size: smaller;
-    
+
 }
 
 #trending {
@@ -99,15 +97,15 @@ h1 {
     margin-bottom: 50px;
 }
 
-.trends{    
+.trends {
     padding: 5px 38px;
     position: relative;
     width: 25%;
     height: 220px;
-    
+
 }
 
-.author{
+.author {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -115,7 +113,7 @@ h1 {
     font-size: 0.9em;
 }
 
-.author img{
+.author img {
     width: 23px;
     border-radius: 50%;
 }
@@ -123,7 +121,7 @@ h1 {
 .number {
     position: absolute;
     top: 10px;
-    left:0;
+    left: 0;
     font-size: 2em;
     font-weight: 900;
     margin: 0;
@@ -131,16 +129,16 @@ h1 {
 
 }
 
-.newsDate{
+.newsDate {
     color: gray;
     letter-spacing: 0;
     display: flex;
     align-items: end;
 
-    
+
 }
 
-.badge{
+.badge {
     background-color: rgb(228, 228, 228);
     padding: 5px 10px;
     border-radius: 15px;
@@ -166,7 +164,7 @@ h1 {
     height: 1600px;
 }
 
-.notizie{
+.notizie {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,7 +179,7 @@ h1 {
     max-width: 100%;
 }
 
-#infoNotizia{
+#infoNotizia {
     width: 60%;
     position: relative;
 }
@@ -208,9 +206,10 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
+
 }
-.tags{
+
+.tags {
     font-size: 0.9em;
     color: gray;
     border: 1px solid gray;
@@ -220,11 +219,12 @@ h1 {
     margin: 5px;
 }
 
-.othersContainer{
+.othersContainer {
     display: flex;
     flex-wrap: wrap;
-    
+
 }
+
 .others {
     color: gray;
     font-size: 0.9em;
@@ -238,6 +238,7 @@ h1 {
 
 
 @media screen and (max-width:1199px) {
+
     header,
     #heroSect,
     #titoloTrends,
@@ -249,34 +250,38 @@ h1 {
     nav {
         width: 60%;
     }
-    #heroSect{
+
+    #heroSect {
         justify-content: flex-start;
         padding-top: 50px;
         padding-bottom: 50px;
         padding-right: 0;
     }
-    #titolo{
+
+    #titolo {
         width: 80%;
     }
 
-    .trends{
+    .trends {
         width: 39%;
     }
-    
+
 
     #containerDX {
         order: -1;
         position: static;
     }
 
-    .tags, 
+    .tags,
     .others {
         margin: 8px;
     }
+
     #containerSX,
     #containerDX {
         width: 100%;
     }
+
     #principale {
         flex-wrap: nowrap;
     }
@@ -284,10 +289,11 @@ h1 {
     .notizie {
         margin: 10px 0;
     }
-} 
+}
 
 
 @media screen and (max-width:767px) {
+
     header,
     #heroSect,
     #titoloTrends,
@@ -302,11 +308,12 @@ h1 {
     #tutteM {
         display: none;
     }
-    nav{
+
+    nav {
         width: 38%;
     }
 
-    #heroSect{
+    #heroSect {
         padding: 50px 18px;
     }
 
@@ -318,7 +325,7 @@ h1 {
         padding-bottom: 50px;
     }
 
-    .trends{
+    .trends {
         width: 100%;
         height: 120px;
         margin: 10px 0;
@@ -346,12 +353,12 @@ h1 {
         margin-top: 50px;
     }
 
-    .tags, 
+    .tags,
     .others {
         margin: 8px;
     }
 
-    #infoNotizia{
+    #infoNotizia {
         width: 70%;
         position: relative;
     }
@@ -360,11 +367,12 @@ h1 {
         width: 27%;
     }
 
-    .newsDate{
+    .newsDate {
         display: flex;
         justify-content: space-between;
     }
-    .newsDate img{
+
+    .newsDate img {
         display: none;
     }
 }
