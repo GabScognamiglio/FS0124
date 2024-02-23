@@ -1,0 +1,115 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/*HEADER*/
+
+header{
+    background-color: #ffc017;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 8%; 
+    border-bottom: 2px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav{
+    width: 40%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-inline-start: 0;
+    list-style: none;
+}
+
+#getStarted{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/*MAIN*/
+
+#heroSect{
+    background-color: #ffc017;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    padding: 0 8%;
+}
+
+h1 {
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-size: 3.5em;
+    letter-spacing: -5px;
+    margin: 0;
+    line-height: 1em;
+}
+
+#startReading {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 60px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#trending {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8%;
+    font-size: 0.9em;
+}
+
+.trends{    
+    padding: 5px 38px;
+    position: relative;
+    width: 25%;
+    
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.author img{
+    width: 23px;
+    border-radius: 50%;
+}
+
+.number {
+    position: absolute;
+    top: 10px;
+    left:0;
+    font-size: 2em;
+    font-weight: 900;
+    margin: 0;
+    color: #E5E6E5;
+
+}
+
+.newsDate{
+    color: gray;
+    letter-spacing: 0;
+}
