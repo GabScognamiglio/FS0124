@@ -37,12 +37,15 @@ nav ul{
     list-style: none;
 }
 
+nav ul li {
+    cursor: pointer;
+}
+
 #getStarted{
     background-color: #191919;
     color: white;
     padding: 10px 20px;
     border-radius: 30px;
-    cursor: pointer;
     transition: all 1s;
 }
 
