@@ -34,7 +34,7 @@ nav ul{
 }
 
 #getStarted{
-    background-color: black;
+    background-color: #191919;
     color: white;
     padding: 10px 20px;
     border-radius: 30px;
@@ -45,12 +45,13 @@ nav ul{
 
 #heroSect{
     background-color: #ffc017;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #191919;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.2em;
     padding: 0 8%;
+    margin-bottom: 50px;
 }
 
 h1 {
@@ -64,11 +65,19 @@ h1 {
 
 #startReading {
     display: inline-block;
-    background-color: black;
+    background-color: #191919;
     color: white;
     padding: 10px 60px;
     border-radius: 30px;
     cursor: pointer;
+}
+
+#titoloTrends{
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    font-size: smaller;
+    
 }
 
 #trending {
@@ -76,12 +85,14 @@ h1 {
     flex-wrap: wrap;
     padding: 0 8%;
     font-size: 0.9em;
+    border-bottom: 2px solid black;
 }
 
 .trends{    
     padding: 5px 38px;
     position: relative;
     width: 25%;
+    height: 220px;
     
 }
 
@@ -112,4 +123,7 @@ h1 {
 .newsDate{
     color: gray;
     letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    
 }
