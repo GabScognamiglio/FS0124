@@ -41,7 +41,7 @@ header {
 #immagineTop img{
     @include stileImg(3px solid rgb(224, 224, 224), 8px 8px 20px rgb(65, 65, 65));
     opacity: 0;
-    @include fade-in(1s, 500px, 200px, 2s, fadeInWithSlide);
+    @include fade-in(1s, 500px, 200px, 2s, fadeIn);
 }
 
 nav ul {
@@ -59,6 +59,9 @@ li a:link,
 li a:visited {
     text-decoration: none;
     color: white;
+    &:hover{
+        color: red;
+    } 
 }
 
 header,

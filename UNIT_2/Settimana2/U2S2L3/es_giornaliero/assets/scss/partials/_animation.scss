@@ -10,11 +10,13 @@
       }
     }
     
-    animation: $duration $name ease-out $delay forwards;
+    animation:$name $duration  ease-out $delay 1 forwards;
   }
-  
-  // Esempio di utilizzo del mixin
-//   .my-element {
-//     @include fade-in(1s, -30px, 0, 0.5s, fadeInWithSlide);
-//   }
+
+  a{
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+  }
+
+//     @include fade-in(1s, -30px, 0, 0.5s, fadeIn);
+
   

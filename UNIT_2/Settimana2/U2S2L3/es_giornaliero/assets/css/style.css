@@ -2,6 +2,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
 button {
   margin: 8px;
   padding: 20px;
@@ -9,12 +13,18 @@ button {
   color: white;
   font-weight: bolder;
   border: none;
+  cursor: pointer;
   opacity: 0;
+}
+
+button:hover,
+button:active {
+  transform: scale(0.9);
 }
 
 #btn1 {
   background-color: #0e6cff;
-  animation: 1s btnFade ease-out 0.5s forwards;
+  animation: btnFade 1s ease-out 0.5s 1 forwards;
 }
 @keyframes btnFade {
   0% {
@@ -29,7 +39,7 @@ button {
 
 #btn2 {
   background-color: #ff8700;
-  animation: 1s btnFade ease-out 1s forwards;
+  animation: btnFade 1s ease-out 1s 1 forwards;
 }
 @keyframes btnFade {
   0% {
@@ -44,7 +54,7 @@ button {
 
 #btn3 {
   background-color: #4caf50;
-  animation: 1s btnFade ease-out 1.5s forwards;
+  animation: btnFade 1s ease-out 1.5s 1 forwards;
 }
 @keyframes btnFade {
   0% {
@@ -55,6 +65,10 @@ button {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+a {
+  animation: name duration timing-function delay iteration-count direction fill-mode;
 }
 
 body {
@@ -99,9 +113,9 @@ header {
   margin: 15px;
   box-shadow: 8px 8px 20px rgb(65, 65, 65);
   opacity: 0;
-  animation: 1s fadeInWithSlide ease-out 2s forwards;
+  animation: fadeIn 1s ease-out 2s 1 forwards;
 }
-@keyframes fadeInWithSlide {
+@keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translateY(500px);
@@ -127,6 +141,10 @@ li a:link,
 li a:visited {
   text-decoration: none;
   color: white;
+}
+li a:link:hover,
+li a:visited:hover {
+  color: red;
 }
 
 header,
