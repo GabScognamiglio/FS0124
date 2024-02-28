@@ -1,3 +1,16 @@
+header h1 {
+  color: white;
+}
+
+header h1:hover {
+  color: red;
+  cursor: pointer;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
 h1 {
   color: #ca0000;
   font-size: 2rem !important;
@@ -7,5 +20,3 @@ h2 {
   color: #ca0000;
   font-size: 1.5rem !important;
 }
-
-/*# sourceMappingURL=style.css.map */
