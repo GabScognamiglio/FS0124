@@ -1,7 +1,13 @@
-$colorePrimario: #000000;
+$colorePrimario: #ca0000;
 
 $coloreSecondario: #165f25;
 
 h1 {
     color: $colorePrimario;
+    font-size: 2rem !important;
 };
+
+h2 {
+    color: $colorePrimario;
+    font-size: 1.5rem !important;
+}
