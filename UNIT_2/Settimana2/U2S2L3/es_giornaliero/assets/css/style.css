@@ -41,6 +41,7 @@ h1 {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 #heroSect {
@@ -55,6 +56,12 @@ header {
 
 #immagineTop {
   width: 40%;
+}
+
+#immagineTop img {
+  border: 5px solid gray;
+  border-radius: 10px;
+  margin: 15px;
 }
 
 nav ul {
@@ -87,4 +94,17 @@ img {
 p {
   font-size: 25px;
   color: white;
+}
+
+#fotoOrizzontali {
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#fotoOrizzontali img {
+  border: none;
+  border-radius: 10px;
+  margin: 15px;
+  width: 22%;
 }

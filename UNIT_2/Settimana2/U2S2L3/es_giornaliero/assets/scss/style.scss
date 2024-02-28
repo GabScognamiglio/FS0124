@@ -1,6 +1,7 @@
 @import 'partials/colori';
 @import 'partials/font';
 @import 'partials/buttons';
+@import '../scss/mixins/mixins';
 
 body {
     margin: 0;
@@ -21,6 +22,7 @@ h1 {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 #heroSect {
@@ -32,9 +34,11 @@ header {
 #titolo {
     width: 50%;
 }
-
-#immagineTop {
+#immagineTop{
     width: 40%;
+}
+#immagineTop img{
+    @include stileImg(5px solid gray);
 }
 
 nav ul {
@@ -67,4 +71,15 @@ img {
 p {
     font-size: $fontMedium;
     color: white;
+}
+
+#fotoOrizzontali {
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-between
+}
+
+#fotoOrizzontali img {
+    @include stileImg(none);
+    width: 22%;
 }
