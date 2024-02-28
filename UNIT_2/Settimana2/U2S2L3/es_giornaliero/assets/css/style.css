@@ -3,23 +3,58 @@ body {
 }
 
 button {
+  margin: 8px;
   padding: 20px;
   border-radius: 10px;
   color: white;
   font-weight: bolder;
   border: none;
+  opacity: 0;
 }
 
 #btn1 {
   background-color: #0e6cff;
+  animation: 1s btnFade ease-out 0.5s forwards;
+}
+@keyframes btnFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #btn2 {
   background-color: #ff8700;
+  animation: 1s btnFade ease-out 1s forwards;
+}
+@keyframes btnFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #btn3 {
   background-color: #4caf50;
+  animation: 1s btnFade ease-out 1.5s forwards;
+}
+@keyframes btnFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 body {
@@ -59,9 +94,22 @@ header {
 }
 
 #immagineTop img {
-  border: 5px solid gray;
+  border: 3px solid rgb(224, 224, 224);
   border-radius: 10px;
   margin: 15px;
+  box-shadow: 8px 8px 20px rgb(65, 65, 65);
+  opacity: 0;
+  animation: 1s fadeInWithSlide ease-out 2s forwards;
+}
+@keyframes fadeInWithSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(200px);
+  }
 }
 
 nav ul {
@@ -83,7 +131,7 @@ li a:visited {
 
 header,
 #heroSect {
-  padding: 60px;
+  padding: 40px;
   background-color: #640fc5;
 }
 
@@ -97,7 +145,7 @@ p {
 }
 
 #fotoOrizzontali {
-  margin: 100px 0;
+  margin: 300px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -106,5 +154,6 @@ p {
   border: none;
   border-radius: 10px;
   margin: 15px;
+  box-shadow: none;
   width: 22%;
 }

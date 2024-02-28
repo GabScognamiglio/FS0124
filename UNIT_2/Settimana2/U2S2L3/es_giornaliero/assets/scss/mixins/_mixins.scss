@@ -1,5 +1,6 @@
-@mixin stileImg ($bordo){
+@mixin stileImg ($bordo, $ombra){
     border: $bordo;
     border-radius: 10px;
     margin: 15px;
+    box-shadow: $ombra;
 }

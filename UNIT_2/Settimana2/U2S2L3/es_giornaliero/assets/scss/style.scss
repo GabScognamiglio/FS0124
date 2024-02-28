@@ -2,6 +2,7 @@
 @import 'partials/font';
 @import 'partials/buttons';
 @import '../scss/mixins/mixins';
+@import 'partials/animation';
 
 body {
     margin: 0;
@@ -38,7 +39,9 @@ header {
     width: 40%;
 }
 #immagineTop img{
-    @include stileImg(5px solid gray);
+    @include stileImg(3px solid rgb(224, 224, 224), 8px 8px 20px rgb(65, 65, 65));
+    opacity: 0;
+    @include fade-in(1s, 500px, 200px, 2s, fadeInWithSlide);
 }
 
 nav ul {
@@ -60,7 +63,7 @@ li a:visited {
 
 header,
 #heroSect {
-    padding: 60px;
+    padding: 40px;
     background-color: map-get($map: $colori, $key: navhero);
 }
 
@@ -74,12 +77,12 @@ p {
 }
 
 #fotoOrizzontali {
-    margin: 100px 0;
+    margin: 300px 0;
     display: flex;
     justify-content: space-between
 }
 
 #fotoOrizzontali img {
-    @include stileImg(none);
+    @include stileImg(none, none);
     width: 22%;
 }
