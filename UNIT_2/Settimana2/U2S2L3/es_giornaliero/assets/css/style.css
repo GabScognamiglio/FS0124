@@ -87,27 +87,25 @@ h1 {
   letter-spacing: -4px;
 }
 
-header {
+header, #heroSect {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: baseline;
 }
 
 #heroSect {
-  display: flex;
   align-items: center;
-  justify-content: space-around;
 }
 
-#titolo {
-  width: 50%;
-}
-
-#immagineTop {
+#titolo,
+#immagineTop,
+#nomeAzienda,
+nav {
   width: 40%;
 }
 
 #immagineTop img {
+  width: 100%;
   border: 3px solid rgb(224, 224, 224);
   border-radius: 10px;
   margin: 15px;
@@ -128,6 +126,7 @@ header {
 
 nav ul {
   display: flex;
+  justify-content: flex-end;
   padding-inline-start: 0;
   margin-inline-start: 0;
   list-style-type: none;
@@ -151,10 +150,6 @@ header,
 #heroSect {
   padding: 40px;
   background-color: #640fc5;
-}
-
-img {
-  max-width: 100%;
 }
 
 p {
