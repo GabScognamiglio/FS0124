@@ -1,0 +1,55 @@
+@import 'partials/colori';
+@import 'partials/font';
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+#nomeAzienda {
+    @include titolone;
+
+};
+
+h1{
+    font-size: $fontBig;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    padding-inline-start: 0;
+    margin-inline-start: 0;
+    list-style-type: none;
+}
+
+li{
+    padding-left: 20px;
+}
+
+li a:link,
+li a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+header,
+#heroSect{
+    padding: 60px;
+    background-color: map-get($map: $colori, $key: navhero );
+}
+
+img {
+    max-width: 80%;
+}
+
+p{
+    font-size: $fontMedium;
+    color: white;
+}

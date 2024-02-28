@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+#nomeAzienda {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  padding-inline-start: 0;
+  margin-inline-start: 0;
+  list-style-type: none;
+}
+
+li {
+  padding-left: 20px;
+}
+
+li a:link,
+li a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+header,
+#heroSect {
+  padding: 60px;
+  background-color: #640fc5;
+}
+
+img {
+  max-width: 80%;
+}
+
+p {
+  font-size: 25px;
+  color: white;
+}
