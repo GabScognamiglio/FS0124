@@ -2,6 +2,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+button {
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bolder;
+  border: none;
+}
+
+#btn1 {
+  background-color: #0e6cff;
+}
+
+#btn2 {
+  background-color: #ff8700;
+}
+
+#btn3 {
+  background-color: #4caf50;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -14,12 +34,27 @@ h1,
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 70px;
+  letter-spacing: -4px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+}
+
+#heroSect {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#titolo {
+  width: 50%;
+}
+
+#immagineTop {
+  width: 40%;
 }
 
 nav ul {
@@ -46,7 +81,7 @@ header,
 }
 
 img {
-  max-width: 80%;
+  max-width: 100%;
 }
 
 p {

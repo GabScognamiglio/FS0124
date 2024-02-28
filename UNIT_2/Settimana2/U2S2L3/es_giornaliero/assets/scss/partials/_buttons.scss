@@ -1,0 +1,19 @@
+button {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight:bolder;
+    border: none;
+}
+
+#btn1{
+    background-color: map-get($map: $colori, $key: blu);
+}
+
+#btn2{
+    background-color: map-get($map: $colori, $key: arancio);
+}
+
+#btn3{
+    background-color: map-get($map: $colori, $key: verde);
+}

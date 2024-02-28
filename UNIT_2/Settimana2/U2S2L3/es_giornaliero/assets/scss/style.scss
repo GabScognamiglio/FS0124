@@ -1,7 +1,8 @@
 @import 'partials/colori';
 @import 'partials/font';
+@import 'partials/buttons';
 
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,16 +11,30 @@ body{
 h1,
 #nomeAzienda {
     @include titolone;
+}
 
-};
-
-h1{
+h1 {
     font-size: $fontBig;
+    letter-spacing: -4px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+}
+
+#heroSect {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#titolo {
+    width: 50%;
+}
+
+#immagineTop {
+    width: 40%;
 }
 
 nav ul {
@@ -29,7 +44,7 @@ nav ul {
     list-style-type: none;
 }
 
-li{
+li {
     padding-left: 20px;
 }
 
@@ -40,16 +55,16 @@ li a:visited {
 }
 
 header,
-#heroSect{
+#heroSect {
     padding: 60px;
-    background-color: map-get($map: $colori, $key: navhero );
+    background-color: map-get($map: $colori, $key: navhero);
 }
 
 img {
-    max-width: 80%;
+    max-width: 100%;
 }
 
-p{
+p {
     font-size: $fontMedium;
     color: white;
 }
