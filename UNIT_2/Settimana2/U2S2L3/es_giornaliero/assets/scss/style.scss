@@ -42,7 +42,7 @@ nav {
     width: 100%;
     @include stileImg(3px solid rgb(224, 224, 224), 8px 8px 20px rgb(65, 65, 65));
     opacity: 0;
-    @include fade-in(1s, 500px, 200px, 2s, fadeIn);
+    @include fade-in(1.5s, 500px, 200px, 2s, fadeIn);
 }
 
 nav ul {
@@ -80,7 +80,7 @@ p {
 #fotoOrizzontali {
     margin: 300px 0;
     display: flex;
-    justify-content: space-between
+    justify-content: space-evenly;
 }
 
 #fotoOrizzontali img {
