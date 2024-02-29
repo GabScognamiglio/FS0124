@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="bg-light">
     <header>
         <nav class="navbar bg-body-tertiary">
         <div class="container-fluid d-flex flex-nowrap justify-content-between">
@@ -108,11 +108,11 @@
             </div>
         </div>
 
-        <div class="container-fluid bg-white">
-            <div class="row d-flex justify-content-center">
-                <div class="col-12 col-lg-4 ">
+        <div class="container-fluid bg-white shadow">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-4 d-flex justify-content-lg-center">
                     <div class="row d-flex align-items-center">
-                        <div class="col-2 d-flex justify-content-center" id="loghetto">
+                        <div class="col-2 d-flex align-items-center" id="loghetto">
                             <img src="assets/img/camera-video.svg" alt="logocam" class="img-fluid">
                         </div>
                         <div class="col-10">
@@ -121,9 +121,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 ">
+                <div class="col-12 col-lg-4 d-flex justify-content-lg-center">
                     <div class="row d-flex align-items-center">
-                        <div class="col-2 d-flex justify-content-center" id="loghetto">
+                        <div class="col-2 d-flex align-items-center" id="loghetto">
                             <img src="assets/img/camera-video.svg" alt="logocam" class="img-fluid">
                         </div>
                         <div class="col-10">
@@ -132,9 +132,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 ">
+                <div class="col-12 col-lg-4 d-flex justify-content-lg-center">
                     <div class="row d-flex align-items-center">
-                        <div class="col-2 d-flex justify-content-center" id="loghetto">
+                        <div class="col-2 d-flex align-items-center" id="loghetto">
                             <img src="assets/img/camera-video.svg" alt="logocam" class="img-fluid">
                         </div>
                         <div class="col-10">
@@ -143,10 +143,279 @@
                         </div>
                     </div>
                 </div>
-                
+            </div>
+        </div>
+
+        <div class="container">
+            <h4 class="mt-5 mb-2">Recommended to you</h4>
+            <div class="row d-flex justify-content-around">
+                <div class="col-6 col-lg-4 col-xl-3 my-3">
+                    <div class="card" id="card">
+                        <img src="assets/img/course-graphql.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">GraphQL: introduction to GraphQL for beginners</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 2h 40m - Advance   
+                            </p>
+                            <p> <b>$500</b> <del class="text-secondary">$600</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-5.jpg" alt="avatar" id="author"> &nbsp; Brooklin Simmons
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3 my-3">
+                    <div class="card" id="card" >
+                        <img src="assets/img/course-javascript.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">Our Complete Beginner's Guide to Vanilla JavaScript</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 4h 10m - Advance   
+                            </p>
+                            <p> <b>$700</b> <del class="text-secondary">$850</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-1.jpg" alt="avatar" id="author"> &nbsp; Jenny Wilson
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3 my-3">
+                    <div class="card" id="card">
+                        <img src="assets/img/course-node.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">Beginning Node.js, Express & MongoDB Development</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 2h 00m - Advance   
+                            </p>
+                            <p> <b>$800</b> <del class="text-secondary">$950</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-3.jpg" alt="avatar" id="author"> &nbsp; Sina Ray
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3 my-3 d-lg-none d-xl-block">
+                    <div class="card" id="card">
+                        <img src="assets/img/course-laravel.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">Laravel: The Ultimate Beginner's Guide to Learn</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 1h 00m - Beginner   
+                            </p>
+                            <p> <b>$170</b> <del class="text-secondary">$220</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-7.jpg" alt="avatar" id="author"> &nbsp; Sobo Rikhan
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h4 class="mt-5 mb-2">Most Popular</h4>
+            <div class="row d-flex justify-content-around">
+                <div class="col-6 col-lg-4 col-xl-3 my-3">
+                    <div class="card" id="card">
+                        <img src="assets/img/course-graphql.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">GraphQL: introduction to GraphQL for beginners</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 2h 40m - Advance   
+                            </p>
+                            <p> <b>$500</b> <del class="text-secondary">$600</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-5.jpg" alt="avatar" id="author"> &nbsp; Brooklin Simmons
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3 my-3">
+                    <div class="card" id="card" >
+                        <img src="assets/img/course-graphql.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">GraphQL: introduction to GraphQL for beginners</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 2h 40m - Advance   
+                            </p>
+                            <p> <b>$500</b> <del class="text-secondary">$600</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-5.jpg" alt="avatar" id="author"> &nbsp; Brooklin Simmons
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3 my-3">
+                    <div class="card" id="card">
+                        <img src="assets/img/course-graphql.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">GraphQL: introduction to GraphQL for beginners</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 2h 40m - Advance   
+                            </p>
+                            <p> <b>$500</b> <del class="text-secondary">$600</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-5.jpg" alt="avatar" id="author"> &nbsp; Brooklin Simmons
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3 my-3 d-lg-none d-xl-block">
+                    <div class="card" id="card">
+                        <img src="assets/img/course-graphql.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">GraphQL: introduction to GraphQL for beginners</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 2h 40m - Advance   
+                            </p>
+                            <p> <b>$500</b> <del class="text-secondary">$600</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-5.jpg" alt="avatar" id="author"> &nbsp; Brooklin Simmons
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mb-5">
+            <h4 class="mt-5 mb-2">Trending</h4>
+            <div class="row d-flex justify-content-around">
+                <div class="col-6 col-lg-4 col-xl-3 my-3">
+                    <div class="card" id="card">
+                        <img src="assets/img/course-graphql.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">GraphQL: introduction to GraphQL for beginners</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 2h 40m - Advance   
+                            </p>
+                            <p> <b>$500</b> <del class="text-secondary">$600</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-5.jpg" alt="avatar" id="author"> &nbsp; Brooklin Simmons
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3 my-3">
+                    <div class="card" id="card" >
+                        <img src="assets/img/course-graphql.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">GraphQL: introduction to GraphQL for beginners</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 2h 40m - Advance   
+                            </p>
+                            <p> <b>$500</b> <del class="text-secondary">$600</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-5.jpg" alt="avatar" id="author"> &nbsp; Brooklin Simmons
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3 my-3">
+                    <div class="card" id="card">
+                        <img src="assets/img/course-graphql.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">GraphQL: introduction to GraphQL for beginners</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 2h 40m - Advance   
+                            </p>
+                            <p> <b>$500</b> <del class="text-secondary">$600</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-5.jpg" alt="avatar" id="author"> &nbsp; Brooklin Simmons
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3 my-3 d-lg-none d-xl-block">
+                    <div class="card" id="card">
+                        <img src="assets/img/course-graphql.jpg" id="cardfoto" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h4 class="fs-5">GraphQL: introduction to GraphQL for beginners</h4>
+
+                            <p class="card-text text-secondary d-flex align-items-center">
+                                <img src="assets/img/clock.svg" alt="clock">&nbsp; 2h 40m - Advance   
+                            </p>
+                            <p> <b>$500</b> <del class="text-secondary">$600</del></p>
+                            <hr>
+                            <div class="container d-flex flex-nowrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/avatar-5.jpg" alt="avatar" id="author"> &nbsp; Brooklin Simmons
+                                </div>
+                                <img src="assets/img/bookmark.svg" alt="bookmark" id="bookmark">
+                            </div>
+                        </div>
+                      </div>
+                </div>
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="container mb-3 d-flex justify-content-between"> 
+            <p>&copy;2024 Gab. All Right reserved.</p>
+            <div class="d-flex">
+                <p class="mx-3 btn">Privacy</p>
+                <p class="mx-3 btn">Terms</p>
+                <p class="mx-3 btn">Feedback</p>
+                <p class="mx-3 btn">Support</p>
+            </div>
+        </div>
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
