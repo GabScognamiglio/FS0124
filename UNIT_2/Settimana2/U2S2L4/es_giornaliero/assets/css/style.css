@@ -1,0 +1,19 @@
+#utente {
+    border-radius: 50%;
+    height: 50px;
+}
+
+#notifiche {
+    border-radius: 50%;
+}
+
+#heroSect {
+    background-color: #7550FE;
+}
+
+#loghetto {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #FFEEDA ;
+}
