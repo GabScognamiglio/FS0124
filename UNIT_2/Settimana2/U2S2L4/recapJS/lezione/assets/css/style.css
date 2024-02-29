@@ -1,0 +1,18 @@
+header {
+    height: 150px;
+}
+
+.gradiente {
+    background-image: linear-gradient(to right, green 5%, white 50%, red);
+}
+
+.logo{
+    height: 20%;
+}
+
+#nascosto {
+    display: none;
+    flex-flow: column;
+    align-items: center;
+}
+
