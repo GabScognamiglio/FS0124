@@ -509,6 +509,7 @@ const province = [
 		'prov_it': 'SS',
 		'prov_nome': 'SASSARI',
 		'prov_reg': 'SARDEGNA',
+		'prov_url': 'assets/img/regioni/sardegna.png',
 	},
 	{
 		'prov_it': 'SV',
@@ -701,3 +702,78 @@ const regioni = [
 		'prov_regione': 'VENETO',
 	},
 ];
+
+
+const menuRegioni = document.getElementById('regioni_menu');
+const menuProvince = document.getElementById('province_menu');
+const stemmi = document.getElementById('nascosto');
+let provinceReg = [];
+
+
+window.addEventListener('load', init);
+
+function init() {
+	menuProvince.setAttribute('disabled', 'true');
+	for (let i = 0; i < regioni.length; i++) {
+		let option = document.createElement('option');
+		option.setAttribute('value', regioni[i].prov_regione);
+		option.innerText = regioni[i].prov_regione;
+		menuRegioni.appendChild(option);
+	}
+}
+
+
+menuRegioni.addEventListener('change', function () {
+	stemmi.style.display ='none';
+	let regione = this.value;
+	if (regione == '') {
+		stemmi.style.display = 'none';
+		menuProvince.innerHTML = `<option value='' selected></option>`;
+		menuProvince.setAttribute('disabled', 'true');
+		return;
+	}
+	else {
+		menuProvince.removeAttribute('disabled');
+		caricaProvince(regione);
+	}
+});
+
+function caricaProvince(regione) {
+	menuProvince.innerHTML = `<option value='' selected></option>`;
+	provinceReg= province.filter(provincia => provincia.prov_reg == regione);
+
+	for (let i = 0; i < provinceReg.length; i++) {
+		let option = document.createElement('option');
+		option.setAttribute('value', provinceReg[i].prov_nome);
+		option.innerText = provinceReg[i].prov_nome;
+		menuProvince.appendChild(option);
+	}
+};
+
+menuProvince.addEventListener('change', function () {
+	let provincia = this.value;
+	if (provincia=='') {
+		stemmi.style.display ='none';
+		return;
+	}
+	else {
+		caricaImmagini(provincia);
+	}
+})
+
+function caricaImmagini(provincia) {
+	stemmi.style.display = 'flex';
+	for (let i=0; i<provinceReg.length; i++) {
+		let nome=provinceReg[i].prov_nome;
+		if (nome==provincia) {
+			let regione = provinceReg[i].prov_reg;
+			let stemmaReg = provinceReg[i].prov_url;
+			document.getElementById('nomeRegione').innerText=`La regione selezionata è ${regione}`
+			document.getElementById('stemmaRegione').setAttribute('src', stemmaReg);
+			document.getElementById('nomeProvincia').innerText=`La provincia selezionata è ${provincia}`;
+			document.getElementById('stemmaProvincia').setAttribute('src', `assets/img/province/${nome}.png`);
+		}
+	}
+
+}
+
