@@ -4,7 +4,7 @@
 
 svg {
     fill: #6c757d;
-    
+
 }
 
 #avatar,
@@ -20,26 +20,26 @@ svg {
 @media screen and (max-width: 991px) {
     #navbarDX {
         width: 100%;
-        
+
     }
 }
 
-.film{
+.film {
     cursor: pointer;
     transition: scale 0.3s;
 }
 
-.film:hover{
+.film:hover {
     scale: 1.2;
 }
 
-#paypal{
+#paypal {
     width: 70px;
 }
 
 .form-check:checked,
 .form-check,
-.form-check:focus{
+.form-check:focus {
     background-color: transparent;
     border: 1px solid #6c757d;
     box-shadow: none;
