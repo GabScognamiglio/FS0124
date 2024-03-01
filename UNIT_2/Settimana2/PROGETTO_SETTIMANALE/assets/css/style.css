@@ -1,0 +1,36 @@
+#logo {
+    width: 100px;
+}
+
+svg {
+    fill: #6c757d;
+    
+}
+
+#avatar {
+    width: 60px;
+}
+
+#navbarDX {
+    width: 25%;
+    max-width: 220px;
+}
+
+@media screen and (max-width: 991px) {
+    #navbarDX {
+        width: 100%;
+        
+    }
+}
+
+.film{
+    cursor: pointer;
+    transition: scale 0.3s;
+}
+
+.film:hover{
+    scale: 1.2;
+}
+
+
+
