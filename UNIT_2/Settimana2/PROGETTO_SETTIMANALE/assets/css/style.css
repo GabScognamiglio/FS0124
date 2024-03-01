@@ -37,4 +37,11 @@ svg {
     width: 70px;
 }
 
-
+.form-check:checked,
+.form-check,
+.form-check:focus{
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    box-shadow: none;
+    border-radius: 0;
+}
