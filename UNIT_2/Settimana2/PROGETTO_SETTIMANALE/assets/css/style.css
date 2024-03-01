@@ -12,6 +12,10 @@ svg {
     width: 40px;
 }
 
+#avatarPiccolo {
+    width: 28px;
+}
+
 #navbarDX {
     width: 30%;
     max-width: 220px;
