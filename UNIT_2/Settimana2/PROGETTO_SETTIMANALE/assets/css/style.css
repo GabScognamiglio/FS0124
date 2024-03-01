@@ -17,6 +17,10 @@ svg {
     max-width: 220px;
 }
 
+#navbarDX *{
+    cursor: pointer;
+}
+
 @media screen and (max-width: 991px) {
     #navbarDX {
         width: 100%;
