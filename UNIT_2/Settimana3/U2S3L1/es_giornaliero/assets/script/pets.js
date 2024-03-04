@@ -5,7 +5,7 @@ let proprietario = document.getElementById('proprietario');
 let specie = document.getElementById('specie');
 let razza = document.getElementById('razza');
 const errore = document.getElementById('errore');
-errore.style.display='none'
+errore.style.visibility='hidden'
 let arrayAnimali =[]
 
 class Pets {
@@ -36,11 +36,11 @@ btn.addEventListener('click', function (e) {
     e.preventDefault();
     //se i primi due campi non sono riempiti--> STOP
     if (nome.value=='' || proprietario.value==''){
-        errore.style.display='block'
+        errore.style.visibility='visible'
         return;
     }
     else {
-        errore.style.display='none'
+        errore.style.visibility='hidden';
     };
     //creo un'istanza della classe Pets dandogli i valori dell'input utente e lo pusho nell'array
     let nuovoAnimale = new Pets (nome.value, proprietario.value, specie.value, razza.value)
