@@ -6,12 +6,15 @@ class User {
         this.location = _location
     }
 
-    confrontaAge(x,y) {
-        if (x.age>y.age) {
-            console.log(`${x.firstName} è più vecchio di ${y.firstName}`)
+    confrontaAge(userX) {
+        if (this.age > userX.age) {
+            console.log(`${this.firstName} è più vecchio di ${userX.firstName}`);
+        }
+        else if (userX.age > this.age) {
+            console.log(`${userX.firstName} è più vecchio di ${this.firstName}`);
         }
         else {
-            console.log(`${y.firstName} è più vecchio di ${x.firstName}`)
+            console.log(`${this.firstName} e ${userX.firstName} hanno la stessa età`);
         }
     }
 }
