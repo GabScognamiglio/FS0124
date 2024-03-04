@@ -6,7 +6,7 @@ class User {
         this.location = _location
     }
 
-    confrontaAge(userX) {
+    compareAge(userX) {
         if (this.age > userX.age) {
             console.log(`${this.firstName} è più vecchio di ${userX.firstName}`);
         }
@@ -23,5 +23,5 @@ const user1 = new User('Gabriele', 'Scognamiglio', 29, 'Fiumicino');
 const user2 = new User('Gilberto', 'Pasfadini', 55, 'Ostia');
 const user3 = new User('Ermenegildo', 'Zanzelli', 18, 'Acilia');
 
-user1.confrontaAge(user1, user2);
-user1.confrontaAge(user1, user3);
+user1.compareAge(user2);
+user1.compareAge(user3);
