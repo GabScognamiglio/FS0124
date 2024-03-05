@@ -1,18 +1,19 @@
 const timer = document.getElementById('timer');
 
+window.onload = iniziaTimer;
+
 function iniziaTimer() {
     let start = sessionStorage.getItem('start');  //cerco se esiste un session storage
     if (!start) {
-      start = Date.now();
-      sessionStorage.setItem('start', start); //se non c'è lo creo
-    } 
+        start = Date.now();  // al caricamento della pagina definisce in millisecondi il tempo trascorso dalle 00:00 del 1/1/1970
+        sessionStorage.setItem('start', start); //se non c'è lo creo
+    };
 
-    setInterval(function() {
-      let tempoCorrente = Date.now();
-      let tempoPassato = Math.floor((tempoCorrente - start) / 1000);
-      timer.innerText = tempoPassato;
-    }, 1000);
-}
+    setInterval(function () {
+        let tempoAttuale = Date.now();
+        let tempoTrascorso = Math.floor((tempoAttuale - start) / 1000);
+        timer.innerHTML = `${tempoTrascorso} <span class="display-6">secondi</span>`;
+    }, 1000);  //ogni secondo converte il tempo trascorso (tempo attuale-tempo di inizio) da millisecondi in secondi. Guarda giù
+};
 
-window.onload = iniziaTimer;
-  
+// più nello specifico, ogni secondo ottengo il tempo trascorso dalle 00:00 del 1/1/1970, al quale sottraggo la variabile start (il cui valore è lo stesso ma definito al momento del caricamento della pagina). Dividendo il tutto per 1000, ottengo la differenza in real time in secondi, ogni secondo, quindi un timer.
