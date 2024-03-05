@@ -21,4 +21,4 @@ function iniziaTimer() {
 
 };
 
-// più nello specifico, ogni secondo ottengo il tempo trascorso dalle 00:00 del 1/1/1970, al quale sottraggo la variabile start (il cui valore è lo stesso ma definito al momento del caricamento della pagina). Dividendo il tutto per 1000, ottengo la differenza in real time in secondi, ogni secondo, quindi un timer(o meglio ancora cronometro).
+// più nello specifico, ogni secondo ottengo il tempo trascorso dalle 00:00 del 1/1/1970, al quale sottraggo la variabile start (il cui valore è lo stesso ma definito al momento del caricamento della pagina). Dividendo il tutto per 1000, ottengo la differenza in real time in secondi, ogni secondo, quindi un timer (o meglio ancora cronometro).
