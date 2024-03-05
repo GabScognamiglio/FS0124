@@ -1,6 +1,6 @@
 const timer = document.getElementById('timer');
-const messaggio60 = document.getElementById('messaggio60');
-messaggio60.style.visibility='hidden';
+const messaggio = document.getElementById('messaggio');
+messaggio.style.visibility='hidden';
 window.onload = iniziaTimer;
 
 function iniziaTimer() {
@@ -13,9 +13,9 @@ function iniziaTimer() {
     setInterval(function () {
         let tempoAttuale = Date.now();
         let tempoTrascorso = Math.floor((tempoAttuale - start) / 1000);
-        timer.innerHTML = `${tempoTrascorso} <span class="display-6">secondi</span>`;
-        if (tempoTrascorso>30) {
-            messaggio60.style.visibility='visible';
+        timer.innerHTML = `${tempoTrascorso} <span class="display-6 text-warning">secondi</span>`;
+        if (tempoTrascorso>8) {
+            messaggio.style.visibility='visible';
         }
     }, 1000);  //ogni secondo converte il tempo trascorso (tempo attuale-tempo di inizio) da millisecondi in secondi. Guarda giù
 
