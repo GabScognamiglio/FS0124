@@ -29,10 +29,10 @@ function print() {
         div.setAttribute('id', books[i].asin);
         div.innerHTML=`<div class="card mt-3 bg-body-tertiary shadow" >
         <img src="${books[i].img}" class="card-img-top img-fluid" alt="---" id="bookImage">
-        <div class="card-body ">
+        <div class="card-body d-flex flex-column">
             <h5 class="card-title mb-3" id="bookTitle">${books[i].title}</h5>
-            <span class="card-text bg-dark rounded-5 text-white p-1 w-25"><samp id="category">${books[i].category}</samp></span>
-            <p class="card-text mt-3" id="price">${books[i].price} €</p>
+            <p><span class="card-text bg-dark rounded-5 text-white p-1"><samp id="category">${books[i].category}</samp></span></p>
+            <p class="card-text mt-3 d-flex justify-content-end" id="price">${books[i].price} €</p>
         </div>
     </div> `
         cardContainer.appendChild(div);
