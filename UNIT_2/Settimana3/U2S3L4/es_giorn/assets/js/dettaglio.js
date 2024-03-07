@@ -26,7 +26,6 @@ async function caricaImg() {
     }
 }
 
-
 function stampaImg() {
     let img = document.createElement('img');
     img.classList.add('img-fluid');

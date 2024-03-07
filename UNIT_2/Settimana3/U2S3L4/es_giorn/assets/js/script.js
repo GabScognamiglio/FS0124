@@ -7,7 +7,6 @@ let immagini = []
 const searchText = document.getElementById('searchText');
 const btnSearch = document.getElementById('btnSearch');
 
-
 //pulsante Load Images
 async function loadImages1() {
     try {
@@ -65,8 +64,6 @@ async function loadSearch() {
     }
 }
 
-
-
 function stampa() {
     contenitore.innerHTML = ''
     for (let i = 0; i < immagini.photos.length; i++) {
@@ -116,15 +113,3 @@ function dettaglioImg(id) {
     localStorage.setItem('foto', id);
     location.href = 'dettagli.html'
 }
-
-
-// da errore dicendo che card è null!!!
-
-// function hide(id) {
-//     let card = document.getElementById(id);
-//     card.style.display = 'none';
-// }
-
-// This is a wider card with supporting text below as a natural
-// lead-in to additional content. This content is a little bit
-// longer.
