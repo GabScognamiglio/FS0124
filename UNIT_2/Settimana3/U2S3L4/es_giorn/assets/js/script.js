@@ -3,9 +3,11 @@ const apiKey = 'lU4I7mvQkqeXowAR4u6DaRkCmpCh65X3pyW9oWMRXtOiaA0Irvivt8jo'
 const contenitore = document.getElementById('contenitore');
 const load1 = document.getElementById('load1');
 const load2 = document.getElementById('load2');
-
+let immagini=[]
 const searchText = document.getElementById('searchText');
 const btnSearch = document.getElementById('btnSearch');
+
+
 
 // load1.addEventListener('click', loadImages1());
 
@@ -78,7 +80,7 @@ function stampa() {
         <div class="card mb-4 shadow-sm">
               <img src="${immagini.photos[i].src.original}" class="bd-placeholder-img card-img-top" />
               <div class="card-body">
-                <h5 class="card-title"><a href="#dettagli.html" id="dettaglioImg">Visualizza Immagine</a></h5>
+                <h5 class="card-title"><a href="#" id="dettaglioImg" onclick="dettaglioImg(${immagini.photos[i].id})">Visualizza Immagine</a></h5>
                 <p class="card-text">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
@@ -114,28 +116,10 @@ function stampa() {
     }
 }
 
+ function dettaglioImg(id) {
+
+    localStorage.setItem('foto', id);
+    location.href='dettagli.html'
+ }
 
 
-
-// {
-//     "id": 1374064,
-//     "width": 3024,
-//     "height": 4032,
-//     "url": "https://www.pexels.com/photo/woman-standing-on-the-cliff-1374064/",
-//     "photographer": "julie aagaard",
-//     "photographer_url": "https://www.pexels.com/@julieaagaard",
-//     "photographer_id": 590997,
-//     "avg_color": "#7F8074",
-//     "src": {
-//         "original": "https://images.pexels.com/photos/1374064/pexels-photo-1374064.jpeg",
-//         "large2x": "https://images.pexels.com/photos/1374064/pexels-photo-1374064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-//         "large": "https://images.pexels.com/photos/1374064/pexels-photo-1374064.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-//         "medium": "https://images.pexels.com/photos/1374064/pexels-photo-1374064.jpeg?auto=compress&cs=tinysrgb&h=350",
-//         "small": "https://images.pexels.com/photos/1374064/pexels-photo-1374064.jpeg?auto=compress&cs=tinysrgb&h=130",
-//         "portrait": "https://images.pexels.com/photos/1374064/pexels-photo-1374064.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
-//         "landscape": "https://images.pexels.com/photos/1374064/pexels-photo-1374064.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-//         "tiny": "https://images.pexels.com/photos/1374064/pexels-photo-1374064.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
-//     },
-//     "liked": false,
-//     "alt": "Woman Standing on the Cliff"
-// }
