@@ -3,13 +3,9 @@ const apiKey = 'lU4I7mvQkqeXowAR4u6DaRkCmpCh65X3pyW9oWMRXtOiaA0Irvivt8jo'
 const contenitore = document.getElementById('contenitore');
 const load1 = document.getElementById('load1');
 const load2 = document.getElementById('load2');
-let immagini=[]
+let immagini = []
 const searchText = document.getElementById('searchText');
 const btnSearch = document.getElementById('btnSearch');
-
-
-
-// load1.addEventListener('click', loadImages1());
 
 
 //pulsante Load Images
@@ -25,8 +21,8 @@ async function loadImages1() {
         console.log(immagini.photos);
 
     }
-    catch(error){
-        console.log('Error:'+ error);
+    catch (error) {
+        console.log('Error:' + error);
 
     }
 };
@@ -44,7 +40,7 @@ async function loadImages2() {
         console.log(immagini.photos);
 
     }
-    catch(error){
+    catch (error) {
         console.log('Error:', error);
 
     }
@@ -63,7 +59,7 @@ async function loadSearch() {
         console.log(immagini.photos);
 
     }
-    catch(error){
+    catch (error) {
         console.log('Error:', error);
 
     }
@@ -72,12 +68,12 @@ async function loadSearch() {
 
 
 function stampa() {
-    contenitore.innerHTML=''
-    for (let i=0; i<immagini.photos.length; i++) {
+    contenitore.innerHTML = ''
+    for (let i = 0; i < immagini.photos.length; i++) {
         let div = document.createElement('div');
         div.classList.add('col-md-4');
-        div.innerHTML= `
-        <div class="card mb-4 shadow-sm">
+        div.innerHTML = `
+        <div class="card mb-4 shadow-sm" id="card${immagini.photos[i].id}">
               <img src="${immagini.photos[i].src.original}" class="bd-placeholder-img card-img-top" />
               <div class="card-body">
                 <h5 class="card-title"><a href="#" id="dettaglioImg" onclick="dettaglioImg(${immagini.photos[i].id})">Visualizza Immagine</a></h5>
@@ -91,8 +87,8 @@ function stampa() {
                     <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#id${immagini.photos[i].id}">
                       View
                     </button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      Edit
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="hide(card${immagini.photos[i].id})">
+                      Hide
                     </button>
                     <div class="modal fade" id="id${immagini.photos[i].id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -116,10 +112,17 @@ function stampa() {
     }
 }
 
- function dettaglioImg(id) {
+function dettaglioImg(id) {
 
     localStorage.setItem('foto', id);
-    location.href='dettagli.html'
- }
+    location.href = 'dettagli.html'
+}
 
+
+// da errore dicendo che card è null!!!
+
+// function hide(id) {
+//     let card = document.getElementById(id);
+//     card.style.display = 'none';
+// }
 
