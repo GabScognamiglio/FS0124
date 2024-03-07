@@ -76,11 +76,10 @@ function stampa() {
         <div class="card mb-4 shadow-sm" id="card${immagini.photos[i].id}">
               <img src="${immagini.photos[i].src.original}" class="bd-placeholder-img card-img-top" />
               <div class="card-body">
-                <h5 class="card-title"><a href="#" id="dettaglioImg" onclick="dettaglioImg(${immagini.photos[i].id})">Visualizza Immagine</a></h5>
+                <h5 class="card-title">Autore della foto: ${immagini.photos[i].photographer}</h5>
                 <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                <a href="#" id="dettaglioImg" onclick="dettaglioImg(${immagini.photos[i].id})">Visualizza a schermo intero</a>
+                    
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -126,3 +125,6 @@ function dettaglioImg(id) {
 //     card.style.display = 'none';
 // }
 
+// This is a wider card with supporting text below as a natural
+// lead-in to additional content. This content is a little bit
+// longer.
