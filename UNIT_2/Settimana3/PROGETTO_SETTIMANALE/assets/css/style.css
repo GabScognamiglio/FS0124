@@ -5,3 +5,13 @@ header{
 #logo{
     width: 100px;
 }
+
+.linkDx:link,
+.linkDx:visited {
+    color: white !important;
+}
+
+.linkDx:link:hover,
+.linkDx:visited:hover {
+    color: rgb(204, 204, 204) !important;
+}

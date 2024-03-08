@@ -136,12 +136,13 @@ async function deleteRecord(){
     messaggio.innerText='Record Eliminato';
     
     try {
-        let nuovoRecord = await fetch((dataURL+id), {
+        let cancellatoRecord = await fetch((dataURL+id), {
             method: "DELETE",
             headers: {
                 "Authorization": myKey,
                 "Content-Type": "application/json"
             }
+        
         })
     }
     catch (error) {

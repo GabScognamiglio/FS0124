@@ -2,12 +2,14 @@ const cardContainer = document.getElementById('cardContainer');
 const myKey = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZGNlMjJkN2IxMTAwMTkwZTZlMDQiLCJpYXQiOjE3MDk4OTEyNDEsImV4cCI6MTcxMTEwMDg0MX0.yMGLZ0AUI-8VOiWP4D785JUzrn4_zGLcZxQttST-duc';
 const dataURL = "https://striveschool-api.herokuapp.com/api/product/";
 prodotti = [];
-
+const spinner = document.getElementById('spinner');
 
 window.addEventListener('load', init);
 
 function init() {
     loadProducts();
+    
+    
 }
 
 async function loadProducts() {
@@ -47,5 +49,8 @@ function printProducts(){
                         </div>
                       </div>`
         cardContainer.appendChild(div);
+        
     }
+    spinner.style.display='none';
 }
+

@@ -9,16 +9,21 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
+    <header class="sticky-top">
         <nav class="container d-flex justify-content-between align-items-center">
             <a href="index.html"><img src="assets/imgs/amazon logo.png" alt="logo" id="logo"></a>
-            <a href="back.html">Back Office</a>
+            <a href="back.html" class="linkDx">Back Office</a>
         </nav>
     </header>
     <main>
         
         <div class="container">
-            <h1 class="mt-5">Prodotti</h1>
+            <div class="container-fluid d-flex align-items-baseline">
+                <h1 class="mt-5">Prodotti &nbsp;</h1>
+                <div id="spinner" class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
             <hr>
             <div class="row mt-3 mb-5" id="cardContainer">
                 <div class="col-3">
