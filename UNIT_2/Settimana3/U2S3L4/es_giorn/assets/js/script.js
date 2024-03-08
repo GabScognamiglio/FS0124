@@ -71,12 +71,14 @@ function stampa() {
         div.classList.add('col-md-4');
         div.innerHTML = `
         <div class="card mb-4 shadow-sm" id="card${immagini.photos[i].id}">
-              <img src="${immagini.photos[i].src.original}" class="bd-placeholder-img card-img-top" />
+              <img src="${immagini.photos[i].src.medium}" class="bd-placeholder-img card-img-top" />
               <div class="card-body">
                 <h5 class="card-title">Autore della foto: ${immagini.photos[i].photographer}</h5>
                 <p class="card-text">
+                ${immagini.photos[i].alt}
+                </p>
+                <p class="card-text">
                 <a href="#" id="dettaglioImg" onclick="dettaglioImg(${immagini.photos[i].id})">Visualizza a schermo intero</a>
-                    
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -93,7 +95,7 @@ function stampa() {
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                            <img src="${immagini.photos[i].src.original}" class="img-fluid">
+                            <img src="${immagini.photos[i].src.medium}" class="img-fluid">
                             </div>
                             </div>
                         </div>
