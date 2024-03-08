@@ -43,7 +43,7 @@ function printDetails() {
     productDetails.innerHTML=`
                     <p>${prodotto.brand}</p>
                     <h3 class="fs-2 my-3">${prodotto.name}</h3>
-                    <p><span><samp class="btn btn-dark text-warning">${prodotto.price}€</samp></span></p>
+                    <p><span><samp class="badge bg-dark text-warning fs-6">${prodotto.price}€</samp></span></p>
                     <p>${prodotto.description}</p>`
 
 }
