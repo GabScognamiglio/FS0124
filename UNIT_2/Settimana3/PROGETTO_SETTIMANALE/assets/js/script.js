@@ -34,8 +34,9 @@ function printProducts(){
         div.classList.add('col-lg-3');
         div.classList.add('col-sm-6');
         div.classList.add('col-md-4');
+        div.classList.add('mt-4');
         div.innerHTML = `
-        <div class="card" >
+        <div class="card shadow" >
                         <img src="${prodotti[i].imageUrl}" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
                           <p class="card-text">${prodotti[i].brand}</p>

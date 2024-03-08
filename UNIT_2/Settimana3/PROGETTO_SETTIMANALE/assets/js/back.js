@@ -8,6 +8,7 @@ const url = document.getElementById('url');
 const descrizione = document.getElementById('descrizione');
 const myKey = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZGNlMjJkN2IxMTAwMTkwZTZlMDQiLCJpYXQiOjE3MDk4OTEyNDEsImV4cCI6MTcxMTEwMDg0MX0.yMGLZ0AUI-8VOiWP4D785JUzrn4_zGLcZxQttST-duc';
 const dataURL = "https://striveschool-api.herokuapp.com/api/product/";
+const messaggio= document.getElementById('messaggio');
 const params = new URLSearchParams(location.search)
 const id = params.get('id')
 
@@ -55,37 +56,96 @@ function caricaPagina() {
     elimina.style.display = 'none'
 }
 
-save.addEventListener('click', post)
+save.addEventListener('click', postPut)
+
+function postPut(){
+    if (id){
+        put();
+    }
+    else {post()}
+}
 
 async function post() {
+    
+    messaggio.innerText='Record Aggiunto';
 
-    // const name = nome.value;
-    // const brand = marca.value;
-    // const price = prezzo.value;
-    // const imageUrl = url.value;
-    // const description = descrizione.value;
+    const name = nome.value;
+    const brand = marca.value;
+    const price = parseInt(prezzo.value);
+    const imageUrl = url.value;
+    const description = descrizione.value;
 
-    // const nuovoOggetto = {name, brand, price, imageUrl, description};
+    const nuovoOggetto = {name, brand, price, imageUrl, description};
 
-    // console.log(nuovoOggetto);  //esiste
+    console.log(nuovoOggetto);  //esiste
     try {
         let nuovoRecord = await fetch(dataURL, {
             method: "POST",
-            body: {"name": nome.value,
-            "brand": brand.value,
-            "imageUrl": url.value,
-            "price": parseInt(prezzo.value),
-            "description": descrizione.value},
+            body: JSON.stringify(nuovoOggetto),
             headers: {
-                "Authorization": myKey
+                "Authorization": myKey,
+                "Content-Type": "application/json"
             }
         })
 
-        console.log(nuovoRecord);
+        console.log(prezzo.value)
+        recordCreato = await nuovoRecord.json()
+        console.log(recordCreato);
 
     }
     catch (error) {
         console.log(error)
     }
 
+}
+
+async function put(){
+    messaggio.innerText='Record Modificato';
+    const name = nome.value;
+    const brand = marca.value;
+    const price = parseInt(prezzo.value);
+    const imageUrl = url.value;
+    const description = descrizione.value;
+
+    const nuovoOggetto = {name, brand, price, imageUrl, description};
+
+    console.log(nuovoOggetto);  //esiste
+
+    try {
+        let nuovoRecord = await fetch((dataURL+id), {
+            method: "PUT",
+            body: JSON.stringify(nuovoOggetto),
+            headers: {
+                "Authorization": myKey,
+                "Content-Type": "application/json"
+            }
+        })
+        recordCreato = await nuovoRecord.json()
+        console.log(recordCreato);
+
+    }
+    catch (error) {
+        console.log(error)
+    }
+}
+
+
+elimina.addEventListener('click', deleteRecord);
+
+async function deleteRecord(){
+    messaggio.innerText='Record Eliminato';
+    
+    try {
+        let nuovoRecord = await fetch((dataURL+id), {
+            method: "DELETE",
+            headers: {
+                "Authorization": myKey,
+                "Content-Type": "application/json"
+            }
+        })
+    }
+    catch (error) {
+        console.log(error)
+    };
+    
 }
