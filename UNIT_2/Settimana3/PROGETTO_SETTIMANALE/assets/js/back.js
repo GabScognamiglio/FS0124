@@ -25,6 +25,11 @@ function init() {
     }
 };
 
+function goHome(){
+    location.href='index.html'
+}
+
+
 async function caricaProdotto() {
     try {
         let response = await fetch((dataURL + id), {
@@ -62,12 +67,19 @@ function postPut(){
     if (id){
         put();
     }
-    else {post()}
+    else {
+       post();
+    }
 }
 
 async function post() {
     
-    messaggio.innerText='Record Aggiunto';
+    // if(nome.value==''|| marca.value=='' || prezzo.value=='' || url.value=='' || description.value==''){
+    //     messaggio.innerText='Riempire tutti i campi!'
+    // }
+    messaggio.innerHTML=`Record Aggiunto! Verrai reindirizzato alla Home &nbsp; <div id="spinner" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>`;;
 
     const name = nome.value;
     const brand = marca.value;
@@ -91,7 +103,9 @@ async function post() {
         console.log(prezzo.value)
         recordCreato = await nuovoRecord.json()
         console.log(recordCreato);
-
+        setTimeout(() => {
+            goHome();
+          }, "2800");
     }
     catch (error) {
         console.log(error)
@@ -99,8 +113,11 @@ async function post() {
 
 }
 
+
 async function put(){
-    messaggio.innerText='Record Modificato';
+    messaggio.innerHTML=`Record Modificato! Verrai reindirizzato alla Home &nbsp; <div id="spinner" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>`;;
     const name = nome.value;
     const brand = marca.value;
     const price = parseInt(prezzo.value);
@@ -122,6 +139,9 @@ async function put(){
         })
         recordCreato = await nuovoRecord.json()
         console.log(recordCreato);
+        setTimeout(() => {
+            goHome();
+          }, "2800");
 
     }
     catch (error) {
@@ -133,7 +153,9 @@ async function put(){
 elimina.addEventListener('click', deleteRecord);
 
 async function deleteRecord(){
-    messaggio.innerText='Record Eliminato';
+    messaggio.innerHTML=`Record Eliminato! Verrai reindirizzato alla Home &nbsp; <div id="spinner" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>`;
     
     try {
         let cancellatoRecord = await fetch((dataURL+id), {
@@ -144,6 +166,9 @@ async function deleteRecord(){
             }
         
         })
+        setTimeout(() => {
+            goHome();
+          }, "2800");
     }
     catch (error) {
         console.log(error)
