@@ -61,7 +61,10 @@ function caricaPagina() {
     elimina.style.display = 'none'
 }
 
-save.addEventListener('click', postPut)
+save.addEventListener('click', function(e){
+    e.preventDefault();
+    postPut();
+})
 
 function postPut(){
     if (id){
@@ -69,17 +72,14 @@ function postPut(){
     }
     else {
        post();
+
     }
 }
 
 async function post() {
-    
-    // if(nome.value==''|| marca.value=='' || prezzo.value=='' || url.value=='' || description.value==''){
-    //     messaggio.innerText='Riempire tutti i campi!'
-    // }
     messaggio.innerHTML=`Record Aggiunto! Verrai reindirizzato alla Home &nbsp; <div id="spinner" class="spinner-border text-primary" role="status">
     <span class="visually-hidden">Loading...</span>
-</div>`;;
+    </div>`;
 
     const name = nome.value;
     const brand = marca.value;
@@ -106,6 +106,7 @@ async function post() {
         setTimeout(() => {
             goHome();
           }, "2800");
+
     }
     catch (error) {
         console.log(error)
