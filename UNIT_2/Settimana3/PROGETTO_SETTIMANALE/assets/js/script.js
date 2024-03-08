@@ -41,7 +41,7 @@ function printProducts(){
                           <p class="card-text">${prodotti[i].brand}</p>
                           <h5 class="card-title">${prodotti[i].name}</h5>
                           <p class="card-text">${prodotti[i].description}</p>
-                          <p><a href="back.html" class="btn btn-warning">Modifica</a></p>
+                          <p><a href="http://127.0.0.1:5500/back.html?id=${prodotti[i]._id}" class="btn btn-warning">Modifica</a></p>
                           <p><a href="http://127.0.0.1:5500/details.html?id=${prodotti[i]._id}" class="btn btn-secondary">Scopri di più</a></p>
                         </div>
                       </div>`

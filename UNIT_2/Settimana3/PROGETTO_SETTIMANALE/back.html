@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dettagli prodotto</title>
+    <title>Back office</title>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,7 +15,50 @@
         </nav>
     </header>
     <main>
-        
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mt-5">
+                <h1 id="titolo"></h1>
+            </div>    
+            <hr>
+        </div>
+        <div class="container">
+            <form>
+                <p>
+                    <label for="nome" class="form-label">Nome</label>
+                    <input required type="text" name="nome" id="nome" class="form-text form-control" placeholder="Nome prodotto">
+                </p>
+                <p>
+                    <label for="brand" class="form-label">Brand</label>
+                    <input required type="text" name="brand" id="brand" class="form-text form-control" placeholder="Marca">
+                </p>
+                <p>
+                    <label for="prezzo" class="form-label">Prezzo</label>
+                    <input required type="number" name="prezzo" id="prezzo" class="form-text form-control" placeholder="0€">
+                </p>
+                <p>
+                    <label for="url" class="form-label">URL immagine</label>
+                    <input required type="text" name="url" id="url" class="form-text form-control" placeholder="https://urlimage.com/tuourl">
+                </p>
+                <p>
+                    <label for="descrizione" class="form-label">Descrizione</label>
+                    <textarea required name="descrizione" id="descrizione" class="form-control" placeholder="Descrizione del prodotto"></textarea>
+                </p>
+                <div class="container">
+                    <div class="row my-5">
+                        <div class="col-3">
+                            <button type="button" class="btn btn-danger w-100" id="elimina">Elimina</button>
+                        </div>
+                        <div class="col-3"></div>
+                        <div class="col-3">
+                            <button type="reset" class="btn btn-outline-dark w-100">Reset</button>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-warning w-100" id="save">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </main>
     
     <script src="assets/js/back.js"></script>
