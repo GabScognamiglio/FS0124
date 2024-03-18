@@ -28,7 +28,7 @@ class User implements Phone {
     }
 
     chiama404() {
-        return `il credito residuo è ${this.credito}€`;
+        return `Il credito residuo è ${this.credito}€`;
     }
 
     getNumeroChiamate() {
@@ -42,8 +42,79 @@ class User implements Phone {
 }
 
 let gab = new User('Gabriele', 'Scognamiglio', 10, 0)
-console.log(gab.chiamata(50));
-console.log(gab.chiamata(12));
-console.log(gab.ricarica(150));
-console.log(gab.getNumeroChiamate());
-console.log(gab.chiama404());
+// console.log(gab.chiamata(50));
+// console.log(gab.chiamata(12));
+// console.log(gab.ricarica(150));
+// console.log(gab.getNumeroChiamate());
+// console.log(gab.chiama404());
+
+const aggiornaCredito = document.getElementById('aggiornaCredito') as HTMLElement;
+const aggiornaChiamate = document.getElementById('aggiornaChiamate') as HTMLElement;
+const azzeraChiamate = document.getElementById('azzeraChiamate') as HTMLButtonElement;
+const chiama = document.getElementById('chiama') as HTMLButtonElement;
+const terminaChiamata = document.getElementById('terminaChiamata') as HTMLButtonElement;
+const timer = document.getElementById('timer') as HTMLElement;
+const inputRicarica = document.getElementById('inputRicarica') as HTMLInputElement;
+const btnRicarica = document.getElementById('btnRicarica') as HTMLButtonElement;
+const nome = document.getElementById('nome') as HTMLElement;
+const cognome = document.getElementById('cognome') as HTMLElement;
+const credito = document.getElementById('credito') as HTMLElement;
+const minChiamate = document.getElementById('minChiamate') as HTMLElement;
+
+
+window.addEventListener('load', init);
+
+function init(): void {
+    nome.innerText = gab.nome;
+    cognome.innerText = gab.cognome;
+    credito.innerText = gab.chiama404();
+    minChiamate.innerText = `${gab.numeroChiamate}`;
+
+}
+
+btnRicarica.addEventListener('click', function (e) {
+    e.preventDefault();
+    gab.ricarica(parseInt(inputRicarica.value))
+    inputRicarica.value = ''
+}
+)
+
+aggiornaCredito.addEventListener('click', function (e) {
+    e.preventDefault();
+    credito.innerText = gab.chiama404();
+}
+)
+
+aggiornaChiamate.addEventListener('click', function (e) {
+    e.preventDefault();
+    minChiamate.innerText = `${gab.numeroChiamate}`;
+}
+)
+
+
+let tempo = 0
+let intervallo: number;
+function timerino() {
+    tempo++
+    timer.innerText = `${tempo}`
+}
+
+chiama.addEventListener('click', function () {
+    if (tempo !== 0) {
+        return
+    }
+    else { intervallo = setInterval(timerino, 1000); }
+
+});
+
+terminaChiamata.addEventListener('click', function () {
+    clearInterval(intervallo);
+    gab.chiamata(tempo);
+    tempo = 0
+    timer.innerText = '';
+})
+
+azzeraChiamate.addEventListener('click', function () {
+    gab.azzeraChiamate();
+    minChiamate.innerText = `${gab.numeroChiamate}`;
+})
