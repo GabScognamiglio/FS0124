@@ -26,11 +26,6 @@ var User = /** @class */ (function () {
     return User;
 }());
 var gab = new User('Gabriele', 'Scognamiglio', 10, 0);
-// console.log(gab.chiamata(50));
-// console.log(gab.chiamata(12));
-// console.log(gab.ricarica(150));
-// console.log(gab.getNumeroChiamate());
-// console.log(gab.chiama404());
 var aggiornaCredito = document.getElementById('aggiornaCredito');
 var aggiornaChiamate = document.getElementById('aggiornaChiamate');
 var azzeraChiamate = document.getElementById('azzeraChiamate');
@@ -43,6 +38,8 @@ var nome = document.getElementById('nome');
 var cognome = document.getElementById('cognome');
 var credito = document.getElementById('credito');
 var minChiamate = document.getElementById('minChiamate');
+var tempo = 0;
+var intervallo;
 window.addEventListener('load', init);
 function init() {
     nome.innerText = gab.nome;
@@ -63,8 +60,6 @@ aggiornaChiamate.addEventListener('click', function (e) {
     e.preventDefault();
     minChiamate.innerText = "".concat(gab.numeroChiamate);
 });
-var tempo = 0;
-var intervallo;
 function timerino() {
     tempo++;
     timer.innerText = "".concat(tempo);

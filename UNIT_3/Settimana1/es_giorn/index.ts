@@ -41,13 +41,7 @@ class User implements Phone {
 
 }
 
-let gab = new User('Gabriele', 'Scognamiglio', 10, 0)
-// console.log(gab.chiamata(50));
-// console.log(gab.chiamata(12));
-// console.log(gab.ricarica(150));
-// console.log(gab.getNumeroChiamate());
-// console.log(gab.chiama404());
-
+let gab = new User('Gabriele', 'Scognamiglio', 10, 0);
 const aggiornaCredito = document.getElementById('aggiornaCredito') as HTMLElement;
 const aggiornaChiamate = document.getElementById('aggiornaChiamate') as HTMLElement;
 const azzeraChiamate = document.getElementById('azzeraChiamate') as HTMLButtonElement;
@@ -60,6 +54,8 @@ const nome = document.getElementById('nome') as HTMLElement;
 const cognome = document.getElementById('cognome') as HTMLElement;
 const credito = document.getElementById('credito') as HTMLElement;
 const minChiamate = document.getElementById('minChiamate') as HTMLElement;
+let tempo = 0
+let intervallo: number;
 
 window.addEventListener('load', init);
 
@@ -90,9 +86,6 @@ aggiornaChiamate.addEventListener('click', function (e) {
 }
 )
 
-
-let tempo = 0
-let intervallo: number;
 function timerino() {
     tempo++
     timer.innerText = `${tempo}`
