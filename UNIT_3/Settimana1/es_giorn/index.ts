@@ -28,7 +28,7 @@ class User implements Phone {
     }
 
     chiama404() {
-        return `Il credito residuo è ${this.credito}€`;
+        return `Credito residuo: ${this.credito}€`;
     }
 
     getNumeroChiamate() {

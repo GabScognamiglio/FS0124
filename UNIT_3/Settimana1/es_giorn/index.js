@@ -15,7 +15,7 @@ var User = /** @class */ (function () {
         return "Durata chiamata: ".concat(minuti, "; I minuti in chiamata totali sono: ").concat(this.numeroChiamate);
     };
     User.prototype.chiama404 = function () {
-        return "Il credito residuo \u00E8 ".concat(this.credito, "\u20AC");
+        return "Credito residuo: ".concat(this.credito, "\u20AC");
     };
     User.prototype.getNumeroChiamate = function () {
         return "I minuti in chiamata totali sono: ".concat(this.numeroChiamate);
