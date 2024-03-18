@@ -61,7 +61,6 @@ const cognome = document.getElementById('cognome') as HTMLElement;
 const credito = document.getElementById('credito') as HTMLElement;
 const minChiamate = document.getElementById('minChiamate') as HTMLElement;
 
-
 window.addEventListener('load', init);
 
 function init(): void {
