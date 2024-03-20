@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Post } from 'src/app/models/post.interface';
 
 @Component({
-  selector: 'app-correlato',
-  templateUrl: './correlato.component.html',
-  styleUrls: ['./correlato.component.scss']
+  selector: 'app-laterale-card',
+  templateUrl: './laterale-card.component.html',
+  styleUrls: ['./laterale-card.component.scss']
 })
-export class CorrelatoComponent {
+export class LateraleCardComponent {
+  
   posts!:Post[]
   post!:Post
   constructor(){
@@ -23,4 +24,5 @@ export class CorrelatoComponent {
     let data = await response.json();
     return data
   }
+
 }

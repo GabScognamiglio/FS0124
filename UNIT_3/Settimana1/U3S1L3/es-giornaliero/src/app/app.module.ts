@@ -10,6 +10,7 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
 import { EvidenzaComponent } from './components/evidenza/evidenza.component';
 import { CorrelatoComponent } from './components/correlato/correlato.component';
 import { LateraleComponent } from './components/laterale/laterale.component';
+import { LateraleCardComponent } from './components/laterale-card/laterale-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LateraleComponent } from './components/laterale/laterale.component';
     PostDetailsComponent,
     EvidenzaComponent,
     CorrelatoComponent,
-    LateraleComponent
+    LateraleComponent,
+    LateraleCardComponent
   ],
   imports: [
     BrowserModule

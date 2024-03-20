@@ -12,12 +12,14 @@ export class EvidenzaComponent {
   post!:Post
   constructor() {
     this.evidencePost();
+    
 }
 
 async evidencePost() {
     const response = await fetch('../../assets/db.json');
     const data = await response.json();
     this.posts = data;
+    console.log(this.posts)
     let index = Math.floor(Math.random() * this.posts.length);
     this.post = this.posts[index];
 }
