@@ -1,0 +1,14 @@
+<div class="container">
+    <h2 class="text-center">Post ATTIVI</h2>
+    <div *ngFor="let post of posts, let i=index">
+        <div>
+            <div *ngIf="post.active" class="card mb-4">
+                <h5 class="card-header">POST id {{post.id}}</h5>
+                <div class="card-body">
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <p class="card-text">{{post.body}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
