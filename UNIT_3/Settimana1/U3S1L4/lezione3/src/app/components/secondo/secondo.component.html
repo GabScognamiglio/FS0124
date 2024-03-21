@@ -1,0 +1,17 @@
+<div class="container">
+    <h1 class="text-center">SECONDO component</h1>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <a [routerLink]="['secondoA']" class="btn btn-primary p-3">Child A</a>
+            </div>
+            <div class="col"><a [routerLink]="['secondoB']" class="btn btn-primary p-3">Child B</a></div>
+            <div class="col"> <a [routerLink]="['/secondo']" class="btn btn-primary p-3">Padre</a></div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>
+<hr>
+<router-outlet></router-outlet>
