@@ -1,0 +1,7 @@
+<div class="container bg-light py-3 border-top">
+    <p> 🔗 <a [routerLink]="['/post', post.id]">{{post.title}}</a></p>
+    <span *ngFor="let tag of post.tags">
+        <span class="badge bg-primary mx-1">{{tag.toUpperCase()}}</span>
+    </span>
+    <p class="mt-2">{{post.reactions}} 👍</p>
+</div>
