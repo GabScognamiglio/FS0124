@@ -1,1 +1,17 @@
-<p>inactive-posts works!</p>
+<h2 class="text-center my-3">Post Non Attivi</h2>
+<div class="container">
+    <div class="row" *ngFor="let post of inactivePosts">
+        <div class="col-12">
+            <div class="card my-2">
+                <div class="card-header d-flex justify-content-between">
+                    <h5 class="card-title w-75">{{post.title}}</h5>
+                    <span>ID:{{post.id}}</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{post.body.slice(0,220)}}... </p>
+                    <a [routerLink]="['/post', post.id]" class="btn btn-dark">Dettagli</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

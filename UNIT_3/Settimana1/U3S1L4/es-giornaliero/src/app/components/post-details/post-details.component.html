@@ -1,1 +1,10 @@
-<p>post-details works!</p>
+<div class="container">
+    <h3 class="text-center my-5">{{post?.title}}</h3>
+    <p class="d-flex justify-content-center"><span *ngFor="let tag of post?.tags">
+        <span class="badge bg-primary mx-1">{{tag.toUpperCase()}}</span>
+    </span></p>
+    <p class="fs-5">{{post?.body}}</p>
+    <p>Reactions: {{post?.reactions}} 👍</p>
+    
+    <p class="d-flex justify-content-end">Post ID: {{post?.id}}</p>
+</div>
