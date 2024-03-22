@@ -10,6 +10,8 @@ import { AudiPageComponent } from './components/audi-page/audi-page.component';
 import { FordPageComponent } from './components/ford-page/ford-page.component';
 import { FiatPageComponent } from './components/fiat-page/fiat-page.component';
 import { CarDetailsComponent } from './components/car-details/car-details.component';
+import { Err404Component } from './components/err404/err404.component';
+import { ChiSiamoComponent } from './components/chi-siamo/chi-siamo.component';
 
 
 const routes = [
@@ -34,8 +36,12 @@ const routes = [
     component:CarDetailsComponent
   },
   {
+    path:'chi-siamo',
+    component:ChiSiamoComponent
+  },
+  {
     path:'**',
-    component:HomeComponent
+    component:Err404Component
   }
 
 
@@ -49,7 +55,9 @@ const routes = [
     AudiPageComponent,
     FordPageComponent,
     FiatPageComponent,
-    CarDetailsComponent
+    CarDetailsComponent,
+    Err404Component,
+    ChiSiamoComponent
   ],
   imports: [
     BrowserModule,
