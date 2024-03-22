@@ -6,7 +6,9 @@
         "modelImage": "06/aut-51-iz0284-01p.jpg",
         "year": 2015,
         "price": 7500,
-        "available": false
+        "available": false,
+        "id":1,
+        "description": "Cerchi un'auto spaziosa, versatile e divertente da guidare? La Fiat 500L del 2015 è l'auto perfetta per te!\n\nCon il suo design moderno e accattivante, la 500L offre un ampio spazio interno per tutta la famiglia, grazie ai suoi 5 posti a sedere e al bagagliaio capiente. Il motore TurboJet garantisce consumi ridotti e prestazioni affidabili, mentre la ricca dotazione di optional rende la guida confortevole e sicura.\n\nImmatricolata nel 2015, questa Fiat 500L ha percorso 78.000 chilometri ed è stata regolarmente tagliandata e revisionata. Si presenta in ottime condizioni, sia meccaniche che estetiche, ed è pronta per accompagnarti nelle tue avventure quotidiane.\n\nNon lasciarti sfuggire questa occasione: a soli 7500€, potrai vivere il comfort e la versatilità di una vera Fiat 500L!"
     },
     {
         "brand": "Fiat",
@@ -15,7 +17,9 @@
         "modelImage": "06/aut-51-iz0271-01p.jpg",
         "year": 2010,
         "price": 3500,
-        "available": true
+        "available": true,
+        "id":2,
+        "description":"Stai cercando un'auto che sia divertente da guidare e che abbia un carattere deciso? Allora la Fiat 500 Abarth del 2010 è l'auto perfetta per te! \n\nCon il suo motore 1.4 T-Jet da 135 CV e il cambio manuale a 5 marce, questa piccola peste offre prestazioni grintose e un'agilità senza pari. La sua carrozzeria grintosa, con cerchi in lega da 17\", doppio scarico e spoiler posteriore, non lascia dubbi sul suo carattere sportivo.\n\nGli interni in pelle nera e il volante sportivo creano un ambiente di guida confortevole e coinvolgente, mentre il clima manuale e la radio CD/MP3 ti garantiscono il massimo comfort durante i tuoi viaggi.\n\nImmatricolata nel 2010, questa Fiat 500 Abarth ha percorso 48.000 chilometri ed è stata regolarmente tagliandata e revisionata. Si presenta in ottime condizioni, sia meccaniche che estetiche, ed è pronta per regalarti nuove emozioni su strada.\n\nNon lasciarti sfuggire questa occasione: a soli 3500€, potrai vivere il fascino e la grinta di una vera Abarth!"
     },
     {
         "brand": "Ford",
@@ -24,7 +28,9 @@
         "modelImage": "01/aut-15-iz0614-01p.jpg",
         "year": 2009,
         "price": 5200,
-        "available": false
+        "available": false,
+        "id":6,
+        "description":"Stai cercando un' berlina affidabile e spaziosa? La Ford Taurus del 2009 è l'auto perfetta per te! Offre comfort e prestazioni per affrontare al meglio i tuoi viaggi quotidiani e le gite fuori porta. Con [inserire numero] posti a sedere e un ampio bagagliaio, è ideale per famiglie o chi necessita di spazio. Immatricolata nel 2009, ha percorso 230.000 chilometri ed è stata regolarmente tagliandata e revisionata. Si presenta in buone condizioni ed è pronta a circolare. A soli 5200€, cogli l'occasione di acquistare un'auto spaziosa e affidabile!"
     },
     {
         "brand": "Ford",
@@ -33,7 +39,9 @@
         "modelImage": "06/aut-50-iz1081-01p.jpg",
         "year": 2014,
         "price": 9700,
-        "available": true
+        "available": true,
+        "id":3,
+        "description": "Sei alla ricerca di un'auto moderna, affidabile e versatile? La Ford Focus del 2014 è la scelta giusta per te! Con un design elegante e interni spaziosi, offre comfort e praticità per ogni tuo spostamento. Immatricolata nel 2014, ha percorso 107.000 chilometri ed è stata regolarmente tagliandata e revisionata. Si presenta in ottime condizioni, sia meccaniche che estetiche. A soli 9700€, potrai guidare un'auto sicura e piacevole da guidare."
     },
     {
         "brand": "Audi",
@@ -42,8 +50,11 @@
         "modelImage": "05/aut-46-iz0055-01p.jpg",
         "year": 2012,
         "price": 4300,
-        "available": true
+        "available": true,
+        "id":4,
+        "description": "Cerchi un'auto berlina compatta, elegante e divertente da guidare? L'Audi A3 del 2012 è l'auto perfetta per te! Con il suo design sportivo e raffinato, l'Audi A3 offre un'esperienza di guida unica nel suo genere. Il potente motore TDI garantisce prestazioni eccezionali e consumi ridotti, mentre l'ampio spazio interno e l'allestimento completo di optional la rendono ideale per viaggi in città o gite fuori porta.\n\nImmatricolata nel 2012, questa Audi A3 ha percorso 80.000 chilometri ed è stata regolarmente tagliandata e revisionata. Si presenta in buone condizioni, sia meccaniche che estetiche, ed è pronta per regalarti nuove emozioni su ogni strada.\n\nNon lasciarti sfuggire questa occasione: a soli 4300€, potrai vivere il lusso e la performance di un'autentica Audi A3!"
     },
+ 
     {
         "brand": "Audi",
         "brandLogo": "2015/10/Audi-Logo-600x338.png",
@@ -51,6 +62,77 @@
         "modelImage": "06/aut-51-iz0124-01p.jpg",
         "year": 2020,
         "price": 41700,
-        "available": false
-    }
+        "available": false,
+        "id":5,
+        "description": "Sei alla ricerca di un'auto moderna, affidabile e versatile? La Ford Focus del 2014 è la scelta giusta per te! Con un design elegante e interni spaziosi, offre comfort e praticità per ogni tuo spostamento. Immatricolata nel 2014, ha percorso 120.000 chilometri ed è stata regolarmente tagliandata e revisionata. Si presenta in ottime condizioni, sia meccaniche che estetiche. A soli 9700€, potrai guidare un'auto sicura e piacevole da guidare."
+    },
+    {
+        "brand": "Ford",
+        "brandLogo": "2016/03/Ford-Logo-600x338.png",
+        "model": "Fiesta",
+        "modelImage": "06/aut-51-iz3026-01p.jpg",
+        "year": 2017,
+        "price": 7000,
+        "available": true,
+        "id": 7,
+        "description": "Ford Fiesta 2017: perfetta per la città! Cerchi un'utilitaria affidabile, versatile e divertente da guidare? Con il suo motore benzina da 1.0 litri e 80 cavalli, è agile e scattante nel traffico cittadino, ma anche parsimoniosa nei consumi. La carrozzeria rosso brillante è in ottime condizioni, e gli interni sono spaziosi e confortevoli, perfetti per viaggiare in città o per le gite fuori porta. Immatricolata nel 2017, ha percorso solo 65.000 chilometri ed è stata regolarmente tagliandata e revisionata. Si presenta in ottime condizioni, sia meccaniche che estetiche. Prezzo: 7.000€."
+      },
+      {
+        "brand": "Audi",
+        "model": "A4",
+        "brandLogo": "2015/10/Audi-Logo-600x338.png",
+        "modelImage":"05/aut-44-iz0320-01p.jpg",
+        "year": 2022,
+        "price": 36500,
+        "available": true,
+        "id": 8,
+        "description": "Cerchi una berlina elegante e sofisticata? L'Audi A4 è una scelta perfetta. Con i suoi interni lussuosi, le caratteristiche tecnologiche avanzate e l'esperienza di guida fluida, l'Audi A4 offre comfort e prestazioni. Questo modello del 2022 è in ottime condizioni e pronto per partire."
+      },
+      {
+        "brand": "Audi",
+        "model": "Q5",
+        "brandLogo": "2015/10/Audi-Logo-600x338.png",
+        "modelImage":"06/aut-51-iz0112-01p.jpg",
+        "year": 2021,
+        "price": 42800,
+        "available": false,
+        "id": 9,
+        "description": "Hai bisogno di un SUV versatile che unisca stile e praticità? Non guardare oltre l'Audi Q5. Con i suoi interni spaziosi, la manovrabilità reattiva e le caratteristiche di sicurezza avanzate, l'Audi Q5 è perfetta sia per la guida in città che per le fughe del fine settimana. Questo modello del 2021 è in condizioni eccellenti e pronto per affrontare qualsiasi avventura."
+      },
+      {
+        "brand": "Fiat",
+        "brandLogo": "2016/02/Logo-Fiat-600x338.png",
+        "model": "500 pop",
+        "modelImage": "06/aut-51-iz0260-01p.jpg",
+        "year": 2018,
+        "price": 10500,
+        "available": false,
+        "id": 10,
+        "description": "Cerchi una city car elegante e compatta? La Fiat 500 è la scelta perfetta per te! Con il suo design iconico e la maneggevolezza agile, la Fiat 500 è l'ideale per spostarsi con disinvoltura nelle strade urbane. Nonostante le sue piccole dimensioni, la 500 offre uno spazio interno sorprendente e una serie di caratteristiche moderne per migliorare la tua esperienza di guida. Questa Fiat 500 del 2018 è in condizioni eccellenti, avendo percorso solo 25.000 chilometri dalla sua immatricolazione. Tagliandata regolarmente e ben mantenuta, è pronta a portare gioia nei tuoi spostamenti quotidiani.\n\nNon perdere l'occasione di possedere una Fiat 500 per soli 10.500 €!"
+      },
+      {
+        "brand": "Fiat",
+        "brandLogo": "2016/02/Logo-Fiat-600x338.png",
+        "model": "500",
+        "modelImage": "06/aut-51-iz0278-01p.jpg",
+        "year": 2016,
+        "price": 8500,
+        "available": true,
+        "id": 11,
+        "description": "Cerchi una city car pratica ed affidabile? La Fiat 500 è la scelta perfetta! Grazie alle sue dimensioni compatte e al motore efficiente, la Fiat 500 eccelle negli ambienti urbani, rendendo il parcheggio e le manovre un gioco da ragazzi. Nonostante la sua piccola statura, la Panda offre uno spazio interno sorprendente e una gamma di caratteristiche per migliorare la tua esperienza di guida. Questa Fiat Panda del 2016 è stata ben mantenuta e tagliandata regolarmente, con solo 45.000 chilometri sul contachilometri dalla sua immatricolazione. È in ottime condizioni, sia meccaniche che estetiche, ed è pronta per affrontare con disinvoltura i tuoi spostamenti quotidiani. Non perdere l'occasione di possedere una Fiat 500 a soli 8.500€!"
+      },
+      {
+        "brand": "Ford",
+        "brandLogo": "2016/03/Ford-Logo-600x338.png",
+        "model": "GT",
+        "modelImage": "07/mst-01-iz0015-01p.jpg",
+        "year": 2005,
+        "price": 27400,
+        "available": true,
+        "id": 12,
+        "description": "Sei pronto per un'esperienza di guida emozionante e senza compromessi? La leggendaria Ford Mustang del 2004 è pronta a farti sentire la potenza e la libertà della strada.\n\nCon il suo design iconico e muscoloso, la Ford Mustang del 2004 cattura lo sguardo e il cuore di chiunque la incontri. Il motore V8 offre una potenza eccezionale, facendoti sentire il brivido dell'accelerazione e il rombo inconfondibile del motore mentre percorri le strade.\n\nL'interno è un mix di comfort e stile retrò, con sedili comodi e una plancia intuitiva che ti permette di controllare tutte le funzioni essenziali senza distogliere lo sguardo dalla strada.\n\nNonostante sia un'auto sportiva, la Ford Mustang del 2004 offre anche una buona praticità, con un ampio bagagliaio per trasportare tutto ciò di cui hai bisogno per le tue avventure su strada.\n\nQuesta Ford Mustang del 2004 è stata curata con attenzione, mantenuta in ottime condizioni sia estetiche che meccaniche. Con soli 12.000€, potrai possedere un'icona americana e vivere il sogno di possedere una vera muscle car."
+      }
+
+
+
 ]

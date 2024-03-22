@@ -39,12 +39,12 @@
                             <div class="col-sm-7">
                                 <div class="card-body">
                                     <h5 class="card-title">{{car.brand}} {{car.model}}</h5>
-                                    <p class="card-text">Prezzo: {{car.price}} €</p>
-                                    <p class="card-text">Anno: <span
-                                            class="badge bg-warning text-dark">{{car.year}}</span></p>
+                                    <p class="card-text">Prezzo: <span
+                                        class="badge bg-warning text-dark">{{car.price}} €</span> </p>
+                                    <p class="card-text">Anno: {{car.year}}</p>
                                     <p>Disponibilità: <span *ngIf="car.available">✅</span>
                                         <span *ngIf="!car.available">❌</span> </p>
-                                    <a [routerLink]="['/']" class="btn btn-primary" id="btnMio">Tutte le {{car.brand}}</a>
+                                    <a [routerLink]="['/dettaglio/', car.id]" class="btn btn-primary" id="btnMio">Dettagli auto</a>
                                 </div>
                             </div>
                         </div>

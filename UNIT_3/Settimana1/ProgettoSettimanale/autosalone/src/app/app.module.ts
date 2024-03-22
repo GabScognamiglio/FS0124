@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AudiPageComponent } from './components/audi-page/audi-page.component';
 import { FordPageComponent } from './components/ford-page/ford-page.component';
 import { FiatPageComponent } from './components/fiat-page/fiat-page.component';
+import { CarDetailsComponent } from './components/car-details/car-details.component';
 
 
 const routes = [
@@ -27,7 +28,17 @@ const routes = [
   {
     path:'fiat',
     component:FiatPageComponent
+  },
+  {
+    path:'dettaglio/:id',
+    component:CarDetailsComponent
+  },
+  {
+    path:'**',
+    component:HomeComponent
   }
+
+
 ]
 @NgModule({
   declarations: [
@@ -37,7 +48,8 @@ const routes = [
     HomeComponent,
     AudiPageComponent,
     FordPageComponent,
-    FiatPageComponent
+    FiatPageComponent,
+    CarDetailsComponent
   ],
   imports: [
     BrowserModule,

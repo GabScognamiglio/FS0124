@@ -5,5 +5,7 @@ export interface Car {
     modelImage:string,
     year:number,
     price:number,
-    available:boolean
+    available:boolean,
+    id:number,
+    description:string
 }
