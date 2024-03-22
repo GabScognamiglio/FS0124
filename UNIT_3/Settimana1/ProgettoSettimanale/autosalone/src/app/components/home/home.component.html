@@ -1,1 +1,57 @@
-<p>home works!</p>
+<div class="container my-5">
+    <main>
+        <div class="container-fluid bg-body-secondary d-flex justify-content-evenly  rounded-3">
+            <div class="row p-3">
+                <div class="col-12 col-lg-5 text-center"><img src="../../../assets/img/logo.png" alt="" width="350"
+                        class="rounded-3"></div>
+                <div class="col-12 col-lg-7 d-flex align-items-center flex-column justify-content-center">
+                    <h1 class="display-1 fw-bold">GAB-RENT</h1>
+                    <p class="h4 text-center">Con voi dal 1995, per offrirvi le migliori auto dei migliori marchi.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-4">
+            <h3 class="text-center">I nostri marchi:</h3>
+            <div class="row">
+                <div class="col-4 d-flex justify-content-center align-items-center">
+                    <img src="../../../assets/img/audi-logo.png" alt="" class="w-50">
+                </div>
+                <div class="col-4 d-flex justify-content-center align-items-center">
+                    <img src="../../../assets/img/fiat-logo.png" alt="" class="w-50">
+                </div>
+                <div class="col-4">
+                    <img src="../../../assets/img/ford-logo.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-4">
+            <h3 class="text-center my-4">Migliori auto del momento:</h3>
+            <div class="row">
+                <div class="col-12 col-lg-6" *ngFor="let car of featuredCars">
+                    <div class="card my-2">
+                        <div class="row no-gutters">
+                            <div class="col-sm-5 d-flex justify-content-center align-items-center">
+                                <img class="card-img" src="https://www.kimballstock.com/pix/car/p/{{car.modelImage}}"
+                                    alt="auto">
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{car.brand}} {{car.model}}</h5>
+                                    <p class="card-text">Prezzo: {{car.price}} €</p>
+                                    <p class="card-text">Anno: <span
+                                            class="badge bg-warning text-dark">{{car.year}}</span></p>
+                                    <p>Disponibilità: <span *ngIf="car.available">✅</span>
+                                        <span *ngIf="!car.available">❌</span> </p>
+                                    <a [routerLink]="['/']" class="btn btn-primary" id="btnMio">Tutte le {{car.brand}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
