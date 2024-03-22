@@ -1,1 +1,30 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="../../../assets/img/logo.png" height="60" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item ">
+            <a class="nav-link mx-2 text-light" aria-current="page" [routerLink]="['/']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" [routerLink]="['/audi']"
+            routerLinkActive="active">Audi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" [routerLink]="['/fiat']"
+            routerLinkActive="active">Fiat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" [routerLink]="['/ford']"
+            routerLinkActive="active">Ford</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
