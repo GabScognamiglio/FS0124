@@ -41,15 +41,12 @@ export class HomepageComponent {
     alert("Edit successful!")
   }
 
-  colore=false
-
   filtraTag(selezione: any) {
     this.tagSelected = selezione;
-    console.log(this.tagSelected);
+    // console.log(this.tagSelected);
     let array = this.posts.filter(element => element.tags.includes(this.tagSelected));
     this.filteredTags = array;
     console.log(this.filteredTags);
-    this.colore=!this.colore
   }
 
 }

@@ -57,9 +57,9 @@
 
 <section class="row">
 
-  <h4>Filtered by: <span *ngFor="let tag of allTags" class="badge  me-1 fs-6 tag-selected" [ngClass]="this.colore? 'bg-success' : 'bg-secondary'" (click)="filtraTag(tag)">{{tag
+  <h4>Tags: <span *ngFor="let tag of allTags" class="badge bg-secondary me-1 fs-6 tag-selected" [ngClass]="this.tagSelected===tag? 'bg-success' : 'bg-secondary'" (click)="filtraTag(tag)">{{tag
       | uppercase}}</span></h4>
-
+  <!-- <h4 *ngIf="tagSelected">Filtrato per: <span class="badge bg-secondary me-1 fs-6 tag-selected" >{{tagSelected | uppercase}}</span></h4> -->
   <app-single-post #singlePost *ngFor="let post of filteredTags, let i=index" [post]="post">
     <ng-container *ngIf="filteredTags.includes(post)">
       <div class="d-flex flex-column">
