@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-12 col-lg-8">
+    <div class="p-4 mb-4 bg-body-secondary rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">In evidenza: {{ post.title }}</h1>
+        <a routerLink="/post/{{ post.id }}">Leggi di più</a>
+      </div>
+    </div>
+    <section class="row mb-5">
+      <div class="col-12 col-sm-6 p-4 d-flex flex-column" *ngIf="related[0]?.id">
+        <strong class="d-inline-block mb-2 text-primary-emphasis text-uppercase">{{related[0].tags.join(", ")}}</strong>
+        <h3 class="mb-0">{{related[0].title}}</h3>
+        <div class="mb-1 text-body-secondary">Reactions: {{related[0].reactions}}</div>
+        <p class="card-text mb-auto">{{related[0].body.slice(0,150)}}...</p>
+        <a routerLink="/post/{{related[0].id}}">
+          Continue reading
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 p-4 d-flex flex-column" *ngIf="related[3]?.id">
+        <strong class="d-inline-block mb-2 text-primary-emphasis text-uppercase">{{related[3].tags.join(", ")}}</strong>
+        <h3 class="mb-0">{{related[3].title}}</h3>
+        <div class="mb-1 text-body-secondary">Reactions: {{related[3].reactions}}</div>
+        <p class="card-text mb-auto">{{related[3].body.slice(0,150)}}...</p>
+        <a routerLink="/post/{{related[3].id}}">
+          Continue reading
+        </a>
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-4">
+    <div class="px-5 py-4 bg-body-secondary rounded-3">
+      <h5>
+        Potrebbero piacerti:
+      </h5>
+      <ul class="list-group">
+        <li class="list-group-item " *ngFor="let post of related">
+
+          <a routerLink="/post/{{ post.id }}">🔗 {{ post.title }}</a>
+          <br>
+          <span class="badge bg-primary me-1 text-uppercase" *ngFor="let tag of post.tags || []">{{tag}}</span>
+          <br>
+          {{post.reactions}} 👍
+        </li>
+      </ul>
+      <h5>Vedi anche: </h5>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <a routerLink="/active">Post attivi</a>
+        </li>
+        <li class="list-group-item">
+          <a routerLink="/inactive">Post inattivi</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section class="row">
+  <app-single-post #singlePost *ngFor="let post of posts" [post]="post">
+    <div class="d-flex flex-column">
+      <input type="text" [(ngModel)]="post.title" class="card-title form-control">
+      <textarea cols="30" rows="5" class="card-text form-control" [(ngModel)]="post.body"></textarea>
+      <button class="btn btn-success mt-2" (click)="editPost()">SAVE</button>
+    </div>
+  </app-single-post>
+</section>

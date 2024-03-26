@@ -1,0 +1,7 @@
+<div class="container-fluid">
+    <p></p>
+    <h3>{{post.title}}</h3>
+    <p>Reactions: <span>{{post.reactions}}</span></p>
+    <p>{{post.body.slice(0,150)}}...</p>
+    <p><a [routerLink]="['/post', post.id]">Leggi di più</a></p>
+</div>

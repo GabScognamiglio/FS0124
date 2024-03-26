@@ -1,0 +1,11 @@
+<div class="card my-2" *ngFor="let post of active">
+  <div class="card-header">
+
+    {{post.tags.join(", ")}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.body}}</p>
+    <a routerLink="/post/{{post.id}}" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+    <h3 class="text-center my-5">{{post?.title}}</h3>
+    <p>
+        <span class="badge bg-primary mx-1 px-3 fs-6 rounded-5" *ngFor="let tag of post?.tags">{{tag.toUpperCase()}}</span>
+    </p>
+    <p class="fs-5">{{post?.body}}</p>
+    <p>Reactions: {{post?.reactions}} 👍</p>
+    
+    <p class="d-flex justify-content-end">Post ID: {{post?.id}}</p>
+</div>

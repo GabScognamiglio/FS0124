@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "es-giornaliero": {
+    "soluzione2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/es-giornaliero",
+            "outputPath": "dist/soluzione2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "es-giornaliero:build:production"
+              "browserTarget": "soluzione2:build:production"
             },
             "development": {
-              "browserTarget": "es-giornaliero:build:development"
+              "browserTarget": "soluzione2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "es-giornaliero:build"
+            "browserTarget": "soluzione2:build"
           }
         },
         "test": {
@@ -102,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "caa82267-c8a0-4ef4-9436-b160387e645f"
+    "analytics": "f38b5d10-e49c-486a-bfaa-aaeda2add723"
   }
 }

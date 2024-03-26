@@ -1,0 +1,15 @@
+<div class="card my-3" [ngClass]="{'border-primary': post.active}">
+  <div class="card-header d-flex justify-content-between">
+    <div class="badges">
+      <span class="badge bg-primary me-1 text-uppercase" *ngFor="let tag of post.tags"> {{tag}} </span>
+    </div>
+    <div class="btn btn-danger" (click)="toggleEdit()">EDIT</div>
+  </div>
+  <div class="card-body" *ngIf="!this.edit">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.body}}</p>
+  </div>
+  <div class="card-body" *ngIf="this.edit">
+    <ng-content ></ng-content>
+  </div>
+</div>
