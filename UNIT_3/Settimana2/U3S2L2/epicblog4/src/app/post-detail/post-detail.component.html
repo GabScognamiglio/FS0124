@@ -1,1 +1,7 @@
-<p>Qui mosteremo i dettagli del post</p>
+<div class="container">
+    <h2 class="text-center my-4">{{post.title}}</h2>
+    <h4 class="fw-normal">{{post.body}}</h4>
+    <h4 class="my-3">Tags: <span *ngFor="let tag of post.tags" class="badge bg-dark mx-1">{{tag}}</span></h4>
+    <h4>Stato: <span *ngIf="post.active" >🟢</span> <span *ngIf="!post.active" >🔴</span> </h4>
+    <h4>Id: {{post.id}}</h4>
+</div>
