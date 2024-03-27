@@ -13,7 +13,8 @@
                             <p class="badge bg-dark text-warning fs-6">{{product.price}}€</p>
                             <p><button class="btn btn-dark" (click)="addToCart(product.id)">Aggiungi al
                                     carrello</button></p>
-                            <p><button class="btn btn-danger" (click)="addToFavs(product.id)">Aggiungi ai favs</button></p>
+                            <p *ngIf="!favorites.includes(product)"><button class="btn btn-danger"  (click)="addToFavs(product)">Aggiungi ai favs</button></p>
+                            <p *ngIf="favorites.includes(product)"> <button class="btn btn-danger">Rimuovi dai favs</button></p>
                         </div>
                     </div>
                 </div>
