@@ -36,16 +36,10 @@ export class ProductsService {
 
   addFav(product:any) {
     if (!this.favArray.includes(product)){
-    this.favArray.push(product)}
+    this.favArray.push(product);}
     this.favSub.next(this.favArray);
   }
 
-
-
-  // removeCart(indice:number){
-  //   this.cartArray.slice(indice, 1);
-  //   this.cartSub.next(this.cartArray);
-  // }
 
   getErrorMessage(status: number) {
     let message = '';

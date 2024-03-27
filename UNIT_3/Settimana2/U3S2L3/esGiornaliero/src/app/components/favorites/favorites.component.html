@@ -2,7 +2,7 @@
 <h1 class="text-center">PREFERITI</h1>
 
 <div class="row">
-    <div class="col-4" *ngFor="let product of favArray">
+    <div class="col-4" *ngFor="let product of favArray, let i=index">
         <div class="card">
             <img src="{{product.images[0]}}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -11,7 +11,7 @@
                 <p class="card-text"> {{product.description.slice(0,50)}} ...</p>
                 <p class="badge bg-dark text-warning fs-6">{{product.price}}€</p>
                 
-                <p><button class="btn btn-danger">Rimuovi ai favs</button></p>
+                <p><button class="btn btn-danger" (click)="remove(i)">Rimuovi ai favs</button></p>
             </div>
         </div>
     </div>

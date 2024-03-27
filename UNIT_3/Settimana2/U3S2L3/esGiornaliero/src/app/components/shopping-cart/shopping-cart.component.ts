@@ -10,7 +10,7 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class ShoppingCartComponent implements OnInit {
   cartArray=this.productSrv.cartArray;
-  totale=0
+  totale=0  //variabile per incamerare il totale
 
   constructor(private productSrv: ProductsService) { }
 
@@ -24,6 +24,5 @@ export class ShoppingCartComponent implements OnInit {
   remove(i:number){
     this.productSrv.cartArray.splice(i,1)
     console.log(this.cartArray)
-    
   }
 }

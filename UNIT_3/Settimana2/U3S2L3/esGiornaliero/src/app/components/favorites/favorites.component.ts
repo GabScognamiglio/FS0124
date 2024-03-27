@@ -16,5 +16,9 @@ export class FavoritesComponent implements OnInit{
   ngOnInit(): void { console.log(this.favArray) }
 
 
+  remove(i:number){
+    this.productSrv.favArray.splice(i,1)
+    console.log(this.productSrv.favArray)
+  }
 }
 

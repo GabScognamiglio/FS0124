@@ -8,15 +8,17 @@ import { ProductsService } from 'src/app/services/products.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
   sub!: Subscription;
   products: Product[] = []
+  favorites: Product[] = []
 
 
   constructor(private productSrv: ProductsService) { }
 
   ngOnInit(): void {
     this.retrieveProducts()
+
   }
 
   retrieveProducts() {
@@ -26,17 +28,17 @@ export class HomeComponent implements OnInit{
     })
   }
 
-  addToCart(id:number){
-    let prod = this.products.find((element)=> element.id===id)
+  addToCart(id: number) {
+    let prod = this.products.find((element) => element.id === id)
     this.productSrv.addCart(prod);
   }
 
-  toggleFav=false
+  toggleFav = false
 
-  addToFavs(id:number){
-    let prod = this.products.find((element)=> element.id===id)
+  addToFavs(id: number) {
+    let prod = this.products.find((element) => element.id === id)
     this.productSrv.addFav(prod);
     console.log(this.productSrv.favArray)
-    this.toggleFav=true
+    this.toggleFav = true
   }
 }
