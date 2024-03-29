@@ -15,19 +15,19 @@
     {
       "id": "3",
       "todo": "Watch a classic movie",
-      "completed": false,
+      "completed": true,
       "userId": 4
     },
     {
       "id": "4",
       "todo": "Contribute code or a monetary donation to an open-source software project",
-      "completed": false,
+      "completed": true,
       "userId": 48
     },
     {
       "id": "5",
       "todo": "Solve a Rubik's cube",
-      "completed": false,
+      "completed": true,
       "userId": 31
     },
     {
@@ -51,7 +51,7 @@
     {
       "id": "9",
       "todo": "Invite some friends over for a game night",
-      "completed": false,
+      "completed": true,
       "userId": 47
     },
     {
@@ -597,7 +597,7 @@
     {
       "id": "100",
       "todo": "Learn a new programming language",
-      "completed": true,
+      "completed": false,
       "userId": 1
     },
     {
@@ -899,6 +899,18 @@
       "todo": "Sleeeeep for the whole day!!!",
       "completed": false,
       "userId": 32
+    },
+    {
+      "id": "8cc0",
+      "todo": "Fare la spesa",
+      "userId": "6",
+      "completed": true
+    },
+    {
+      "id": "8dae",
+      "todo": "Mangiare al mcdonalds",
+      "userId": "1",
+      "completed": false
     }
   ],
   "users": [

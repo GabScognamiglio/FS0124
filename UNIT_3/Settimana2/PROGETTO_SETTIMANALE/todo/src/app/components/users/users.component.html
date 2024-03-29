@@ -2,10 +2,10 @@
 
 <div class="container d-flex align-items-center flex-column">
     <div class="row justify-content-center">
-        <div *ngFor="let user of users" class="card mb-3 border-0 shadow-lg" style="max-width: 800px;">
+        <div *ngFor="let user of users" class="card mb-3 border-0 shadow-lg" style="max-width: 1000px;">
             <div class="row g-0">
-                <div class="col-md-4 d-flex justify-content-center">
-                    <img src="{{user.image}}" class="img-fluid rounded-start" alt="...">
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <img src="{{user.image}}" class="img-fluid rounded-start p-3" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -14,7 +14,7 @@
                         <p class="card-text mb-1"><small class="text-body-secondary">{{user.email}}</small></p>
                         <p class="card-text"><small class="text-body-secondary">ID no.:{{user.id}}</small></p>
                         <h6>Task assegnate:</h6>
-                      
+                        <app-user-tasks [id]="user.id"></app-user-tasks>
                     </div>
                 </div>
             </div>

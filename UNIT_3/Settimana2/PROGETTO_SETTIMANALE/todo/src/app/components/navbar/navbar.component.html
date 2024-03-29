@@ -1,31 +1,34 @@
-<nav class="navbar navbar-expand-lg bg-dark sticky-top shadow ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold text-light " [routerLink]="['/']"
-        routerLinkActive="active">To-Do</a>
+        <a class="navbar-brand fw-bold text-light " [routerLink]="['/']">To-Do</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-light"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link text-light" aria-current="page" [routerLink]="['/']"
-                    routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }">Tutti i todo</a>
+                    <a class="nav-link text-light rounded-4" aria-current="page" [routerLink]="['/']" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">Tutti i todo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" aria-current="page" [routerLink]="['/completed']"
-                    routerLinkActive="active" >Completi</a>
+                    <a class="nav-link text-light rounded-4" aria-current="page" [routerLink]="['/completed']"
+                        routerLinkActive="active">Completi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" [routerLink]="['/incompleted']"
-                    routerLinkActive="active">Incompleti</a>
+                    <a class="nav-link text-light rounded-4 " [routerLink]="['/incompleted']"
+                        routerLinkActive="active">Incompleti</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" [routerLink]="['/users']"
-                    routerLinkActive="active">Utenti</a>
+                    <a class="nav-link text-light rounded-4" [routerLink]="['/users']" routerLinkActive="active">Utenti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light rounded-4" [routerLink]="['/newTask']" routerLinkActive="active">Nuova task</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+
+<!--  -->

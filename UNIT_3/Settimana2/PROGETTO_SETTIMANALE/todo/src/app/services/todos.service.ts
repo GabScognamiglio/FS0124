@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class TodosService {
-  private apiUrl:string='http://localhost:3000/todo'
+  private apiUrl:string='http://localhost:3000/todo/'
 
   constructor(private http:HttpClient) { }
 
@@ -23,5 +23,13 @@ export class TodosService {
       console.error('Error updating data!', error);
     });
   
+  }
+
+  newTask(todo:Partial<Todo>){
+    this.http.post(this.apiUrl, todo).subscribe(response => {
+      console.log('Data updated successfully!', response);
+    }, error => {
+      console.error('Error updating data!', error);
+    });
   }
 }

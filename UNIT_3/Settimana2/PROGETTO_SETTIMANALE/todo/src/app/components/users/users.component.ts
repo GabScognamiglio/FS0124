@@ -3,7 +3,7 @@ import { User } from 'src/app/interfaces/user.interface';
 import { UserService } from 'src/app/services/user.service';
 import { Todo } from 'src/app/interfaces/todo.interface';
 import { TodosService } from 'src/app/services/todos.service';
-import { Subscription } from 'rxjs';
+import { Subscription, filter } from 'rxjs';
 
 @Component({
   selector: 'app-users',
@@ -30,10 +30,10 @@ export class UsersComponent implements OnInit {
 
   retrieveUsers(){
     this.userSub = this.userSrv.getUsers().subscribe((res) => {
-      this.users = res;      
+      this.users = res;
     });
   }
-
+  
   retrieveTodos(){
     this.todoSub = this.todoSrv.getTodos().subscribe((res) => {
       this.todos = res;

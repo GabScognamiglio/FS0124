@@ -1,0 +1,14 @@
+<h1 class="text-center my-4">Nuova Task</h1>
+
+<div class="container">
+    <form>
+        <label for="newTask" class="form-label">To-Do</label>
+        <input type="text" placeholder="Inserisci qui la task" class="form-control mb-3" [(ngModel)]="nuovoTodo.todo" (keyup)="stampa()" name="newTask" >
+        <label for="user">User</label>
+        <select name="user" class="form-select" [(ngModel)]="nuovoTodo.userId">
+            <option value="" selected>&nbsp;</option>
+            <option *ngFor="let user of users" value="{{user.id}}" >{{user.firstName}} {{user.lastName}}</option>
+        </select>
+        <button class="btn btn-success mt-3" (click)="newTodo(nuovoTodo)">Aggiungi</button>
+    </form>
+</div>

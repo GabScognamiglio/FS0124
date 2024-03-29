@@ -10,6 +10,8 @@ import { CompletedTodosComponent } from './components/completed-todos/completed-
 import { IncompletedTodosComponent } from './components/incompleted-todos/incompleted-todos.component';
 import { UsersComponent } from './components/users/users.component';
 import { FormsModule } from '@angular/forms';
+import { UserTasksComponent } from './components/user-tasks/user-tasks.component';
+import { NewTaskComponent } from './components/new-task/new-task.component';
 
 const routes: Route[] = [
   {
@@ -29,6 +31,10 @@ const routes: Route[] = [
     component: UsersComponent
   },
   {
+    path: "newTask",
+    component: NewTaskComponent
+  },
+  {
     path: "**",
     component: HomeComponent
   }
@@ -41,7 +47,9 @@ const routes: Route[] = [
     CompletedTodosComponent,
     IncompletedTodosComponent,
     UsersComponent,
-    HomeComponent
+    HomeComponent,
+    UserTasksComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,

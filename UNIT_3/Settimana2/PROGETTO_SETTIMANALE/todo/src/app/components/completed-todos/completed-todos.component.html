@@ -12,9 +12,10 @@
         </tr>
       </thead>
     <tbody>
-      <tr [ngClass]="todo.completed? 'table-success':'table-danger'" *ngFor="let todo of completed, let i=index">
+      <tr [ngClass]="todo.completed? 'table-success':'table-danger'"  class="table-info" *ngFor="let todo of completed, let i=index">
         <th scope="row">{{i+1}}</th>
-        <td><input type="checkbox" (click)="toggleStatus(todo.id)"></td>
+        <td *ngIf="!todo.completed"><button type="button"  class="btn btn-outline-dark rounded-pill py-2" (click)="toggleStatus(todo.id)">✔️</button></td>
+        <td  *ngIf="todo.completed"><button type="button" class="btn btn-outline-dark rounded-pill py-2" (click)="toggleStatus(todo.id)">✖️</button></td>
         <td>{{todo.todo}}</td>
         <td>{{todo.id}}</td>
         <td>{{todo.userId}}</td>

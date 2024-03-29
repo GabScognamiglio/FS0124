@@ -1,0 +1,20 @@
+<div *ngIf="filteredTodos.length==0">Nessuna</div>
+<table class="table">
+    <thead  *ngIf="filteredTodos.length>0">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Change</th>
+        <th scope="col">To-Do</th>
+        <th scope="col">ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr [ngClass]="todo.completed? 'table-success':'table-danger'" class="table-info"  *ngFor="let todo of filteredTodos, let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td *ngIf="!todo.completed"><button type="button"  class="btn btn-outline-dark btn-sm rounded-pill py-2" (click)="toggleStatus(todo.id)">✔️</button></td>
+        <td  *ngIf="todo.completed"><button type="button" class="btn btn-outline-dark btn-sm rounded-pill py-2" (click)="toggleStatus(todo.id)">✖️</button></td>
+        <td>{{todo.todo}}</td>
+        <td>{{todo.id}}</td>
+      </tr>
+
+  </table>
