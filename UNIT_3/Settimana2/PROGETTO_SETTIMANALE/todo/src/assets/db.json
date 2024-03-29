@@ -267,7 +267,7 @@
     {
       "id": "45",
       "todo": "Learn Javascript",
-      "completed": false,
+      "completed": true,
       "userId": 16
     },
     {
@@ -483,7 +483,7 @@
     {
       "id": "81",
       "todo": "Play a video game",
-      "completed": false,
+      "completed": true,
       "userId": 27
     },
     {
@@ -813,7 +813,7 @@
     {
       "id": "136",
       "todo": "Compliment someone",
-      "completed": false,
+      "completed": true,
       "userId": 41
     },
     {
@@ -861,7 +861,7 @@
     {
       "id": "144",
       "todo": "Charge the phone",
-      "completed": false,
+      "completed": true,
       "userId": 26
     },
     {
@@ -885,7 +885,7 @@
     {
       "id": "148",
       "todo": "Hug Mom :)",
-      "completed": false,
+      "completed": true,
       "userId": 30
     },
     {
@@ -910,6 +910,12 @@
       "id": "8dae",
       "todo": "Mangiare al mcdonalds",
       "userId": "1",
+      "completed": false
+    },
+    {
+      "id": "1fe7",
+      "todo": "Imparare Angular",
+      "userId": 6,
       "completed": false
     }
   ],

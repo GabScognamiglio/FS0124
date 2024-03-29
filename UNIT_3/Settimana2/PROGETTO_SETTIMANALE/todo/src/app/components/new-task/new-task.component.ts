@@ -36,6 +36,7 @@ export class NewTaskComponent {
   }
 
   newTodo(nuovoTodo:any){
+    nuovoTodo.userId=Number(nuovoTodo.userId)
     this.todoSrv.newTask(nuovoTodo);
   }
 
