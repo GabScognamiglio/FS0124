@@ -1,27 +1,14 @@
 # Todo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+## Note per il prof
 
-## Development server
+L'unico known-bug è:
+- quando viene creato un nuovo To Do nell'apposita sezione, esso è correttamente visualizzato nei tasks, si può cambiare il suo stato (completed: true/false), ma non risulta assegnato all'utente selezionato nella select, anche se il todo risulta con l'userId scelto, forse perchè json-server produce di base un ID che non è solo numerico come gli altri (es: "8ee6").
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Bug minore:
+- nei component "Completed" e "incompleted" quando cambi lo stato di un task (completed:false/true) esso cambia colore, viene fatta la PATCH correttamente, ma risulterà nell'altro component solo al refresh, o al cambio vista.
 
-## Code scaffolding
+### Author
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-Gabriele Scognamiglio
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
