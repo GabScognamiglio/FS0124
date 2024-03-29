@@ -1,0 +1,30 @@
+<h1 class="text-center my-4">Tutti i To-Do</h1>
+
+
+
+<div class="container">
+  <div class="container-fluid d-flex justify-content-center">
+    <input type="text" placeholder="Search for a To-Do..." class="form-control border-4 w-50" [(ngModel)]="searchText" (keyup)="filterItems(searchText)">
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Change</th>
+        <th scope="col">To-Do</th>
+        <th scope="col">ID</th>
+        <th scope="col">User ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr [ngClass]="todo.completed? 'table-success':'table-danger'" class="table-info"  *ngFor="let todo of filteredItems, let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td><input type="checkbox" (click)="toggleStatus(todo.id)"></td>
+        <td>{{todo.todo}}</td>
+        <td>{{todo.id}}</td>
+        <td>{{todo.userId}}</td>
+      </tr>
+
+  </table>
+</div>
