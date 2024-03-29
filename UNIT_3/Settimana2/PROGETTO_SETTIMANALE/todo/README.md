@@ -10,6 +10,10 @@
 #### Bug minore:
 - nei component "Completed" e "incompleted" quando cambi lo stato di un task (completed:false/true) esso cambia colore, viene fatta la PATCH correttamente, ma risulterà nell'altro component solo al refresh, o al cambio vista.
 
+### Possibili implementazioni future:
+
+-Aggiungere una sezione/funzione per poter cancellare definitivamente le task, effettuando una chiamata http DELETE
+
 ### Author:
 
 Gabriele Scognamiglio
