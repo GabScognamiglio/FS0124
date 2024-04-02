@@ -1,0 +1,20 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <h2 class="text-center my-3">LOGIN</h2>
+            <form #form="ngForm" (ngSubmit)="onSubmit()">
+                <div>
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control" required>
+                </div>
+                <div>
+                  <label for="password" class="form-label">Password</label> 
+                  <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-outline-dark mt-3">Accedi</button>
+              </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>

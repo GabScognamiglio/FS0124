@@ -1,0 +1,49 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <h2 class="text-center my-3">REGISTRAZIONE</h2>
+            <form [formGroup]="signUpForm" (submit)="onSubmit()">
+                <div class="my-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" id="nome" formControlName="nome" class="form-control">
+                </div>
+                <div class="my-3">
+                    <label for="cognome" class="form-label">Cognome</label>
+                    <input type="text" id="cognome" formControlName="cognome" class="form-control">
+                </div>
+                <div class="my-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" formControlName="password" class="form-control">
+                </div>
+                <div class="my-3">
+                    <label for="confermaPassword" class="form-label">Conferma password</label>
+                    <input type="password" id="confermaPassword" formControlName="confermaPassword"
+                        class="form-control">
+                </div>
+                <div class="my-3">
+                    <label for="genere" class="form-label">Genere</label>
+                    <select id="genere" formControlName="genere" class="form-select">
+                        <option value="M">Maschio</option>
+                        <option value="F">Femmina</option>
+                        <option value="N">Non specificato</option>
+                    </select>
+                </div>
+                <div class="my-3">
+                    <label for="immagineProfilo" class="form-label">Immagine profilo</label>
+                    <input type="file" id="immagineProfilo" formControlName="immagineProfilo" class="form-control">
+                </div>
+                <div class="my-3">
+                    <label for="biografia" class="form-label">Biografia</label>
+                    <textarea id="biografia" formControlName="biografia" class="form-control"></textarea>
+                </div>
+                <div class="my-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" formControlName="username" class="form-control">
+                </div>
+                <button type="submit" [disabled]="!signUpForm.valid" class="btn btn-success btn-lg mt-3">Invia</button>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
