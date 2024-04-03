@@ -7,7 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 // import { ActivePostsComponent } from './components/active-posts/active-posts.component';
 import { InactivePostsComponent } from './components/inactive-posts/inactive-posts.component';
-// import { PostCardComponent } from './components/post-card/post-card.component';
+import { PostCardComponent } from './components/post-card/post-card.component';
 import { HomeComponent } from './components/home/home.component';
 import { Error404Component } from './components/error404/error404.component';
 import { HighlightDirective } from './directives/highlight.directive';
@@ -66,6 +66,7 @@ const routes: Routes = [
         UserDetailsComponent,
         EllipsisPipe,
         PostDetailsComponent,
+        // PostCardComponent
     ],
     imports: [BrowserModule, RouterModule.forRoot(routes)],
     providers: [],
