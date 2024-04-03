@@ -16,8 +16,8 @@ export class SignUpComponent {
     this.signUpForm = this.fb.group({
       nome: this.fb.control('', [Validators.required]),
       cognome: this.fb.control('', [Validators.required]),
-      password: this.fb.control('', [Validators.required, Validators.minLength(8)]),
-      confermaPassword: ['', Validators.required, this.confermaPassword],
+      password: this.fb.control('', [Validators.required, Validators.minLength(8), Validators.pattern(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&^_-]).{8,}/)]),
+      confermaPassword: ['', Validators.required],
       genere: 'M',
       immagineProfilo: [''],
       biografia: [''],

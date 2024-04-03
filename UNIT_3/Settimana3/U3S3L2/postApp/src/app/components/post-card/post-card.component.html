@@ -1,0 +1,6 @@
+<!-- Il componente figlio postcard usa l'elemento post di tipo Post ricevuto dai padri -->
+<h5 class="card-header" appHighlight>Post id {{ post.id }}</h5>
+<div class="card-body">
+    <h3 class="card-title">{{ post.title | ellipsis }}</h3>
+    <ng-content></ng-content>
+</div>
