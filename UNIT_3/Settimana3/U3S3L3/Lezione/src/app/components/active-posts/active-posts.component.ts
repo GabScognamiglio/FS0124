@@ -14,7 +14,6 @@ export class ActivePostsComponent implements OnInit {
     }
 
     async ngOnInit(){
-        console.log('ngOnInit attivato');
         await this.postSrv.getPosts().subscribe((data)=>{
              this.posts = data
         });

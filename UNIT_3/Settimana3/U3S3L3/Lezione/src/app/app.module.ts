@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TokenInterceptor } from './auth/token.interceptor';
+
 
 
 import { AppComponent } from './app.component';
@@ -20,6 +22,7 @@ import { EllipsisPipe } from './pipes/ellipsis.pipe';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Route[] = [
     {
@@ -29,22 +32,27 @@ const routes: Route[] = [
     {
         path: 'activePosts',
         component: ActivePostsComponent,
+        canActivate:[AuthGuard]
     },
     {
         path: 'inactivePosts',
         component: InactivePostsComponent,
+        canActivate:[AuthGuard]
     },
     {
         path: 'activePosts/:id',
         component: PostDetailsComponent,
+        canActivate:[AuthGuard]
     },
     {
         path: 'inactivePosts/:id',
         component: PostDetailsComponent,
+        canActivate:[AuthGuard]
     },
     {
         path: 'users',
         component: UsersComponent,
+        canActivate:[AuthGuard],
         children: [
             {
                 path: ':id',
@@ -84,7 +92,11 @@ const routes: Route[] = [
         RegisterComponent,
     ],
     imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule, FormsModule, ReactiveFormsModule],
-    providers: [],
+    providers: [{
+        provide: HTTP_INTERCEPTORS,
+        useClass: TokenInterceptor,
+        multi: true
+    }],
     bootstrap: [AppComponent],
 })
 export class AppModule { }

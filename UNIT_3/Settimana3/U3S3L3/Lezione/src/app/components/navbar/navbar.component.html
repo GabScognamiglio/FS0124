@@ -1,69 +1,38 @@
 <nav class="navbar navbar-expand-lg bg-black">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
+        <a class="navbar-brand" [routerLink]="['/']">POSTAPP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a
-                        class="nav-link text-white"
-                        [routerLink]="['/']"
-                        routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}"
-                        >Home</a
-                    >
+                    <a class="nav-link text-white" [routerLink]="['/']" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a
-                        class="nav-link text-white"
-                        [routerLink]="['/activePosts']"
-                        routerLinkActive="active"
-                        >Post attivi</a
-                    >
+                <li class="nav-item" *ngIf="user">
+                    <a class="nav-link text-white" [routerLink]="['/activePosts']" routerLinkActive="active">Post
+                        attivi</a>
                 </li>
-                <li class="nav-item">
-                    <a
-                        class="nav-link text-white"
-                        [routerLink]="['/inactivePosts']"
-                        routerLinkActive="active"
-                        >Post non attivi</a
-                    >
+                <li class="nav-item" *ngIf="user">
+                    <a class="nav-link text-white" [routerLink]="['/inactivePosts']" routerLinkActive="active">Post non
+                        attivi</a>
                 </li>
-                <li class="nav-item">
-                    <a
-                        class="nav-link text-white"
-                        [routerLink]="['/users']"
-                        routerLinkActive="active"
-                        >Lista utenti</a
-                    >
+                <li class="nav-item" *ngIf="user">
+                    <a class="nav-link text-white" [routerLink]="['/users']" routerLinkActive="active">Lista utenti</a>
                 </li>
-                <li class="nav-item">
-                    <a
-                        class="nav-link text-white"
-                        [routerLink]="['/login']"
-                        routerLinkActive="active"
-                        >Login</a
-                    >
+                <li *ngIf="!user" class="nav-item">
+                    <a class="nav-link text-white" [routerLink]="['/login']" routerLinkActive="active">Login</a>
                 </li>
-                <li class="nav-item">
-                    <a
-                        class="nav-link text-white"
-                        [routerLink]="['/register']"
-                        routerLinkActive="active"
-                        >Registrati</a
-                    >
+                <li class="nav-item" *ngIf="!user">
+                    <a class="nav-link text-white" [routerLink]="['/register']" routerLinkActive="active">Registrati</a>
                 </li>
+
             </ul>
+            
         </div>
+        <p *ngIf="user" class="text-white float-end me-3 mt-3">Benvenuto {{ user.user.name}}</p>
+        <button *ngIf="user" type="button" class="btn btn-danger float-end" (click)="logout()">ESCI</button>
     </div>
 </nav>
