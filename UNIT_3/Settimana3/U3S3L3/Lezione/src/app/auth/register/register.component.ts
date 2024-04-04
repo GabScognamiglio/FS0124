@@ -12,15 +12,15 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
   userReg!: Register
 
-  constructor(private authSrv: AuthService, private router:Router) { }
+  constructor(private authSrv: AuthService, private router: Router) { }
 
   onSubmit(form: NgForm) {
     console.log(form.value);
     try {
       this.authSrv.signup(form.value).subscribe();
+      this.router.navigate(['/login'])
     } catch (error) {
       console.error(error);
     }
-    this.router.navigate(['/login'])
   }
 }

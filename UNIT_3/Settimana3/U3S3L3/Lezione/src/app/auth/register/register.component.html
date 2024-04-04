@@ -1,4 +1,5 @@
 <div class="container">
+    <h1 class="text-center mt-4">Registrati</h1>
     <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
         <div class="form-group">
             <label for="name" class="form-label">Nome Completo</label>
@@ -7,9 +8,7 @@
             <input type="email" id="email" name="email" required class="form-control" ngModel>
             <label for="password" class="form-label">Password</label>
             <input type="password" id="password" name="password" required class="form-control" ngModel>
-
         </div>
         <button type="submit" [disabled]="signupForm.invalid" class="btn btn-primary mt-4">Registrati</button>
-
     </form>
 </div>
