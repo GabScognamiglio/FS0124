@@ -1,0 +1,15 @@
+<div class="container">
+    <ng-container *ngIf="post; else elseTemplate">
+        <h1 class="text-center mt-4 mb-3">Post numero {{ post.id }}</h1>
+        <h4>{{ post.title }}</h4>
+        <ng-container *ngIf="post.completed; else postTemplate">
+            <h4>Post attivo</h4>
+        </ng-container>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <h3>Post non trovato</h3>
+    </ng-template>
+    <ng-template #postTemplate>
+        <h4>Post non attivo</h4>
+    </ng-template>
+</div>
