@@ -25,4 +25,9 @@ export class ActivePostsComponent implements OnInit {
         this.posts.splice(index, 1);
     }
 
+    deletePost(id:number, index:number) {
+        this.postSrv.deletePost(id).subscribe();
+        this.posts.splice(index, 1);
+    }
+
 }

@@ -1,0 +1,17 @@
+<h1 class="text-center mt-3">Crea un nuovo Post</h1>
+
+<div class="container">
+    <form #newPost="ngForm" (ngSubmit)="nuovoPost(newPost)">
+        <input type="text" id="title" name="title" required ngModel class="form-control my-2" placeholder="Testo del nuovo post...">
+        <select name="completed" id="completed" class="form-select my-2" required ngModel>
+            <option value="" selected></option>
+            <option value="true">completo</option>
+            <option value="false">Non completo</option>
+        </select>
+        <select name="userId" id="userId" class="form-select my-2" required ngModel>
+            <option value="" selected></option>
+            <option *ngFor="let user of arrayUser" [value]="user.id">{{user.name}}</option>
+        </select>
+        <button type="submit" class="btn btn-outline-dark">Crea</button>
+    </form>
+</div>

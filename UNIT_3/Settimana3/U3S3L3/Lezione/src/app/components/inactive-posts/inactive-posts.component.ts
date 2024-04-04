@@ -24,4 +24,10 @@ export class InactivePostsComponent {
         this.postSrv.updatePost(id, { completed: true }).subscribe();
         this.posts.splice(index, 1);
     }
+
+    
+    deletePost(id:number, index:number) {
+        this.postSrv.deletePost(id).subscribe();
+        this.posts.splice(index, 1);
+    }
 }

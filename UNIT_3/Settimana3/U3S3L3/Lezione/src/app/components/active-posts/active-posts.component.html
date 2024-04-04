@@ -21,6 +21,13 @@
                             >
                                 DETTAGLI
                             </button>
+                            <button
+                                type="button"
+                                class="btn btn-danger btn-sm"
+                                (click)="deletePost(post.id, i)"
+                            >
+                                Cancella
+                            </button>
                         </app-post-card>
                     </div>
                 </div>

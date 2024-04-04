@@ -20,6 +20,9 @@
                         attivi</a>
                 </li>
                 <li class="nav-item" *ngIf="user">
+                    <a class="nav-link text-white" [routerLink]="['/newPost']" routerLinkActive="active">Nuovo Post</a>
+                </li>
+                <li class="nav-item" *ngIf="user">
                     <a class="nav-link text-white" [routerLink]="['/users']" routerLinkActive="active">Lista utenti</a>
                 </li>
                 <li *ngIf="!user" class="nav-item">

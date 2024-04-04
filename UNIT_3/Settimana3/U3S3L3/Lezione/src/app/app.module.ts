@@ -23,6 +23,7 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AuthGuard } from './auth/auth.guard';
+import { NewPostComponent } from './components/new-post/new-post.component';
 
 const routes: Route[] = [
     {
@@ -47,6 +48,11 @@ const routes: Route[] = [
     {
         path: 'inactivePosts/:id',
         component: PostDetailsComponent,
+        canActivate:[AuthGuard]
+    },
+    {
+        path: 'newPost',
+        component: NewPostComponent,
         canActivate:[AuthGuard]
     },
     {
@@ -90,6 +96,7 @@ const routes: Route[] = [
         PostDetailsComponent,
         LoginComponent,
         RegisterComponent,
+        NewPostComponent,
     ],
     imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule, FormsModule, ReactiveFormsModule],
     providers: [{

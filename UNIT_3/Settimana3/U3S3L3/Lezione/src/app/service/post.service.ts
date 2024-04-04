@@ -22,4 +22,12 @@ export class PostService {
   updatePost(id: number, data: Partial<Post>) {
     return this.http.patch<Post>(`${this.apiURL}posts/${id}`, data);
   }
+
+  newPost(data:Post){
+    return this.http.post<Post>(`${this.apiURL}posts`, data)
+  }
+
+  deletePost(id:number) {
+    return this.http.delete(`${this.apiURL}posts/${id}`)
+  }
 }
