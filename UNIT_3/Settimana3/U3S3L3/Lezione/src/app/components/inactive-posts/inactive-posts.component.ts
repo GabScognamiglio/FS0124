@@ -13,12 +13,15 @@ export class InactivePostsComponent {
     constructor(private postSrv: PostService) {}
 
     async ngOnInit(): Promise<void> {
-        const posts = await this.postSrv.getPosts();
-        this.posts = posts;
+        console.log('ngOnInit attivato');
+        const posts = await this.postSrv.getPosts().subscribe((data)=>{
+             this.posts = data
+        });
+       ;
     }
 
     enablePost(id: number, index: number) {
-        this.postSrv.updatePost(id, { completed: true });
+        this.postSrv.updatePost(id, { completed: true }).subscribe();
         this.posts.splice(index, 1);
     }
 }

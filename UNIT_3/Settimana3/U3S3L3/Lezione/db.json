@@ -1,4 +1,51 @@
-[
+{
+  "users": [
+    {
+      "email": "gab@sco.it",
+      "password": "$2a$10$EkopIe3YjHQV8NFIq7qa0enIbxZ3/lAGRUNgZ/etFUVoJrKBGgVOm",
+      "name": "Gabriele Scogna",
+      "id": 1
+    },
+    {
+      "email": "a@a.a",
+      "password": "$2a$10$mHy3T2iuY0NDpwGdPSoYee5cRNvOLijpTiIVqcsSKeNO6JhJSByUy",
+      "name": "sjvljhndsjn",
+      "id": 2
+    },
+    {
+      "email": "gab@riele.com",
+      "password": "$2a$10$aNhkDK.EA9ecv1/2u4rXMOa7CruwMjLaZHNoCsTLEakKI42Hzk292",
+      "name": "gabriele",
+      "id": 3
+    }
+  ],
+  "utenti": [
+    {
+      "id": 1,
+      "name": "Gabriele",
+      "email": "gabri@ele.com",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Antonio",
+      "email": "anto@nio.it",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "name": "Clarissa",
+      "email": "clar!@issa.org",
+      "role": "admin"
+    },
+    {
+      "id": 4,
+      "name": "Stefano",
+      "email": "ste@fano.com",
+      "role": "user"
+    }
+  ],
+  "posts": [
     {
       "userId": 1,
       "id": 1,
@@ -21,19 +68,19 @@
       "userId": 1,
       "id": 4,
       "title": "et porro tempora",
-      "completed": true
+      "completed": false
     },
     {
       "userId": 1,
       "id": 5,
       "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 1,
       "id": 6,
       "title": "qui ullam ratione quibusdam voluptatem quia omnis",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 1,
@@ -51,7 +98,7 @@
       "userId": 1,
       "id": 9,
       "title": "molestiae perspiciatis ipsa",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 1,
@@ -1200,3 +1247,4 @@
       "completed": false
     }
   ]
+}

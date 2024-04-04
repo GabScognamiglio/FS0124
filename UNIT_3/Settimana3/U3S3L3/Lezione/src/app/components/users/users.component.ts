@@ -12,7 +12,9 @@ export class UsersComponent implements OnInit {
 
     constructor(private userSrv: UserService) {}
 
-    ngOnInit(): void {
-        this.users = this.userSrv.getUsers();
+    async ngOnInit() {
+        await this.userSrv.getUsers().subscribe((data)=>{
+            this.users = data;
+       });
     }
 }

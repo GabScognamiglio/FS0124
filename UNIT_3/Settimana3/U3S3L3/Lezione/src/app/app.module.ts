@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -15,6 +18,8 @@ import { UsersComponent } from './components/users/users.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { EllipsisPipe } from './pipes/ellipsis.pipe';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 const routes: Route[] = [
     {
@@ -48,6 +53,14 @@ const routes: Route[] = [
         ]
     },
     {
+        path: 'login',
+        component: LoginComponent,
+    },
+    {
+        path: 'register',
+        component: RegisterComponent,
+    },
+    {
         path: '**',
         component: Error404Component,
     },
@@ -67,9 +80,11 @@ const routes: Route[] = [
         UserDetailsComponent,
         EllipsisPipe,
         PostDetailsComponent,
+        LoginComponent,
+        RegisterComponent,
     ],
-    imports: [BrowserModule, RouterModule.forRoot(routes)],
+    imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule, FormsModule, ReactiveFormsModule],
     providers: [],
     bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

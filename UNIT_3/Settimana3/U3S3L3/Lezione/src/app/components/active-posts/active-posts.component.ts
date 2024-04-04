@@ -13,14 +13,16 @@ export class ActivePostsComponent implements OnInit {
     constructor(private postSrv: PostService) {
     }
 
-    async ngOnInit(): Promise<void> {
+    async ngOnInit(){
         console.log('ngOnInit attivato');
-        const posts = await this.postSrv.getPosts();
-        this.posts = posts;
+        await this.postSrv.getPosts().subscribe((data)=>{
+             this.posts = data
+        });
+       ;
     }
 
     disablePost(id: number, index: number) {
-        this.postSrv.updatePost(id, {completed: false});
+        this.postSrv.updatePost(id, {completed: false}).subscribe();
         this.posts.splice(index, 1);
     }
 

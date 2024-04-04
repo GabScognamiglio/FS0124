@@ -9,14 +9,14 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./user-details.component.scss'],
 })
 export class UserDetailsComponent implements OnInit {
-    user: User | undefined;
+    user!: User;
 
     constructor(private userSrv: UserService, private router: ActivatedRoute) {}
 
     ngOnInit(): void {
         this.router.params.subscribe((params) => {
             const id = +params['id'];
-            this.user = this.userSrv.getUser(id);
+            this.userSrv.getUser(id).subscribe((data)=>{this.user=data});
         });
     }
 }

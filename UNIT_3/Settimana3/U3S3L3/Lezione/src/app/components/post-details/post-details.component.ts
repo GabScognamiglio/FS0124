@@ -9,14 +9,15 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./post-details.component.scss'],
 })
 export class PostDetailsComponent implements OnInit {
-    post: Post | undefined;
+    post!: Post;
 
     constructor(private postSrv: PostService, private router: ActivatedRoute) {}
 
     ngOnInit(): void {
         this.router.params.subscribe((params) => {
             const id = +params['id'];
-            this.post = this.postSrv.getPost(id);
+            this.postSrv.getPost(id).subscribe((data)=>
+            this.post=data);
         });
     }
 }
