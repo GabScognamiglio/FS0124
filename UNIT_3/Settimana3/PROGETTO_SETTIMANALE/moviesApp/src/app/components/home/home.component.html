@@ -1,0 +1,29 @@
+<div class="text-center container mt-5">
+    <h1 class="text-danger mb-3">Benvenuto <span *ngIf="user">{{user.user.name}}</span><span *ngIf="!user">in
+            G-Movies</span>!</h1>
+    <h4>Il meglio del Cinema e delle Serie TV sempre a portata di mano!</h4>
+    <h4 *ngIf="!user">Per usufruire dei nostri servizi <a [routerLink]="['/login']">accedi</a> oppure <a
+            [routerLink]="['/signup']">registrati.</a></h4>
+    <div *ngIf="user" class="container mt-5">
+        <h6 class="mb-3">Clicca qui sotto per accedere alla nostra lista dei film</h6>
+        <a [routerLink]="['/movies']">
+            <div id="carouselExampleSlidesOnly" class="carousel slide d-flex justify-content-center"
+                data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://image.tmdb.org/t/p/w500/zisnDuZBQWzio4ylon8AElnat7V.jpg" alt="..."
+                            style="max-width: 475px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://image.tmdb.org/t/p/w500/1jkNM1NHyHsxiBBuOlOeqgmidM0.jpg" alt="..."
+                            style="max-width: 475px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://image.tmdb.org/t/p/w500/vXHzO26mJaOt4VO7ZFiM6No5ScT.jpg" alt="..."
+                            style="max-width: 475px;">
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
