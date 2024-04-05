@@ -14,7 +14,6 @@ export class UsersListComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     await this.userSrv.getUsers().subscribe((data) => {
       this.users = data;
-      console.log(this.users)
     })
   }
 
