@@ -17,6 +17,12 @@
       "password": "$2a$10$iJL03byG4zdL5EZi9V3Qb.ZxiXdjBveTFESKbTG0CtJ5ATuPwJQFu",
       "name": "Gabriele Scognamiglio",
       "id": 4
+    },
+    {
+      "email": "pippo@pluto.it",
+      "password": "$2a$10$rLhTeAdAYtQ3VUPUIpt46uFqw3.Z/yeA3k85.tcXxm8QC0PeVWT6G",
+      "name": "pippo",
+      "id": 5
     }
   ],
   "favorites": [
@@ -63,12 +69,27 @@
     {
       "userId": 4,
       "movieId": 813258,
-      "id": 30
+      "id": 33
     },
     {
       "userId": 4,
-      "movieId": 503736,
-      "id": 31
+      "movieId": 634528,
+      "id": 34
+    },
+    {
+      "userId": 4,
+      "movieId": 823855,
+      "id": 35
+    },
+    {
+      "userId": 4,
+      "movieId": 791373,
+      "id": 36
+    },
+    {
+      "userId": 5,
+      "movieId": 578701,
+      "id": 39
     }
   ],
   "genres": [

@@ -26,6 +26,10 @@ export class MoviesService {
     return this.http.post<Fav>(this.favUrl, data)
   }
 
+  removeFav(id:number){
+    return this.http.delete(`http://localhost:4201/favorites/${id}`)
+  }
+
   getFavs(){
     return this.http.get<Fav[]>(this.favUrl);
   }
