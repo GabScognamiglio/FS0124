@@ -16,6 +16,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { TokenInterceptor } from './auth/token.interceptor';
 import { AuthGuard } from './auth/auth.guard';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 
 
 const routes: Route[] = [
@@ -56,6 +57,11 @@ const routes: Route[] = [
     component: UsersListComponent,
     canActivate:[AuthGuard]
   },
+  {
+    path: 'movies/:id',
+    component: MovieDetailsComponent,
+    canActivate:[AuthGuard]
+  },
 
 ]
 
@@ -70,7 +76,8 @@ const routes: Route[] = [
     ProfileComponent,
     UsersListComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,

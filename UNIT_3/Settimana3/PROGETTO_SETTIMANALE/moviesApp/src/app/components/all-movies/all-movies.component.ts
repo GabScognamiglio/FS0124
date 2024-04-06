@@ -13,7 +13,7 @@ export class AllMoviesComponent implements OnInit {
   movies!: Movie[];
   allFavs!: Fav[];
   userFav: Fav[] = [];
-
+  daRimuovere!:Fav|any;
   caricamento = true;
 
   constructor(private moviesSrv: MoviesService) { }
@@ -36,7 +36,7 @@ export class AllMoviesComponent implements OnInit {
     this.getFavs()
   }
 
-  daRimuovere!:Fav|any
+  
   removeFav(movieID: number) {
     this.daRimuovere = this.userFav.find(fav=>fav.movieId==movieID)
     this.moviesSrv.removeFav(this.daRimuovere.id).subscribe();

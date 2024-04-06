@@ -1,1 +1,10 @@
-<p>details works!</p>
+<div class="container mb-5 d-flex flex-column align-items-center">
+    <h4 class="text-center my-5 text-danger">Dettagli</h4>
+    <div class="card bg-dark text-light p-3 text-center" style="max-width: 700px; min-width: 450px;">
+        <h5 class="card-header border-light">{{user.name}}</h5>
+        <div class="card-body text-start">
+          <h5 class="card-title"><span class="text-secondary">Email:</span> {{user.email}}</h5>
+          <p class="card-text"><span class="text-secondary">ID#:</span>{{user.id}}</p>
+        </div>
+      </div>
+</div>

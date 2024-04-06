@@ -1,0 +1,14 @@
+<div class="container my-5">
+    <h1 class="text-center text-danger">{{movie.title}}</h1>
+    <div class="d-flex justify-content-center">
+
+        <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="">
+    </div>
+
+    <p>
+    <p>Voto: {{movie.vote_average}}/10 <meter class="average-rating" min="0" max="10" value="{{movie.vote_average}}"
+            title="4.3 out of 5 stars" style=" --percent: calc({{movie.vote_average}}/10*100%);">4.3 out of 5</meter>
+    </p>
+    <p>{{movie.overview}}</p>
+
+</div>

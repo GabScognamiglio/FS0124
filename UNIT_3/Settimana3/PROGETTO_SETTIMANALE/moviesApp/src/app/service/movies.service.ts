@@ -18,6 +18,10 @@ export class MoviesService {
     return this.http.get<Movie[]>(this.apiURL)
   }
 
+  getMovie(id:number){
+    return this.http.get<Movie>(`${this.apiURL}/${id}`)
+  }
+
   addFavourite(movieID:number, userID:number){
     const data ={
       userId:userID,

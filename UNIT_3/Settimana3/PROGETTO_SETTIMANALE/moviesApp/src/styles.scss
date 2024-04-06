@@ -3,3 +3,29 @@ html, body {
     background-color: #2c3136;
     color: #f8f9fa;
 }
+
+.average-rating {
+    position: relative;
+    appearance: none;
+    color: transparent;
+    width: auto;
+    display: inline-block;
+    vertical-align: baseline;
+  }
+
+  .average-rating::before {
+    // --percent: calc(7.6/10*100%);
+    content: '★★★★★★★★★★';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(0,0,0,0.2);
+    background:
+      linear-gradient(90deg, rgb(194, 165, 0) var(--percent), rgba(0,0,0,0.2) var(--percent));
+   background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .card{
+    box-shadow:0 1rem 3rem rgb(20, 20, 20) !important;
+  }
