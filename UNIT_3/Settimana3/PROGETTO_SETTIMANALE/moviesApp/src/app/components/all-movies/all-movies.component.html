@@ -9,10 +9,9 @@
                   <p class="card-text"></p>
                   <p>Voto: {{movie.vote_average}}/10 <meter class="average-rating" min="0" max="10" value="{{movie.vote_average}}" title="4.3 out of 5 stars" style=" --percent: calc({{movie.vote_average}}/10*100%);">4.3 out of 5</meter></p>
                   <p class="text-secondary"><i class="bi bi-calendar"></i> {{movie.release_date | date: 'dd MMM yyyy'}}</p>
-                 
-
-                  <!-- <p><i class="bi bi-suit-heart bg-danger p-2 px-3 rounded-pill"></i></p> -->
-                </div> <button class="btn btn-secondary" (click)="addFav(movie.id)">Aggiungi</button>
+                </div> 
+                <button class="btn btn-secondary" (click)="addFav(movie.id)">Aggiungi</button>
+                <button class="btn btn-danger" >Rimuovi</button>
               </div>
         </div>
     </div>

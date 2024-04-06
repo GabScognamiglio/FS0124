@@ -12,7 +12,7 @@ import { MoviesService } from 'src/app/service/movies.service';
 export class AllMoviesComponent implements OnInit {
   movies!: Movie[];
   allFavs!:Fav[];
-  userFav!:Fav[] | any;
+  userFav:Fav[] =[];
 
   constructor(private moviesSrv: MoviesService) { }
 
@@ -28,7 +28,7 @@ export class AllMoviesComponent implements OnInit {
     const activeUser:any=localStorage.getItem('user')
     const userId=JSON.parse(activeUser).user.id;
     this.moviesSrv.addFavourite(movieId, userId).subscribe();
-
+    this.getFavs()
   }
 
   getFavs(){
@@ -41,5 +41,12 @@ export class AllMoviesComponent implements OnInit {
 
       })
         
+  }
+
+  pref=false
+  isFav(id:number){
+    if(this.userFav.find(fav=>fav.movieId===id)){
+      this.pref=true
+    }
   }
 }
