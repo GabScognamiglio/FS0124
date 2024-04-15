@@ -6,7 +6,7 @@ public class Esercizio1 {
     public static void main(String[] args) {
         System.out.println(prodotto(8, 8));
 
-        System.out.println(concatena("Mario", "Rossi"));
+        System.out.println(concatena("Mario ", 50));
 
         String[] arr1 = {"primo", "secondo", "terzo", "quarto", "quinto"};
         String str1 = "SESTO";
@@ -18,8 +18,8 @@ public class Esercizio1 {
         return a * b;
     }
 
-    public static String concatena(String a, String b) {
-        return a.concat(b);
+    public static String concatena(String a, int b) {
+        return a+b;
     }
 
     public static String[] InserisciInArray(String[] array, String stringa) {
