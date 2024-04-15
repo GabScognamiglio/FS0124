@@ -40,4 +40,5 @@ public class Esercizio3 {
     public static double perimetroTriangolo (double lato1, double lato2, double lato3) {
         return (lato1 + lato2 + lato3);
     }
+
 }
