@@ -25,5 +25,6 @@ public class usaEcommerce {
 
         System.out.println(" ");
         System.out.println("Il totale del carrello è: €" + carrello.totaleCarrello());
+
     }
 }
