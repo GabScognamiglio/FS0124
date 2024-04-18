@@ -1,4 +1,4 @@
-package es1;
+package esercizi;
 
 public enum Dipartimento {
     PRODUZIONE,

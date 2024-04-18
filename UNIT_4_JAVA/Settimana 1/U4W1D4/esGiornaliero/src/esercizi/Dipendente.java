@@ -1,14 +1,14 @@
-package es1;
+package esercizi;
 
-public class Dipendente {
+public abstract class Dipendente {
     private int matricola;
     private double stipendio;
     private Dipartimento dipartimento;
 
 
-    public Dipendente(int matricola, double stipendio, Dipartimento dipartimento) {
+    public Dipendente(int matricola, Dipartimento dipartimento) {
         this.matricola = matricola;
-        this.stipendio = stipendio;
+
         this.dipartimento = dipartimento;
     }
 
@@ -27,4 +27,10 @@ public class Dipendente {
     public void setDipartimento(Dipartimento dipartimento) {
         this.dipartimento = dipartimento;
     }
+
+    public void setStipendio(double stipendio) {
+        this.stipendio = stipendio;
+    }
+
+    public abstract void calculateSalary();
 }
