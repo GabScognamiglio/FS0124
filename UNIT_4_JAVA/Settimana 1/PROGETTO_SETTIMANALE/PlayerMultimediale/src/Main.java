@@ -13,7 +13,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i < 5; i++) {
-            System.out.println("Scegli il tipo (1.Audio, 2.Video, 3.Immagine): ");
+            System.out.println((i+1) + "/5 - Scegli il tipo (1.Audio, 2.Video, 3.Immagine): ");
             int sceltaTipo = scanner.nextInt();
             scanner.nextLine();
 
