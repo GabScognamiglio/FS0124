@@ -68,7 +68,7 @@ public class Main {
                 riproduzione = scanner.nextInt();
                 scanner.nextLine();
             }
-            if (riproduzione != 0) {
+            if (riproduzione != 0 && riproduzione<6) {
                 lista[riproduzione - 1].riproduci();
             }
         }
