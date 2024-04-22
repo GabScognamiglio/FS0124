@@ -1,0 +1,4 @@
+2024-04-22 17:11:42,734 ERROR [main] logger1 [Banca.java:20] -- Errore durante il prelievo: es3.BancaException: Il conto è in rosso
+2024-04-22 17:11:42,754 ERROR [main] logger1 [Banca.java:38] -- Errore durante il prelievo: il prelievo non è disponibile -- num mov:0
+2024-04-22 17:11:50,506 ERROR [main] logger1 [Banca.java:20] -- Errore durante il prelievo: es3.BancaException: Il conto è in rosso
+2024-04-22 17:11:50,522 ERROR [main] logger1 [Banca.java:38] -- Errore durante il prelievo: il prelievo non è disponibile -- num mov:0
