@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Banca {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger("logger1");
         ContoCorrente conto1 = new ContoCorrente("Grossi Mario", 1000);
 
