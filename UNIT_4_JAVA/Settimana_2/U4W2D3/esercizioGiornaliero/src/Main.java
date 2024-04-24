@@ -120,8 +120,8 @@ public class Main {
         List<Product> boysProd10 = allProducts.stream()
                 .filter(p->p.getCategory()=="Boys")
                 .map(p->{
-                    double prezzoScontato10= p.getPrice()*0.9;
-                    return new Product(p.getId(),p.getName(),p.getCategory(), prezzoScontato10);
+                    p.setPrice(p.getPrice()*0.9);
+                    return p;
                 })
                 .toList();
         boysProd10.forEach(System.out::println);
