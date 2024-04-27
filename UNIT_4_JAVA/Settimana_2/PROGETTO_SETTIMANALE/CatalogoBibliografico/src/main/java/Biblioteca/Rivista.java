@@ -11,7 +11,11 @@ public class Rivista extends Pubblicazione{
     @Override
     public String toString() {
         return "Rivista{" +
-                "periodicita=" + periodicita +
+                "codiceISBN=" + getCodiceISBN() +
+                ", title='" + getTitle() + '\'' +
+                ", anno=" + getAnno() +
+                ", numPagine=" + getNumPagine() +
+                ", periodicita=" + periodicita +
                 '}';
     }
 

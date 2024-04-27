@@ -13,6 +13,16 @@ public abstract class Pubblicazione {
         this.anno = anno;
     }
 
+    @Override
+    public String toString() {
+        return "Pubblicazione{" +
+                "codiceISBN=" + codiceISBN +
+                ", title='" + title + '\'' +
+                ", anno=" + anno +
+                ", numPagine=" + numPagine +
+                '}';
+    }
+
     public long getCodiceISBN() {
         return codiceISBN;
     }
