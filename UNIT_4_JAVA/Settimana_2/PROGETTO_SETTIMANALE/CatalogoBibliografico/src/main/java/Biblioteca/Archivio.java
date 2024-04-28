@@ -8,7 +8,7 @@ import java.nio.charset.Charset;
 import java.util.*;
 
 public class Archivio {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Map<Long, Pubblicazione> archivio = new HashMap(); //mappa con ISBN come chiave(univoco) e Pubblicazione come valore
         File file = new File("./../persistence/archivio.txt"); //creo file di testo per scrivere e leggere
 
@@ -85,14 +85,14 @@ public class Archivio {
         System.out.println("****METODI RICHIESTI PER IL PROGETTO****");
         System.out.println();
 
-        //METODO PER L'AGGIUNTA DI PUBBLICAZIONI IN ARCHIVIO
+        //METODO PER L'AGGIUNTA DI PUBBLICAZIONI IN ARCHIVIO (e su file)
         Pubblicazione rivistaDaAggiungere = new Rivista(9772037113003L, "The Economist", 96, 2024, Periodicita.SETTIMANALE);
-        aggiungiRecord(archivio, rivistaDaAggiungere);
+        aggiungiRecord(archivio, rivistaDaAggiungere, file);
         System.out.println();
 
-        //METODO PER ELIMINAZIONE DI PUBBLICAZIONI IN ARCHIVIO
+        //METODO PER ELIMINAZIONE DI PUBBLICAZIONI IN ARCHIVIO (e su file)
         long queryEliminazione = 9772037113003L; //simulo una query che arriva, per eliminare il record (elimino lo stesso che ho aggiunto sopra)
-        eliminaRecord(archivio, queryEliminazione);
+        eliminaRecord(archivio, queryEliminazione, file);
         System.out.println();
 
         //METODO PER LA RICERCA TRAMITE CODICE ISBN
@@ -119,21 +119,37 @@ public class Archivio {
 
     }
 
-    public static void aggiungiRecord(Map<Long, Pubblicazione> archivio, Pubblicazione pubblicazione) {
+    public static void aggiungiRecord(Map<Long, Pubblicazione> archivio, Pubblicazione pubblicazione, File file){
         if (archivio.containsKey(pubblicazione.getCodiceISBN())) {
             System.out.println("Record già presente nell'archivio.");
         } else {
-            archivio.put(pubblicazione.getCodiceISBN(), pubblicazione);
-            System.out.println("Record aggiunto con successo all'archivio.");
+            try {
+                archivio.put(pubblicazione.getCodiceISBN(), pubblicazione);
+                String recordString = pubblicazioneToRecordString(pubblicazione);
+                FileUtils.writeStringToFile(file, recordString + "#", Charset.defaultCharset(), true);
+                System.out.println("Record aggiunto con successo all'archivio.");
+            } catch (IOException e) {
+                System.out.println("Si è verificato un errore durante l'aggiunta della pubblicazione al file TXT: " + e.getMessage());
+            }
         }
     }
 
-    public static void eliminaRecord(Map<Long, Pubblicazione> archivio, long ISBN) {
+    public static void eliminaRecord(Map<Long, Pubblicazione> archivio, long ISBN, File file) {
         Pubblicazione pubblicazioneRimossa = archivio.remove(ISBN);
         if (pubblicazioneRimossa == null) {
+
             System.out.println("Elemento non presente in archivio");
         } else {
-            System.out.println("Record eliminato: " + pubblicazioneRimossa);
+            try {
+                String fileContent = FileUtils.readFileToString(file, Charset.defaultCharset());
+                String recordDaEliminare = pubblicazioneToRecordString(pubblicazioneRimossa);
+                String nuovoContenuto = fileContent.replaceAll(recordDaEliminare + "#", "");
+                FileUtils.writeStringToFile(file, nuovoContenuto, Charset.defaultCharset(), false);
+                System.out.println("Record eliminato: " + pubblicazioneRimossa);
+
+            } catch (IOException e) {
+                System.out.println("Si è verificato un errore durante l'eliminazione del record dal file: " + e.getMessage());
+            }
         }
     }
 
@@ -162,5 +178,27 @@ public class Archivio {
                 .filter(p -> ((Libro) p).getAutore().contains(nome))
                 .forEach(System.out::println);
 
+    }
+
+    //METODO PER LA TRASFORMAZIONE DI LIBRI/RIVISTE IN STRINGHE DA INSERIRE/RIMUOVERE NEL FILE .TXT
+    private static String pubblicazioneToRecordString(Pubblicazione pubblicazione) {
+        if (pubblicazione instanceof Libro) {
+            Libro libro = (Libro) pubblicazione;
+            return libro.getCodiceISBN() + "@" +
+                    libro.getTitle() + "@" +
+                    libro.getNumPagine() + "@" +
+                    libro.getAnno() + "@" +
+                    libro.getAutore() + "@" +
+                    libro.getGenere();
+        } else if (pubblicazione instanceof Rivista) {
+            Rivista rivista = (Rivista) pubblicazione;
+            return rivista.getCodiceISBN() + "@" +
+                    rivista.getTitle() + "@" +
+                    rivista.getNumPagine() + "@" +
+                    rivista.getAnno() + "@" +
+                    rivista.getPeriodicita();
+        } else {
+            return ""; // Gestione dei casi non previsti
+        }
     }
 }
