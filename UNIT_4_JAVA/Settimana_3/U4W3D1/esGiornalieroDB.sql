@@ -4,11 +4,11 @@ select * from public.clienti
 where nome = 'Mario';
 
 --es2
-select * from public.clienti
+select nome,cognome from public.clienti
 where anno_nascita = 1982;
 
 --es3
-select * from public.fatture
+select count(*) from public.fatture
 where iva = 20;
 
 --es4
