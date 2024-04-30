@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name="eventi")
+@Table(name = "eventi")
 public class Evento {
     @Id
     @GeneratedValue
@@ -20,8 +20,7 @@ public class Evento {
     @Column(name = "numero_massimo_partecipanti")
     private int numMaxPartecipanti;
 
-    public Evento(int id, String titolo, LocalDate dataEvento, TipoEVento tipoEvento, int numMaxPartecipanti) {
-        this.id = id;
+    public Evento(String titolo, LocalDate dataEvento, TipoEVento tipoEvento, int numMaxPartecipanti) {
         this.titolo = titolo;
         this.dataEvento = dataEvento;
         this.tipoEvento = tipoEvento;
