@@ -1,9 +1,9 @@
 package epicode.entity;
 
-
-
 import javax.persistence.*;
 import java.time.LocalDate;
+
+
 @Entity
 @Table(name = "studenti")
 public class Studente {
