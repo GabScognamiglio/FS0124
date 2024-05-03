@@ -10,8 +10,10 @@ public class Partecipazione {
     @GeneratedValue
     private int id;
     @ManyToOne
-    @JoinColumn(name = "utente_partecipazioni_id")
+    @JoinColumn(name = "persona_id")
     private Persona persona;
+    @ManyToOne
+    @JoinColumn(name = "evento_id")
     private Evento evento;
     @Enumerated(EnumType.STRING)
     private Stato stato;
@@ -24,6 +26,16 @@ public class Partecipazione {
     }
 
     public Partecipazione() {
+    }
+
+    @Override
+    public String toString() {
+        return "Partecipazione{" +
+                "id=" + id +
+                ", persona=" + persona +
+                ", evento=" + evento +
+                ", stato=" + stato +
+                '}';
     }
 
     public int getId() {

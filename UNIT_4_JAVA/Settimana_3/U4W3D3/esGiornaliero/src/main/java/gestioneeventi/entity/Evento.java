@@ -3,6 +3,7 @@ package gestioneeventi.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "eventi")
@@ -22,6 +23,8 @@ public class Evento {
     @OneToOne
     @JoinColumn(name = "location_id")
     private Location location;
+    @OneToMany(mappedBy = "evento", fetch = FetchType.EAGER) //lato inverso
+    private List<Partecipazione> listaPartecipazioni;
 
 
     public Evento(String titolo, LocalDate dataEvento, TipoEVento tipoEvento, int numMaxPartecipanti) {

@@ -1,0 +1,48 @@
+package catalogoBibliotecario.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "libri")
+public class Libro extends Pubblicazione{
+    private String autore;
+    private String genere;
+
+    public Libro(String title, int numPagine, int anno, String autore, String genere) {
+        super(title, numPagine, anno);
+        this.autore = autore;
+        this.genere = genere;
+    }
+
+    public Libro() {
+    }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "codiceISBN=" + getCodiceISBN() +
+                ", title='" + getTitle() + '\'' +
+                ", anno=" + getAnno() +
+                ", numPagine=" + getNumPagine() +
+                ", autore='" + autore + '\'' +
+                ", genere='" + genere + '\'' +
+                '}';
+    }
+
+    public String getAutore() {
+        return autore;
+    }
+
+    public void setAutore(String autore) {
+        this.autore = autore;
+    }
+
+    public String getGenere() {
+        return genere;
+    }
+
+    public void setGenere(String genere) {
+        this.genere = genere;
+    }
+}

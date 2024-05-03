@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 @Entity
-@Table(name = "studenti")
+@Table(name = "persone")
 public class Persona {
     @Id
     @GeneratedValue
@@ -19,7 +19,7 @@ public class Persona {
     private LocalDate dataNascita;
     @Enumerated(EnumType.STRING)
     private Sesso sesso;
-    @OneToMany(mappedBy = "persona") //lato inverso
+    @OneToMany(mappedBy = "persona", fetch = FetchType.EAGER) //lato inverso
     private List<Partecipazione> listaPartecipazioni;
 
 
@@ -33,6 +33,18 @@ public class Persona {
     }
 
     public Persona() {
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", email='" + email + '\'' +
+                ", dataNascita=" + dataNascita +
+                ", sesso=" + sesso +
+                '}';
     }
 
     public int getId() {
