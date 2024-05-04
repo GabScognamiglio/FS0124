@@ -4,6 +4,7 @@ import net.bytebuddy.asm.Advice;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "utenti")
@@ -19,6 +20,8 @@ public class Utente {
     private String cognome;
     @Column(name = "data_nascita")
     private LocalDate dataNascita;
+    @OneToMany(mappedBy = "utente")
+    private List<Prestito> prestiti;
 
     public Utente(String nome, String cognome, LocalDate dataNascita) {
         this.nome = nome;

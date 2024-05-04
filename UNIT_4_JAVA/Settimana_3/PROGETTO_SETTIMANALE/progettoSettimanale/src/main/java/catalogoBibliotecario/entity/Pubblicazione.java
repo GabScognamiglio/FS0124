@@ -1,20 +1,24 @@
 package catalogoBibliotecario.entity;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Table(name = "pubblicazioni")
 public abstract class Pubblicazione {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "codice_ISBN")
-    private long codiceISBN;
+    private UUID codiceISBN;
     @Column(length = 30)
     private String title;
     private int anno;
     @Column(name = "numero_pagine")
     private int numPagine;
+    @OneToMany(mappedBy = "elementoPrestato")
+    private List<Prestito> prestiti;
 
     public Pubblicazione(String title, int numPagine, int anno) {
         this.title = title;
@@ -35,12 +39,8 @@ public abstract class Pubblicazione {
                 '}';
     }
 
-    public long getCodiceISBN() {
+    public UUID getCodiceISBN() {
         return codiceISBN;
-    }
-
-    public void setCodiceISBN(long codiceISBN) {
-        this.codiceISBN = codiceISBN;
     }
 
     public String getTitle() {

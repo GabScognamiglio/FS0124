@@ -9,10 +9,12 @@ public class Prestito {
     @Id
     @GeneratedValue
     private int id;
-    @OneToOne
+    //una persona può avere più prestiti
+    @ManyToOne
     @JoinColumn(name = "utente_id")
     private Utente utente;
-    @OneToOne
+    //un libro/rivista può essere prestato più volte
+    @ManyToOne
     @JoinColumn(name = "elemento_prestato_id")
     private Pubblicazione elementoPrestato;
     @Column(name = "data_inizio_prestito")
