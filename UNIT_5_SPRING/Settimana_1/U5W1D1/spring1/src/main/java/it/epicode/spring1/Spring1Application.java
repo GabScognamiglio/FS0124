@@ -1,6 +1,7 @@
 package it.epicode.spring1;
 
 import it.epicode.spring1.appConfig.AppConfig;
+import it.epicode.spring1.bean.Aula;
 import it.epicode.spring1.bean.Studente;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,6 +23,9 @@ public class Spring1Application {
 
 		System.out.println(studente);
 		System.out.println(studente2);
+
+		Aula aula = ctx.getBean(Aula.class);
+		System.out.println(aula);
 
 //		Map<String, Studente> listaStud = ctx.getBeansOfType(Studente.class);
 //		listaStud.forEach((a, b)-> System.out.println(a + b));
