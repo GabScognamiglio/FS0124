@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11fed72e-029a-43b3-a342-0b5fc49fc812" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/U4W1D1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/U4W1D1/src/Main.java" afterDir="false" />
+    <list default="true" id="4089a9b1-5dc3-4969-89f1-9d06c0f573ac" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/UNIT_4_JAVA.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -25,32 +29,29 @@
   }
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
+  &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2f8XtboZMf9RuuNrRt3K1EA6nJg" />
+  <component name="ProjectId" id="2g8BAxqrOGC155JY6TjxWJ4D5cB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gab/Desktop/FS0124/UNIT_4_JAVA&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Gab/Desktop/FS0124/UNIT_4_JAVA/Settimana_3/PROGETTO_SETTIMANALE/progettoSettimanale"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="11fed72e-029a-43b3-a342-0b5fc49fc812" name="Changes" comment="" />
-      <created>1713183893713</created>
+      <changelist id="4089a9b1-5dc3-4969-89f1-9d06c0f573ac" name="Changes" comment="" />
+      <created>1715069184846</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1713183893713</updated>
+      <updated>1715069184846</updated>
     </task>
     <servers />
   </component>
