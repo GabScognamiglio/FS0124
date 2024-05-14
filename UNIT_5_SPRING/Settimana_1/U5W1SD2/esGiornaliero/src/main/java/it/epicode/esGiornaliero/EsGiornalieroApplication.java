@@ -11,23 +11,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class EsGiornalieroApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EsGiornalieroApplication.class, args);
-
-		ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-
-		System.out.println();
-		System.out.println("***   MENU'   ***");
-		System.out.println();
-
-		Menu menu = ctx.getBean(Menu.class);
-
-		menu.getPizze().forEach(System.out::println);
-		System.out.println();
-		menu.getIngredienti().forEach(System.out::println);
-		System.out.println();
-		menu.getBevande().forEach(System.out::println);
-		System.out.println();
-
-
 	}
 
 }

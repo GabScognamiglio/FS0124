@@ -145,4 +145,27 @@ public class AppConfig {
         return menu;
     }
 
+    @Bean
+    public Tavolo tavolo(){
+        Tavolo tavolo = new Tavolo();
+        tavolo.setNumTavolo(1);
+        tavolo.setMaxCoperti(5);
+        tavolo.setStato(StatoTavolo.LIBERO);
+
+        return tavolo;
+    }
+    @Bean("ordine")
+    public Ordine ordine() {
+        Ordine ordine = new Ordine();
+        ordine.setNumOrdine(2);
+        ordine.setStatoOrdine(StatoOrdine.IN_CORSO);
+        ordine.setCibiOrdinati(List.of(getMargherita(), getSalamiPizza(), getVino(), getAcqua()));
+        ordine.setNumCoperti(4);
+        ordine.setCostoTotaleOrdine(ordine.calcolaTotale());
+
+
+        return ordine;
+
+    }
+
 }
