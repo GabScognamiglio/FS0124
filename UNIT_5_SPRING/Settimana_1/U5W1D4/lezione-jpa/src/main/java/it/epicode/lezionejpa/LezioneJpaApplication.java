@@ -10,4 +10,5 @@ public class LezioneJpaApplication {
 		SpringApplication.run(LezioneJpaApplication.class, args);
 	}
 
+
 }
