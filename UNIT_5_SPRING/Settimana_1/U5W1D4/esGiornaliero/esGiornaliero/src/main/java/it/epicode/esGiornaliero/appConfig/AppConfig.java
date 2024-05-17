@@ -43,7 +43,7 @@ public class AppConfig {
         return vino;
     }
 
-    @Bean
+    @Bean("pomodoro")
     public Ingrediente getPomodoro() {
         Ingrediente pomodoro = new Ingrediente();
         pomodoro.setNome("Pomodoro");
@@ -53,7 +53,7 @@ public class AppConfig {
         return pomodoro;
     }
 
-    @Bean
+    @Bean("mozzarella")
     public Ingrediente getMozzarella() {
         Ingrediente mozzarella = new Ingrediente();
         mozzarella.setNome("Mozzarella");
@@ -73,7 +73,7 @@ public class AppConfig {
         return prosciutto;
     }
 
-    @Bean
+    @Bean("cipolla")
     public Ingrediente getCipolla() {
         Ingrediente cipolla = new Ingrediente();
         cipolla.setNome("Cipolla");
@@ -103,7 +103,7 @@ public class AppConfig {
         return salami;
     }
 
-    @Bean
+    @Bean("margherita")
     public Pizza getMargherita() {
         Pizza margherita = new Pizza();
         margherita.setNome("Margherita");

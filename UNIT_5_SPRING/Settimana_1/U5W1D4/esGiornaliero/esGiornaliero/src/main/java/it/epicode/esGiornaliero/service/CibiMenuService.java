@@ -1,6 +1,7 @@
 package it.epicode.esGiornaliero.service;
 
 import it.epicode.esGiornaliero.bean.CibiMenu;
+import it.epicode.esGiornaliero.bean.Pizza;
 import it.epicode.esGiornaliero.repository.CibiMenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,5 +13,9 @@ public class CibiMenuService {
 
     public void inserisciCibo (CibiMenu cibo) {
         cibiMenuRepository.save(cibo);
+    }
+
+    public Pizza getPizzaById(int id){
+       return (Pizza) cibiMenuRepository.findById(id).get();
     }
 }
