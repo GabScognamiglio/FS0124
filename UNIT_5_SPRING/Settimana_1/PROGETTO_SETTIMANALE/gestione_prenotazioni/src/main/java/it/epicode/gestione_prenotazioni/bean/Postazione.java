@@ -20,6 +20,17 @@ public class Postazione {
     @JoinColumn(name = "edificio_id")
     private Edificio edificio;
 
-    @OneToMany(mappedBy = "postazione")
+    @OneToMany(mappedBy = "postazione", fetch = FetchType.EAGER)
     private List<Prenotazione> prenotazioni;
+
+    @Override
+    public String toString() {
+        return "Postazione{" +
+                "edificio=" + edificio +
+                ", numMaxOccupanti=" + numMaxOccupanti +
+                ", tipoPostazione=" + tipoPostazione +
+                ", descrizione='" + descrizione + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }

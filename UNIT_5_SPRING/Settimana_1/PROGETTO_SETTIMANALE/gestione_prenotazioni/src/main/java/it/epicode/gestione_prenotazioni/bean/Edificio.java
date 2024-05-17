@@ -14,6 +14,16 @@ public class Edificio {
     private String nome;
     private String indirizzo;
     private String citta;
-    @OneToMany(mappedBy = "edificio")
+    @OneToMany(mappedBy = "edificio", fetch = FetchType.EAGER)
     private List<Postazione> postazioni;
+
+    @Override
+    public String toString() {
+        return "Edificio{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", indirizzo='" + indirizzo + '\'' +
+                ", citta='" + citta + '\'' +
+                '}';
+    }
 }

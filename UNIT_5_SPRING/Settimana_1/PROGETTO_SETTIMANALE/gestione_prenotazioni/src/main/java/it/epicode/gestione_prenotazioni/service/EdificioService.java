@@ -24,4 +24,8 @@ public class EdificioService {
     public void cancellaEdificio(int id) {
         edificioRepository.deleteById(id);
     }
+
+    public Edificio getEdificioById(int id) {
+        return edificioRepository.findById(id).get();
+    }
 }

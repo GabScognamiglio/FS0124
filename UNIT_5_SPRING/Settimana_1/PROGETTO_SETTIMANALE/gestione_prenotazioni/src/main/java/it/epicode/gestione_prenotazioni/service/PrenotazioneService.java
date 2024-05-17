@@ -1,6 +1,5 @@
 package it.epicode.gestione_prenotazioni.service;
 
-
 import it.epicode.gestione_prenotazioni.bean.Prenotazione;
 import it.epicode.gestione_prenotazioni.repository.PrenotazioneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +33,9 @@ public class PrenotazioneService {
 
     public void cancellaPrenotazione(int id) {
         prenotazioneRepository.deleteById(id);
+    }
+
+    public Prenotazione getPrenotazioneById(int id) {
+        return prenotazioneRepository.findById(id).get();
     }
 }

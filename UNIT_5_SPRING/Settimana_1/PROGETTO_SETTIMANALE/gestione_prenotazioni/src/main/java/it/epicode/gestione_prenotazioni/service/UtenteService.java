@@ -1,6 +1,5 @@
 package it.epicode.gestione_prenotazioni.service;
 
-
 import it.epicode.gestione_prenotazioni.bean.Utente;
 import it.epicode.gestione_prenotazioni.repository.UtenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,5 +22,9 @@ public class UtenteService {
 
     public void cancellaUtente(int id) {
         utenteRepository.deleteById(id);
+    }
+
+    public Utente getUtenteById(int id) {
+        return utenteRepository.findById(id).get();
     }
 }

@@ -5,6 +5,7 @@ import it.epicode.gestione_prenotazioni.bean.Edificio;
 import it.epicode.gestione_prenotazioni.bean.Postazione;
 import it.epicode.gestione_prenotazioni.bean.Utente;
 import it.epicode.gestione_prenotazioni.bean.enums.TipoPostazione;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -76,7 +77,7 @@ public class AppConfig {
         Postazione postazione = new Postazione();
         postazione.setDescrizione("Postazione A");
         postazione.setTipoPostazione(TipoPostazione.OPENSPACE);
-        postazione.setNumMaxOccupanti(1);
+        postazione.setNumMaxOccupanti(5);;
         return postazione;
     }
 
@@ -94,7 +95,7 @@ public class AppConfig {
         Postazione postazione = new Postazione();
         postazione.setDescrizione("Postazione C");
         postazione.setTipoPostazione(TipoPostazione.SALA_RIUNIONI);
-        postazione.setNumMaxOccupanti(1);
+        postazione.setNumMaxOccupanti(10);
         return postazione;
     }
 
