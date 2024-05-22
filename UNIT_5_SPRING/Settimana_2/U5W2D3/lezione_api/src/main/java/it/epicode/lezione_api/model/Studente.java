@@ -1,5 +1,6 @@
 package it.epicode.lezione_api.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,6 +19,7 @@ public class Studente {
 
     @ManyToOne
     @JoinColumn(name="aula_id")
+    @JsonIgnore
     private Aula aula;
 
 //    public Studente(String nome, String cognome, LocalDate dataNascita) {
