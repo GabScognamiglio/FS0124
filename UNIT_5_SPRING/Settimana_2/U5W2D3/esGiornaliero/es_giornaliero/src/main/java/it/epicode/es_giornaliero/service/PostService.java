@@ -71,11 +71,11 @@ public class PostService {
             post.setCategoria(postDto.getCategoria());
             post.setTempoDiLettura(postDto.getTempoDiLettura());
 
-            Optional<Autore> aulaOptional = autoreRepository.findById(postDto.getAutoreId());
+            Optional<Autore> autoreOptional = autoreRepository.findById(postDto.getAutoreId());
 
-            if (aulaOptional.isPresent()) {
-                Autore aula = aulaOptional.get();
-                post.setAutore(aula);
+            if (autoreOptional.isPresent()) {
+                Autore autore = autoreOptional.get();
+                post.setAutore(autore);
                 postRepository.save(post);
                 return post;
             } else {
