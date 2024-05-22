@@ -1,6 +1,7 @@
 package it.epicode.es_giornaliero.model;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -20,6 +21,9 @@ public class Autore {
     @OneToMany(mappedBy = "autore")
     private List<Post> posts;
 
+
+    public Autore() {
+    }
 
     public Autore(String nome, String cognome, LocalDate dataNascita) {
         this.nome = nome;
