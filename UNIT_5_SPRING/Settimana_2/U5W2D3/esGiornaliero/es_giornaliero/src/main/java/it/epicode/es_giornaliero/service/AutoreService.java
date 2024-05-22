@@ -1,55 +1,70 @@
 package it.epicode.es_giornaliero.service;
 
+import it.epicode.es_giornaliero.dto.AutoreDto;
 import it.epicode.es_giornaliero.exception.AutoreNonTrovatoException;
 import it.epicode.es_giornaliero.model.Autore;
+import it.epicode.es_giornaliero.repository.AutoreRepository;
+import it.epicode.es_giornaliero.repository.PostRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 
 @Service
 public class AutoreService {
-    private List<Autore> autori = new ArrayList<>();
+    @Autowired
+    private PostRepository postRepository;
 
-    public List<Autore> getAllAutori() {
-        return autori;
+    @Autowired
+    private AutoreRepository autoreRepository;
+
+    public String saveAutore(AutoreDto autoreDto) {
+        Autore autore = new Autore(autoreDto.getNome(),autoreDto.getCognome(), autoreDto.getDataNascita());
+       autoreRepository.save(autore);
+       return "Autore con ID " + autore.getId() + " creato con successo.";
+    }
+
+    public Page<Autore> getAutori(int page, int size, String sortBy) {
+        Pageable pageable = PageRequest.of(page, size, Sort.by(sortBy));
+        return autoreRepository.findAll(pageable);
     }
 
     public Optional<Autore> getAutoreById(int id) {
-        return autori.stream().filter(s -> s.getId() == id).findFirst();
+        return autoreRepository.findById(id);
     }
 
-    public String saveAutore(Autore autore) {
-        autori.add(autore);
-        return "Autore creato con questa id: " + autore.getId();
-    }
 
-    public Autore updateAutore(int matricola, Autore autoreUpdate) throws AutoreNonTrovatoException {
-        Optional<Autore> autoreOpt = getAutoreById(matricola);
+    public Autore updateAutore(int id, AutoreDto autoreDto) {
+        Optional<Autore> autoreOptional = getAutoreById(id);
 
-        if (autoreOpt.isPresent()) {
-            Autore autore = autoreOpt.get();
-            autore.setNome(autoreUpdate.getNome());
-            autore.setCognome(autoreUpdate.getCognome());
-            autore.setDataNascita(autoreUpdate.getDataNascita());
+        if (autoreOptional.isPresent()) {
+            Autore autore = autoreOptional.get();
+            autore.setNome(autoreDto.getNome());
+            autore.setCognome(autoreDto.getCognome());
+            autore.setDataNascita(autoreDto.getDataNascita());
+
+            autoreRepository.save(autore);
             return autore;
         }
         else {
-            throw new AutoreNonTrovatoException("Autore non trovato") ;
+            throw new AutoreNonTrovatoException("Autore con ID " + id + " non trovato.");
         }
     }
 
-    public String deleteAutore (int id) throws AutoreNonTrovatoException {
-        Optional<Autore> autoreOpt = getAutoreById(id);
+    public String deleteAutore (int id) {
+        Optional<Autore> autoreOptional = getAutoreById(id);
 
-        if (autoreOpt.isPresent()) {
-            autori.remove(autoreOpt.get());
-            return "Autore eliminato";
+        if (autoreOptional.isPresent()) {
+            autoreRepository.delete(autoreOptional.get());
+            return "Autore con id" + id + " eliminato con successo.";
         }
         else {
-            throw new AutoreNonTrovatoException("Autore non trovato") ;
+            throw new AutoreNonTrovatoException("Autore con id " + id + " non trovato");
         }
     }
 }

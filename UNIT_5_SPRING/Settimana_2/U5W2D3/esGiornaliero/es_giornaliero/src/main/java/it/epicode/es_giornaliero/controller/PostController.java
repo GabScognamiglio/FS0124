@@ -1,13 +1,16 @@
 package it.epicode.es_giornaliero.controller;
 
 
+
+import it.epicode.es_giornaliero.dto.PostDto;
 import it.epicode.es_giornaliero.exception.PostNonTrovatoException;
 import it.epicode.es_giornaliero.model.Post;
 import it.epicode.es_giornaliero.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -17,34 +20,38 @@ public class PostController {
     private PostService postService;
 
 
-    @GetMapping("api/blogPosts")
-    public List<Post> getAllPosts(){
-        return postService.getAllPosts();
+
+    @PostMapping("api/posts")
+    @ResponseStatus(HttpStatus.CREATED)
+    public String savePost(@RequestBody PostDto postDto) {
+        return postService.savePost(postDto);
     }
 
-    @GetMapping("api/blogPosts/{id}")
-    public Post getPostById(@PathVariable int id) throws PostNonTrovatoException {
+    @GetMapping("api/posts")
+    public Page<Post> getPosts(@RequestParam(defaultValue = "0") int page,
+                                  @RequestParam(defaultValue = "10") int size,
+                                  @RequestParam(defaultValue = "id") String sortBy) {
+        return postService.getPosts(page, size, sortBy);
+    }
+
+    @GetMapping("api/posts/{id}")
+    public Post getPostById(@PathVariable int id) {
         Optional<Post> postOptional = postService.getPostById(id);
-        if (postOptional.isPresent()){
+        if (postOptional.isPresent()) {
             return postOptional.get();
-        }
-        else {
+        } else {
             throw new PostNonTrovatoException("Post non trovato");
         }
     }
 
-    @PostMapping("api/blogPosts")
-    public String savePost(@RequestBody Post post){
-        return postService.savePost(post);
+    @PutMapping("/api/posts/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Post updatePost(@PathVariable int id, @RequestBody PostDto postDto) {
+        return postService.updatePost(id, postDto);
     }
 
-    @PutMapping("api/blogPosts/{id}")
-    public Post updatePost(@PathVariable int id, @RequestBody Post post) throws PostNonTrovatoException{
-        return postService.updatePost(id, post);
-    }
-
-    @DeleteMapping("api/blogPosts/{id}")
-    public String deletePost(@PathVariable int id) throws PostNonTrovatoException{
+    @DeleteMapping("/api/posts/{id}")
+    public String deletePost(@PathVariable int id) {
         return postService.deletePost(id);
     }
 
