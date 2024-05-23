@@ -3,12 +3,14 @@ package it.epicode.es_giornaliero.controller;
 
 
 import it.epicode.es_giornaliero.dto.PostDto;
+import it.epicode.es_giornaliero.exception.BadRequestException;
 import it.epicode.es_giornaliero.exception.PostNonTrovatoException;
 import it.epicode.es_giornaliero.model.Post;
 import it.epicode.es_giornaliero.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -23,7 +25,12 @@ public class PostController {
 
     @PostMapping("api/posts")
     @ResponseStatus(HttpStatus.CREATED)
-    public String savePost(@RequestBody PostDto postDto) {
+    public String savePost(@RequestBody PostDto postDto, BindingResult bindingResult) {
+        if(bindingResult.hasErrors()){
+            throw new BadRequestException(bindingResult.getAllErrors().stream().
+                    map(objectError -> objectError.getDefaultMessage()).reduce("", ((s, s2) -> s+s2)));
+        }
+
         return postService.savePost(postDto);
     }
 
@@ -46,7 +53,12 @@ public class PostController {
 
     @PutMapping("/api/posts/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Post updatePost(@PathVariable int id, @RequestBody PostDto postDto) {
+    public Post updatePost(@PathVariable int id, @RequestBody PostDto postDto,BindingResult bindingResult) {
+        if(bindingResult.hasErrors()){
+            throw new BadRequestException(bindingResult.getAllErrors().stream().
+                    map(objectError -> objectError.getDefaultMessage()).reduce("", ((s, s2) -> s+s2)));
+        }
+
         return postService.updatePost(id, postDto);
     }
 

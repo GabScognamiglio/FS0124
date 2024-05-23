@@ -3,13 +3,17 @@ package it.epicode.es_giornaliero.controller;
 
 import it.epicode.es_giornaliero.dto.AutoreDto;
 import it.epicode.es_giornaliero.exception.AutoreNonTrovatoException;
+import it.epicode.es_giornaliero.exception.BadRequestException;
 import it.epicode.es_giornaliero.model.Autore;
 import it.epicode.es_giornaliero.service.AutoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.Optional;
 
 @RestController
@@ -21,7 +25,11 @@ public class AutoreController {
 
     @PostMapping("api/autori")
     @ResponseStatus(HttpStatus.CREATED)
-    public String saveAutore(@RequestBody AutoreDto autoreDto) {
+    public String saveAutore(@RequestBody AutoreDto autoreDto, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            throw new BadRequestException(bindingResult.getAllErrors()
+                    .stream().map(e -> e.getDefaultMessage()).reduce("", (s, a) -> s + a));
+        }
         return autoreService.saveAutore(autoreDto);
     }
 
@@ -44,12 +52,22 @@ public class AutoreController {
 
     @PutMapping("/api/autori/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Autore updateAutore(@PathVariable int id, @RequestBody AutoreDto autoreDto) {
+    public Autore updateAutore(@PathVariable int id, @RequestBody AutoreDto autoreDto, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            throw new BadRequestException(bindingResult.getAllErrors().stream().
+                    map(objectError -> objectError.getDefaultMessage()).reduce("", ((s, s2) -> s + s2)));
+        }
+
         return autoreService.updateAutore(id, autoreDto);
     }
 
     @DeleteMapping("/api/autori/{id}")
     public String deleteAutore(@PathVariable int id) {
         return autoreService.deleteAutore(id);
+    }
+
+    @PatchMapping("/api/autori/{id}")
+    public String patchAvatarAutore(@PathVariable int id, @RequestBody MultipartFile img) throws IOException {
+        return autoreService.patchAvatarAutore(id, img);
     }
 }
