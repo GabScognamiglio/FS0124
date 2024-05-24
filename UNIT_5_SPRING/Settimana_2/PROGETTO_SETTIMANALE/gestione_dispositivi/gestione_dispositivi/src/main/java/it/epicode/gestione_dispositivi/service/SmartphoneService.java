@@ -25,7 +25,7 @@ public class SmartphoneService {
         smartphone.setMarca(smartphoneDto.getMarca());
         smartphone.setModello((smartphoneDto.getModello()));
         smartphone.setPolliciSchermo(smartphoneDto.getPolliciSchermo());
-        smartphone.setStatoDispositivo(smartphoneDto.getStatoDispositivo());
+        smartphone.setStatoDispositivo(StatoDispositivo.valueOf(smartphoneDto.getStatoDispositivo()));
         smartphone.setMegapixel(smartphoneDto.getMegapixel());
 
         smartphoneRepository.save(smartphone);
@@ -49,7 +49,7 @@ public class SmartphoneService {
             smartphone.setMarca(smartphoneDto.getMarca());
             smartphone.setModello((smartphoneDto.getModello()));
             smartphone.setPolliciSchermo(smartphoneDto.getPolliciSchermo());
-            smartphone.setStatoDispositivo(smartphoneDto.getStatoDispositivo());
+            smartphone.setStatoDispositivo(StatoDispositivo.valueOf(smartphoneDto.getStatoDispositivo()));
             smartphone.setMegapixel(smartphoneDto.getMegapixel());
 
             smartphoneRepository.save(smartphone);

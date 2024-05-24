@@ -12,6 +12,6 @@ public class SmartphoneDto {
     private String modello;
     private double polliciSchermo;
     @NotBlank
-    private StatoDispositivo statoDispositivo;
+    private String statoDispositivo;
     private double megapixel;
 }

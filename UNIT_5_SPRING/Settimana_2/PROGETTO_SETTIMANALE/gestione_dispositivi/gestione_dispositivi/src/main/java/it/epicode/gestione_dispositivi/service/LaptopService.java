@@ -27,7 +27,7 @@ public class LaptopService {
         laptop.setMarca(laptopDto.getMarca());
         laptop.setModello((laptopDto.getModello()));
         laptop.setPolliciSchermo(laptopDto.getPolliciSchermo());
-        laptop.setStatoDispositivo(laptopDto.getStatoDispositivo());
+        laptop.setStatoDispositivo(StatoDispositivo.valueOf(laptopDto.getStatoDispositivo()));
         laptop.setRam(laptopDto.getRam());
         laptop.setSsd(laptopDto.getSsd());
 
@@ -52,7 +52,7 @@ public class LaptopService {
             laptop.setMarca(laptopDto.getMarca());
             laptop.setModello((laptopDto.getModello()));
             laptop.setPolliciSchermo(laptopDto.getPolliciSchermo());
-            laptop.setStatoDispositivo(laptopDto.getStatoDispositivo());
+            laptop.setStatoDispositivo(StatoDispositivo.valueOf(laptopDto.getStatoDispositivo()));
             laptop.setRam(laptopDto.getRam());
             laptop.setSsd(laptopDto.getSsd());
 

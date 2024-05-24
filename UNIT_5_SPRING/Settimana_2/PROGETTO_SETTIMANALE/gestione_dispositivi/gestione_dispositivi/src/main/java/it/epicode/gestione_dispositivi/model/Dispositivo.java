@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public abstract class Dispositivo {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     private String marca;
     private String modello;
