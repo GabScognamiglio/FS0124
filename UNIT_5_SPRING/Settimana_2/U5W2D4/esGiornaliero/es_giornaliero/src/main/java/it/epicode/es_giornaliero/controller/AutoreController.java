@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -25,7 +26,7 @@ public class AutoreController {
 
     @PostMapping("api/autori")
     @ResponseStatus(HttpStatus.CREATED)
-    public String saveAutore(@RequestBody AutoreDto autoreDto, BindingResult bindingResult) {
+    public String saveAutore(@RequestBody @Validated AutoreDto autoreDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new BadRequestException(bindingResult.getAllErrors()
                     .stream().map(e -> e.getDefaultMessage()).reduce("", (s, a) -> s + a));
@@ -52,7 +53,7 @@ public class AutoreController {
 
     @PutMapping("/api/autori/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Autore updateAutore(@PathVariable int id, @RequestBody AutoreDto autoreDto, BindingResult bindingResult) {
+    public Autore updateAutore(@PathVariable int id, @RequestBody @Validated AutoreDto autoreDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new BadRequestException(bindingResult.getAllErrors().stream().
                     map(objectError -> objectError.getDefaultMessage()).reduce("", ((s, s2) -> s + s2)));
