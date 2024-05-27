@@ -46,6 +46,7 @@ public class DipendenteService {
         dipendente.setCognome((dipendenteDto.getCognome()));
         dipendente.setUsername(dipendenteDto.getUsername());
         dipendente.setEmail(dipendenteDto.getEmail());
+        dipendente.setPassword(dipendenteDto.getPassword());
 
         dipendenteRepository.save(dipendente);
         return "Dipendente con ID " + dipendente.getId() + " creato con successo.";

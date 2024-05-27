@@ -23,15 +23,15 @@ public class DipendenteController {
     @Autowired
     private DipendenteService dipendenteService;
 
-    @PostMapping("api/dipendenti")
-    @ResponseStatus(HttpStatus.CREATED)
-    public String saveDipendente(@RequestBody @Validated DipendenteDto dipendenteDto, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            throw new BadRequestException(bindingResult.getAllErrors()
-                    .stream().map(e -> e.getDefaultMessage()).reduce("", (s, a) -> s + a));
-        }
-        return dipendenteService.saveDipendente(dipendenteDto);
-    }
+//    @PostMapping("api/dipendenti")
+//    @ResponseStatus(HttpStatus.CREATED)
+//    public String saveDipendente(@RequestBody @Validated DipendenteDto dipendenteDto, BindingResult bindingResult) {
+//        if (bindingResult.hasErrors()) {
+//            throw new BadRequestException(bindingResult.getAllErrors()
+//                    .stream().map(e -> e.getDefaultMessage()).reduce("", (s, a) -> s + a));
+//        }
+//        return dipendenteService.saveDipendente(dipendenteDto);
+//    }
 
     @GetMapping("api/dipendenti")
     public Page<Dipendente> getAutori(@RequestParam(defaultValue = "0") int page,

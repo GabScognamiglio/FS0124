@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 @Component
-@PropertySource("application.properties")
+
 public class JwtTool {
     @Value("${jwt.secret}")
     private String secret;

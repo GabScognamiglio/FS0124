@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
         @Autowired
         private DipendenteService dipendenteService;
 
-        @PostMapping("/auth/register")
+        @PostMapping("/api/dipendenti/auth/register")
         public String register(@RequestBody @Validated DipendenteDto dipendenteDto, BindingResult bindingResult) {
             if (bindingResult.hasErrors()) {
                 throw new BadRequestException(bindingResult.getAllErrors()
@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
             return dipendenteService.saveDipendente(dipendenteDto);
         }
 
-        @PostMapping("/auth/login")
+        @PostMapping("/api/dipendenti/auth/login")
         public String login(@RequestBody @Validated DipendenteLoginDto dipendenteLoginDto, BindingResult bindingResult) {
             if (bindingResult.hasErrors()) {
                 throw new BadRequestException(bindingResult.getAllErrors()

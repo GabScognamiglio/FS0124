@@ -38,6 +38,6 @@ public class JwtFilter extends OncePerRequestFilter {
     //per permettere login e registrazione senza token
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
-        return new AntPathMatcher().match("/auth/**", request.getServletPath());
+        return new AntPathMatcher().match("/api/dipendenti/auth/**", request.getServletPath());
     }
 }
