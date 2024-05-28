@@ -41,4 +41,13 @@ public class JwtTool {
             throw new UnauthorizedException("Error in authorization, please relogin!");
         }
     }
+
+    //decodificare il token ed estrarre id; il parseInt seve per trasformare la stringa in int
+    public int getIdFromToken(String token){
+        return Integer.parseInt(Jwts.parser().verifyWith(Keys.hmacShaKeyFor(secret.getBytes()))
+                .build()
+                .parseSignedClaims(token)
+                .getPayload()
+                .getSubject());
+    }
 }

@@ -18,6 +18,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -40,13 +41,16 @@ public class DipendenteService {
     @Autowired
     private Cloudinary cloudinary;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     public String saveDipendente(DipendenteDto dipendenteDto) {
         Dipendente dipendente = new Dipendente();
         dipendente.setNome(dipendenteDto.getNome());
         dipendente.setCognome((dipendenteDto.getCognome()));
         dipendente.setUsername(dipendenteDto.getUsername());
         dipendente.setEmail(dipendenteDto.getEmail());
-        dipendente.setPassword(dipendenteDto.getPassword());
+        dipendente.setPassword(passwordEncoder.encode(dipendenteDto.getPassword()));
 
         dipendenteRepository.save(dipendente);
         return "Dipendente con ID " + dipendente.getId() + " creato con successo.";
@@ -70,6 +74,7 @@ public class DipendenteService {
             dipendente.setCognome((dipendenteDto.getCognome()));
             dipendente.setUsername(dipendenteDto.getUsername());
             dipendente.setEmail(dipendenteDto.getEmail());
+            dipendente.setPassword(passwordEncoder.encode(dipendenteDto.getPassword()));
 
             dipendenteRepository.save(dipendente);
             return dipendente;

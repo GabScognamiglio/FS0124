@@ -10,6 +10,7 @@ import it.epicode.gestione_dispositivi.service.LaptopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -25,6 +26,7 @@ public class LaptopController {
 
     @PostMapping("api/laptops")
     @ResponseStatus(HttpStatus.CREATED)
+    @PreAuthorize("hasAuthority('ADMIN')") //solo chi è ADMIN è autorizzato
     public String saveLaptop(@RequestBody @Validated LaptopDto laptopDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new BadRequestException(bindingResult.getAllErrors()
@@ -34,6 +36,7 @@ public class LaptopController {
     }
 
     @GetMapping("api/laptops")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public Page<Laptop> getLaptops(@RequestParam(defaultValue = "0") int page,
                                    @RequestParam(defaultValue = "10") int size,
                                    @RequestParam(defaultValue = "id") String sortBy) {
@@ -41,6 +44,7 @@ public class LaptopController {
     }
 
     @GetMapping("api/laptops/{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public Laptop getLaptopById(@PathVariable int id) {
         Optional<Laptop> laptopOptional = laptopService.getLaptopById(id);
         if (laptopOptional.isPresent()) {
@@ -62,11 +66,13 @@ public class LaptopController {
     }
 
     @DeleteMapping("/api/laptops/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')") //solo chi è ADMIN è autorizzato
     public String deleteLaptop(@PathVariable int id) {
         return laptopService.deleteLaptop(id);
     }
 
     @PatchMapping("/api/laptops/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')") //solo chi è ADMIN è autorizzato
     public String patchStatoLaptop(@PathVariable int id, @RequestParam StatoDispositivo statoDispositivo) {
         return laptopService.patchStatoLaptop(id, statoDispositivo);
     }

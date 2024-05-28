@@ -9,6 +9,7 @@ import it.epicode.gestione_dispositivi.service.DipendenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +35,7 @@ public class DipendenteController {
 //    }
 
     @GetMapping("api/dipendenti")
+   @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public Page<Dipendente> getAutori(@RequestParam(defaultValue = "0") int page,
                                       @RequestParam(defaultValue = "10") int size,
                                       @RequestParam(defaultValue = "id") String sortBy) {
@@ -41,6 +43,7 @@ public class DipendenteController {
     }
 
     @GetMapping("api/dipendenti/{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public Dipendente getDipendenteById(@PathVariable int id) {
         Optional<Dipendente> dipendenteOptional = dipendenteService.getDipendenteById(id);
         if (dipendenteOptional.isPresent()) {
@@ -51,6 +54,7 @@ public class DipendenteController {
     }
 
     @PutMapping("/api/dipendenti/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')") //solo chi è ADMIN è autorizzato
     @ResponseStatus(HttpStatus.OK)
     public Dipendente updateDipendente(@PathVariable int id, @RequestBody @Validated DipendenteDto dipendenteDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
@@ -62,21 +66,25 @@ public class DipendenteController {
     }
 
     @DeleteMapping("/api/dipendenti/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')") //solo chi è ADMIN è autorizzato
     public String deleteDipendente(@PathVariable int id) {
         return dipendenteService.deleteDipendente(id);
     }
 
     @PatchMapping("/api/dipendenti/{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')") //solo chi è ADMIN è autorizzato
     public String patchImmagineProfiloDipendente(@PathVariable int id, @RequestBody MultipartFile immagineProfilo) throws IOException {
         return dipendenteService.patchImmagineProfiloDipendente(id, immagineProfilo);
     }
 
     @PatchMapping("/api/dipendenti-laptop/{dipendenteId}")
+    @PreAuthorize("hasAuthority('ADMIN')") //solo chi è ADMIN è autorizzato
     public String patchLaptopDipendente(@PathVariable int dipendenteId, @RequestParam int laptopId) {
         return dipendenteService.patchLaptopDipendente(dipendenteId, laptopId);
     }
 
     @PatchMapping("/api/dipendenti-smartphone/{dipendenteId}")
+    @PreAuthorize("hasAuthority('ADMIN')") //solo chi è ADMIN è autorizzato
     public String patchSmartphoneDipendente(@PathVariable int dipendenteId, @RequestParam int smartphoneId) {
         return dipendenteService.patchSmartphoneDipendente(dipendenteId, smartphoneId);
     }

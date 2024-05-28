@@ -9,6 +9,7 @@ import it.epicode.gestione_dispositivi.service.SmartphoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,7 @@ public class SmartphoneController {
 
     @PostMapping("api/smartphones")
     @ResponseStatus(HttpStatus.CREATED)
+    @PreAuthorize("hasAuthority('ADMIN')") //solo chi è ADMIN è autorizzato
     public String saveSmartphone(@RequestBody @Validated SmartphoneDto smartphoneDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new BadRequestException(bindingResult.getAllErrors()
@@ -32,6 +34,7 @@ public class SmartphoneController {
     }
 
     @GetMapping("api/smartphones")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public Page<Smartphone> getSmartphones(@RequestParam(defaultValue = "0") int page,
                                            @RequestParam(defaultValue = "10") int size,
                                            @RequestParam(defaultValue = "id") String sortBy) {
@@ -39,6 +42,7 @@ public class SmartphoneController {
     }
 
     @GetMapping("api/smartphones/{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public Smartphone getSmartphoneById(@PathVariable int id) {
         Optional<Smartphone> smartphoneOptional = smartphoneService.getSmartphoneById(id);
         if (smartphoneOptional.isPresent()) {
@@ -50,6 +54,7 @@ public class SmartphoneController {
 
     @PutMapping("/api/smartphones/{id}")
     @ResponseStatus(HttpStatus.OK)
+    @PreAuthorize("hasAuthority('ADMIN')") //solo chi è ADMIN è autorizzato
     public Smartphone updateSmartphone(@PathVariable int id, @RequestBody @Validated SmartphoneDto smartphoneDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new BadRequestException(bindingResult.getAllErrors().stream().
@@ -60,11 +65,13 @@ public class SmartphoneController {
     }
 
     @DeleteMapping("/api/smartphones/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')") //solo chi è ADMIN è autorizzato
     public String deleteSmartphone(@PathVariable int id) {
         return smartphoneService.deleteSmartphone(id);
     }
 
     @PatchMapping("/api/smartphones/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')") //solo chi è ADMIN è autorizzato
     public String patchStatoSmartphone(@PathVariable int id, @RequestParam StatoDispositivo statoDispositivo) {
         return smartphoneService.patchStatoSmartphone(id, statoDispositivo);
     }
