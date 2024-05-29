@@ -3,8 +3,15 @@ const numeriEstratti = []
 const tabellone = document.getElementById('tabellone')
 const bottone = document.getElementById('estrai')
 const ultimoEstratto = document.getElementById('ultimoEstratto')
+const ricomincia = document.getElementById('ricomincia')
 let numeroEstratto;
 
+
+ricomincia.addEventListener('click', ricominciaGioco)
+
+function ricominciaGioco(){
+    window.location.reload()
+}
 
 
 //creazione griglione iniziale
@@ -26,6 +33,7 @@ bottone.addEventListener('click', estraiNumero);
 
 
 function estraiNumero() {
+    ultimoEstratto.style.display = "inline-block";
 
     numeroEstratto = Math.floor(Math.random() * 90) + 1;
     if (numeriEstratti.includes(numeroEstratto)) {
@@ -44,14 +52,14 @@ function estraiNumero() {
 //evidenziare numeri usciti (e mo te vojo vede)
 
 function evidenziaEstratti() {
-    let celleEstratte=document.querySelectorAll('.celle');
-    for (let i=0; i<celleEstratte.length; i++){
-        if (numeriEstratti.includes(parseInt(celleEstratte[i].innerHTML))){
+    let celleEstratte = document.querySelectorAll('.celle');
+    for (let i = 0; i < celleEstratte.length; i++) {
+        if (numeriEstratti.includes(parseInt(celleEstratte[i].innerHTML))) {
             celleEstratte[i].classList.add('estratte');
         }
     }
 }
-  
+
 
 
 
